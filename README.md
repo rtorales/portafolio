@@ -18,8 +18,12 @@ Sitio personal de **Ricardo Torales**, Gerente de Proyectos de Tecnología y Con
 | `index.html` | Sitio completo (estilos y scripts inline) |
 | `img/` | Retrato e imágenes |
 | `favicon.svg` | Monograma RT |
-| `CV_Ricardo_Torales_Gerencia.pdf` | CV descargable |
+| `cv.html` | CV imprimible — fuente del PDF |
+| `CV_Ricardo_Torales.pdf` | CV descargable, generado desde `cv.html` |
+| `generate-cv.ps1` | Regenera el PDF con Edge headless tras actualizar el contenido |
 | `ricardo-torales-brand-system/` | Design system de referencia (no se publica como página) |
+
+> **Flujo del CV:** el PDF no se edita a mano. Al actualizar el sitio, reflejar los cambios en `cv.html` y ejecutar `.\generate-cv.ps1`.
 
 ## Contacto
 

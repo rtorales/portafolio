@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    CV imprimible — se genera el PDF desde esta página para que siempre
+    refleje el contenido del sitio. Regenerar con:
+      msedge --headless --print-to-pdf="CV_Ricardo_Torales.pdf" --no-pdf-header-footer http://localhost:4321/cv.html
+  -->
+  <title>CV — Ricardo Torales | PMO & Business Transformation Specialist</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #0e0e11;
+      --zinc-100: #f4f4f5;
+      --zinc-200: #e4e4e7;
+      --zinc-400: #a1a1aa;
+      --zinc-500: #71717a;
+      --zinc-600: #52525b;
+      --gold-700: #6b5326;
+      --gold-100: #f7f2e8;
+      --gold-200: #e7dcc7;
+      --success-700: #065f46;
+      --success-100: #ecfdf3;
+      --success-200: #bbf7d0;
+      --font-display: 'Space Grotesk', system-ui, sans-serif;
+      --font-sans: 'Hanken Grotesk', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+    @page { size: A4; margin: 0; }
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body {
+      font-family: var(--font-sans);
+      font-size: 9.4pt;
+      line-height: 1.5;
+      color: var(--zinc-600);
+      background: #fff;
+    }
+    .page { width: 210mm; margin: 0 auto; padding: 0 14mm 10mm; }
+
+    /* Header oscuro */
+    .cv-header {
+      background: var(--ink);
+      color: #fff;
+      padding: 11mm 14mm 9mm;
+      margin: 0 -14mm 7mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10mm;
+      break-inside: avoid;
+    }
+    .cv-name {
+      font-family: var(--font-display);
+      font-size: 22pt;
+      font-weight: 700;
+      letter-spacing: -.03em;
+      line-height: 1.05;
+      color: #fff;
+    }
+    .cv-role {
+      font-size: 10.5pt;
+      color: rgba(255,255,255,.75);
+      margin-top: 2mm;
+      font-weight: 500;
+    }
+    .cv-role strong { color: #fff; font-weight: 600; }
+    .cv-contact {
+      margin-top: 3.5mm;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.4mm 6mm;
+      font-size: 8pt;
+      color: rgba(255,255,255,.65);
+    }
+    .cv-contact span { white-space: nowrap; }
+    .cv-monogram {
+      width: 15mm; height: 15mm;
+      flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 3.5mm;
+      background: rgba(255,255,255,.07);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 13pt;
+      letter-spacing: -1px;
+      color: #fff;
+    }
+
+    /* Layout de contenido: 2 columnas */
+    .cv-body { display: grid; grid-template-columns: 1fr 58mm; gap: 8mm; }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 10.5pt;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink);
+      border-bottom: 1.5px solid var(--ink);
+      padding-bottom: 1.2mm;
+      margin: 5mm 0 3mm;
+      break-after: avoid;
+    }
+    .cv-body > div > h2:first-child, .cv-side > h2:first-child { margin-top: 0; }
+
+    p.summary { font-size: 9.2pt; }
+    p.summary strong, li strong { color: var(--ink); font-weight: 600; }
+
+    /* Experiencia */
+    .job { margin-bottom: 3.6mm; break-inside: avoid; }
+    .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+    .job-company {
+      font-family: var(--font-display);
+      font-size: 10pt;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -.01em;
+    }
+    .job-period { font-family: var(--font-mono); font-size: 7.2pt; color: var(--zinc-500); white-space: nowrap; }
+    .job-role { font-size: 8.8pt; font-weight: 600; color: var(--zinc-600); }
+    .job-context { font-size: 7.6pt; color: var(--zinc-400); margin-bottom: 1.2mm; }
+    .job ul { list-style: none; margin-top: 1mm; }
+    .job li { position: relative; padding-left: 4mm; font-size: 8.6pt; line-height: 1.45; margin-bottom: .8mm; }
+    .job li::before { content: '▸'; position: absolute; left: 0; color: var(--ink); }
+    .tag-activo {
+      display: inline-block;
+      font-size: 6.4pt;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--success-700);
+      background: var(--success-100);
+      border: 1px solid var(--success-200);
+      border-radius: 10mm;
+      padding: 0 2mm;
+      vertical-align: 1pt;
+      margin-left: 1.5mm;
+    }
+
+    /* Columna lateral */
+    .side-block { margin-bottom: 4mm; break-inside: avoid; }
+    .side-item { margin-bottom: 2.4mm; }
+    .side-item h3 { font-size: 8.6pt; font-weight: 600; color: var(--ink); line-height: 1.35; }
+    .side-item .inst { font-size: 8pt; color: var(--zinc-600); }
+    .side-item .year { font-family: var(--font-mono); font-size: 7pt; color: var(--zinc-500); }
+    .beca {
+      display: inline-block;
+      font-size: 6.2pt;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: var(--gold-700);
+      background: var(--gold-100);
+      border: 1px solid var(--gold-200);
+      border-radius: 10mm;
+      padding: 0 1.8mm;
+      margin-left: 1mm;
+    }
+    .cert-list { list-style: none; }
+    .cert-list li { font-size: 8pt; line-height: 1.4; margin-bottom: 1.5mm; padding-left: 4mm; position: relative; }
+    .cert-list li::before { content: '▸'; position: absolute; left: 0; color: var(--ink); }
+    .cert-list .issuer { font-family: var(--font-mono); font-size: 6.6pt; text-transform: uppercase; color: var(--zinc-400); display: block; }
+    .cert-more { font-size: 7.6pt; color: var(--zinc-500); margin-top: 1.5mm; }
+
+    .chip-row { display: flex; flex-wrap: wrap; gap: 1.4mm; }
+    .chip {
+      font-size: 7.4pt;
+      font-weight: 500;
+      background: var(--zinc-100);
+      border: 1px solid var(--zinc-200);
+      border-radius: 1.5mm;
+      padding: .4mm 1.8mm;
+      color: var(--zinc-600);
+    }
+
+    .lang-item { display: flex; justify-content: space-between; font-size: 8.4pt; margin-bottom: 1mm; }
+    .lang-item strong { color: var(--ink); font-weight: 600; }
+    .lang-item span { color: var(--zinc-500); }
+
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm; margin: 3mm 0 1mm; }
+    .kpi {
+      border: 1px solid var(--zinc-200);
+      border-radius: 2mm;
+      padding: 2mm 1mm;
+      text-align: center;
+      break-inside: avoid;
+    }
+    .kpi-num { font-family: var(--font-display); font-size: 13pt; font-weight: 700; color: var(--ink); letter-spacing: -.02em; line-height: 1.1; }
+    .kpi-label { font-size: 6.4pt; text-transform: uppercase; letter-spacing: .05em; color: var(--zinc-500); margin-top: .6mm; line-height: 1.25; }
+
+    .cv-footer {
+      margin-top: 5mm;
+      padding-top: 2mm;
+      border-top: 1px solid var(--zinc-200);
+      font-size: 7pt;
+      color: var(--zinc-400);
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="cv-header">
+      <div>
+        <h1 class="cv-name">Ricardo Torales</h1>
+        <p class="cv-role">PMO & Business Transformation Specialist · Gerente de Proyectos Tecnológicos<br /><strong>Transformación Digital · Inteligencia Artificial · Automatización de Procesos</strong></p>
+        <div class="cv-contact">
+          <span>✉ ricardotorales@outlook.com</span>
+          <span>✆ +595 981 226 529</span>
+          <span>in/ricardo-torales</span>
+          <span>ricardotorales.com</span>
+          <span>Asunción, Paraguay</span>
+        </div>
+      </div>
+      <div class="cv-monogram">RT</div>
+    </header>
+
+    <div class="kpis">
+      <div class="kpi"><div class="kpi-num">14+</div><div class="kpi-label">Años de experiencia</div></div>
+      <div class="kpi"><div class="kpi-num">34</div><div class="kpi-label">Certificaciones</div></div>
+      <div class="kpi"><div class="kpi-num">2</div><div class="kpi-label">Maestrías</div></div>
+      <div class="kpi"><div class="kpi-num">15+</div><div class="kpi-label">Profesionales liderados</div></div>
+    </div>
+
+    <div class="cv-body">
+      <!-- Columna principal -->
+      <div>
+        <h2>Perfil Profesional</h2>
+        <p class="summary">
+          Ejecutivo tecnológico con más de <strong>14 años de trayectoria</strong> liderando iniciativas de transformación digital de alto impacto en ERP, CRM e Inteligencia Artificial. Actualmente <strong>PMO & Business Transformation Specialist en Grupo Chacomer</strong>, Consultor Externo en Okara y Miembro Titular del Comité de Selección de Proyectos del MITIC (Resolución N.° 381/2025, fondos BID). Especialista en <strong>IA aplicada, hiperautomatización y plataformas Microsoft Dynamics 365, Salesforce y SAP</strong>. Scrum Master certificado con formación en PMBOK e ITIL.
+        </p>
+
+        <h2>Experiencia Profesional</h2>
+
+        <div class="job">
+          <div class="job-head"><span class="job-company">Grupo Chacomer<span class="tag-activo">Activo</span></span><span class="job-period">Abr. 2026 – Actualidad</span></div>
+          <div class="job-role">PMO & Business Transformation Specialist</div>
+          <div class="job-context">Grupo empresarial líder en Paraguay · +3.000 colaboradores · Jornada completa · Híbrido</div>
+          <ul>
+            <li>Gestión y seguimiento de proyectos estratégicos y corporativos; administración de portafolio, gobernanza y reporting ejecutivo.</li>
+            <li>Coordinación de equipos multidisciplinarios y proveedores; definición y monitoreo de KPIs, riesgos y planes de acción.</li>
+            <li>Optimización de procesos, mejora continua e implementación de herramientas y metodologías de gestión.</li>
+            <li>Soporte a la toma de decisiones mediante análisis y visualización de datos, alineando iniciativas con los objetivos estratégicos.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-company">Okara<span class="tag-activo">Activo</span></span><span class="job-period">2025 – Actualidad</span></div>
+          <div class="job-role">Consultor Externo – Sistemas y Automatización de Procesos</div>
+          <div class="job-context">Consultora organizacional líder en Paraguay</div>
+          <ul>
+            <li>Asesoramiento estratégico en sistematización de procesos y soluciones tecnológicas para transformación digital.</li>
+            <li>Diseño y optimización de flujos de automatización orientados a la eficiencia operativa.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-company">MITIC – Ministerio de TIC<span class="tag-activo">Activo</span></span><span class="job-period">Jul. 2025 – Actualidad</span></div>
+          <div class="job-role">Miembro Titular CSP – Representante Sector Privado</div>
+          <div class="job-context">Comité de Selección de Proyectos · Agenda Digital (Contrato BID N.° 4650/OC-PR) · Resolución N.° 381/2025</div>
+          <ul>
+            <li>Evaluación y selección de proyectos TIC con fondos concursables; análisis de viabilidad técnica e impacto.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-company">Axxon Consulting</span><span class="job-period">May. 2025 – 2026</span></div>
+          <div class="job-role">Project Manager</div>
+          <div class="job-context">Consultora multinacional Microsoft Inner Circle Partner · Dynamics 365, CRM, Data & AI</div>
+          <ul>
+            <li>Liderazgo de equipos en implementaciones Dynamics 365 + CRM con componentes de IA (Copilot, Power Platform).</li>
+            <li>Gestión integral del ciclo de vida: alcance, cronograma, presupuesto, calidad y satisfacción del cliente.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-company">Grupo Perfecta</span><span class="job-period">Mar. 2022 – Abr. 2025</span></div>
+          <div class="job-role">Jefe de TI</div>
+          <ul>
+            <li>Dirección de proyectos de ERP, DMS, Salesforce y sistemas financieros; reducción de tiempos operativos y costos.</li>
+            <li>Integraciones entre gestores documentales, ERP y CRM; informes estratégicos de riesgos al directorio.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-company">Exxis Paraguay</span><span class="job-period">Oct. 2019 – Feb. 2022</span></div>
+          <div class="job-role">Líder de Proyectos SAP</div>
+          <ul>
+            <li>Implementación de SAP Business One y add-ons; supervisión de infraestructura certificada SAP B1.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-company">ImagineSOFT</span><span class="job-period">Ago. 2011 – Sep. 2019</span></div>
+          <div class="job-role">Líder de Proyectos ERP</div>
+          <ul>
+            <li>Dirección de equipos de desarrollo, consultoría y helpdesk en implementaciones ERP durante más de 8 años.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Columna lateral -->
+      <div class="cv-side">
+        <h2>Formación</h2>
+        <div class="side-block">
+          <div class="side-item">
+            <h3>Maestría en Gestión de Proyectos</h3>
+            <div class="inst">Universidad Americana</div>
+            <div class="year">2024 – 2026 <span class="beca">Becado BECAL</span></div>
+          </div>
+          <div class="side-item">
+            <h3>Maestría en Gestión de Sistemas Informáticos</h3>
+            <div class="inst">Universidad Autónoma de Asunción</div>
+            <div class="year">2020 – 2024 · Nota: 4.5</div>
+          </div>
+          <div class="side-item">
+            <h3>Diplomado en Inteligencia Empresarial y Automatización</h3>
+            <div class="inst">Universidad Comunera</div>
+            <div class="year">2023 <span class="beca">Becado MITIC</span></div>
+          </div>
+          <div class="side-item">
+            <h3>Licenciatura en Ciencias Informáticas</h3>
+            <div class="inst">Universidad Autónoma del Paraguay</div>
+            <div class="year">2015</div>
+          </div>
+        </div>
+
+        <h2>Certificaciones</h2>
+        <div class="side-block">
+          <ul class="cert-list">
+            <li><span class="issuer">Microsoft · 2026</span>Power Platform Fundamentals (PL-900)</li>
+            <li><span class="issuer">Mavim · 2026</span>Mavim Manager Level 1</li>
+            <li><span class="issuer">Microsoft · 2025</span>Azure AI Fundamentals (AI-900)</li>
+            <li><span class="issuer">SAP · 2021</span>Application Associate – SAP Business One 10.0</li>
+            <li><span class="issuer">CertiProf · 2020</span>Scrum Foundation Professional (SFPC)</li>
+            <li><span class="issuer">CertiProf · 2023</span>Business Intelligence Foundation (BIFPC™)</li>
+            <li><span class="issuer">CertiProf · 2023</span>Lean Six Sigma White Belt (LSSWB PC™)</li>
+            <li><span class="issuer">PMI · 2019</span>Project Management PMBOK V6</li>
+          </ul>
+          <p class="cert-more">34 certificaciones verificables en linkedin.com/in/ricardo-torales</p>
+        </div>
+
+        <h2>Competencias</h2>
+        <div class="side-block chip-row">
+          <span class="chip">PMBOK</span><span class="chip">ITIL</span><span class="chip">SCRUM</span><span class="chip">KANBAN</span><span class="chip">Lean Six Sigma</span><span class="chip">Gobierno de TI</span><span class="chip">Dynamics 365 F&O</span><span class="chip">Dynamics CRM</span><span class="chip">Salesforce</span><span class="chip">SAP B1</span><span class="chip">Azure AI</span><span class="chip">Power Platform</span><span class="chip">Copilot Studio</span><span class="chip">RPA</span><span class="chip">Hiperautomatización</span><span class="chip">BI</span><span class="chip">SQL Server</span><span class="chip">.NET</span><span class="chip">Angular</span><span class="chip">Gestión del cambio</span><span class="chip">Comunicación C-Level</span>
+        </div>
+
+        <h2>Idiomas</h2>
+        <div class="side-block">
+          <div class="lang-item"><strong>Español</strong><span>Nativo</span></div>
+          <div class="lang-item"><strong>Inglés</strong><span>Intermedio</span></div>
+          <div class="lang-item"><strong>Portugués</strong><span>Intermedio</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-footer">
+      <span>Ricardo Torales · PMO & Business Transformation Specialist</span>
+      <span>ricardotorales.com · Actualizado jul. 2026</span>
+    </div>
+  </div>
+</body>
+</html>
