@@ -1,0 +1,97 @@
+/* ============================================================
+   COLORS — Ricardo Torales Brand System
+   Executive-premium, monochrome direction (b/n).
+   Dark ink for hero + portfolio · light zinc for reading.
+   Chromatic tokens (success/gold) survive only as restrained
+   functional signals. Accent = ink on light, white on dark.
+   ============================================================ */
+:root {
+  /* --- Ink — near-black dark surfaces (hero, portfolio, contact) --- */
+  --ink-950: #08080a;   /* deepest */
+  --ink-900: #0e0e11;   /* primary dark surface */
+  --ink-850: #141418;
+  --ink-800: #1b1b20;
+  --ink-700: #26262d;
+
+  /* --- Zinc — neutral scale (light reading, borders, text) --- */
+  --white:     #ffffff;
+  --zinc-50:   #fafafa;   /* page */
+  --zinc-100:  #f4f4f5;   /* subtle surface */
+  --zinc-200:  #e4e4e7;   /* hairline border */
+  --zinc-300:  #d4d4d8;
+  --zinc-400:  #a1a1aa;
+  --zinc-500:  #71717a;   /* muted text */
+  --zinc-600:  #52525b;   /* body text */
+  --zinc-700:  #3f3f46;
+  --zinc-800:  #27272a;
+  --zinc-900:  #18181b;
+
+  /* --- Functional status (restrained, used sparingly) --- */
+  --success-700: #065f46;
+  --success-600: #047857;
+  --success-500: #10b981;
+  --success-400: #34d399;
+  --success-300: #a7f3d0;
+  --success-200: #bbf7d0;
+  --success-100: #ecfdf3;
+
+  /* --- Distinction — refined warm taupe (awards, scholarships) --- */
+  --gold-700: #6b5326;
+  --gold-600: #9a7b41;
+  --gold-200: #e7dcc7;
+  --gold-100: #f7f2e8;
+
+  /* --- Informational tint — neutral (period pills) --- */
+  --info-100: #f4f4f5;
+  --info-200: #e4e4e7;
+
+  /* --- LEGACY ALIASES — remapped to monochrome so older kits
+         stay on-palette. Prefer ink-/zinc- names in new work. --- */
+  --navy-900:  var(--ink-950);
+  --navy-800:  var(--ink-900);
+  --navy-700:  var(--ink-800);
+  --blue-600:  var(--ink-900);
+  --blue-500:  var(--zinc-700);
+  --accent-600:var(--ink-900);
+  --teal-600:  var(--zinc-600);
+  --cyan-400:  rgba(255,255,255,.92);
+  --slate-50:  var(--zinc-50);
+  --slate-100: var(--zinc-100);
+  --slate-200: var(--zinc-200);
+  --slate-500: var(--zinc-500);
+  --slate-600: var(--zinc-600);
+  --slate-800: var(--zinc-800);
+
+  /* ============================================================
+     SEMANTIC ALIASES — use these in components
+     ============================================================ */
+  --color-brand:          var(--ink-900);
+  --color-brand-strong:   var(--ink-950);
+  --color-brand-soft:     var(--ink-800);
+  --color-accent:         var(--ink-900);
+  --color-accent-alt:     var(--zinc-700);
+  --color-glow:           rgba(255,255,255,.92);   /* white glow on dark */
+
+  --surface-page:         var(--zinc-50);
+  --surface-card:         var(--white);
+  --surface-subtle:       var(--zinc-100);
+  --surface-inverse:      var(--ink-900);
+
+  --text-strong:          var(--ink-900);            /* headings on light */
+  --text-body:            var(--zinc-600);           /* paragraph */
+  --text-muted:           var(--zinc-500);           /* captions, labels */
+  --text-on-dark:         rgba(255,255,255,.90);
+  --text-on-dark-muted:   rgba(255,255,255,.58);
+
+  --border-default:       var(--zinc-200);
+  --border-strong:        var(--ink-900);
+  --border-on-dark:       rgba(255,255,255,.14);
+
+  --link:                 var(--ink-900);
+  --link-hover:           var(--zinc-500);
+
+  /* Gradients */
+  --gradient-hero:   radial-gradient(120% 120% at 50% -10%, #1b1b20 0%, #0e0e11 52%, #08080a 100%); /* @kind color */
+  --gradient-accent: linear-gradient(135deg, #f4f4f5, #a1a1aa 52%, #52525b); /* @kind color */
+  --gradient-icon:   linear-gradient(135deg, #f4f4f5, #e4e4e7); /* @kind color */
+}

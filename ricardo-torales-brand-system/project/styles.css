@@ -1,0 +1,10 @@
+/* ============================================================
+   Ricardo Torales — Brand System
+   Global entry point. Consumers link THIS file.
+   Import order only — no rules declared here.
+   ============================================================ */
+@import url('tokens/fonts.css');
+@import url('tokens/colors.css');
+@import url('tokens/typography.css');
+@import url('tokens/spacing.css');
+@import url('tokens/base.css');

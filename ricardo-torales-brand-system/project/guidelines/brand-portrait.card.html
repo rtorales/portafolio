@@ -1,0 +1,26 @@
+<!-- @dsCard group="Brand" viewport="700x260" name="Portrait Ring & Hero Gradient" subtitle="Signature avatar ring on the navy hero band" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--gradient-hero); padding: 30px; display: flex; align-items: center; gap: 30px; }
+  .ring { width: 160px; height: 160px; border-radius: 50%; padding: 5px; background: linear-gradient(135deg, var(--cyan-400), var(--blue-500), rgba(255,255,255,.2)); box-shadow: var(--shadow-photo); flex-shrink: 0; }
+  .ring img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center top; display: block; }
+  .txt { color: #fff; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18); border-radius: 100px; padding: 5px 14px; font-size: .72rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--cyan-400); }
+  .badge::before { content:''; width:6px; height:6px; border-radius:50%; background: var(--cyan-400); }
+  h2 { font-family: var(--font-display); font-size: 1.7rem; margin: 12px 0 6px; letter-spacing:-.02em; }
+  p { margin: 0; color: rgba(255,255,255,.7); font-size: .9rem; }
+</style>
+</head>
+<body>
+  <div class="ring"><img src="../assets/ricardo-torales.jpeg" alt="Ricardo Torales" /></div>
+  <div class="txt">
+    <span class="badge">Gerente de Proyectos · Grupo Chacomer</span>
+    <h2>Ricardo Torales</h2>
+    <p>--gradient-hero · cyan→blue ring · --shadow-photo</p>
+  </div>
+</body>
+</html>

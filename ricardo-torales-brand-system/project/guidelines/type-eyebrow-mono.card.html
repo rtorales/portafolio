@@ -1,0 +1,20 @@
+<!-- @dsCard group="Type" viewport="700x140" name="Eyebrow & Mono" subtitle="Uppercase labels + monospace specimen" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--surface-card); padding: 22px 26px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 16px; }
+  .eyebrow::before { content:''; width: 24px; height: 2px; background: var(--color-accent); border-radius: 2px; }
+  .mono { font-family: var(--font-mono); font-size: .85rem; color: var(--text-strong); }
+  .meta { font-family: var(--font-mono); font-size: .62rem; color: var(--text-muted); display:block; margin-top: 12px; }
+</style>
+</head>
+<body>
+  <span class="eyebrow">Sobre mí · Section Label</span>
+  <div class="mono">const impact = automate(process); // 0E0E11</div>
+  <span class="meta">Hanken Grotesk 700 uppercase ls 0.14em · JetBrains Mono --font-mono</span>
+</body>
+</html>

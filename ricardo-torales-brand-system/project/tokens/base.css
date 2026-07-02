@@ -1,0 +1,21 @@
+/* ============================================================
+   BASE — resets, keyframes, global element defaults
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); }
+
+/* Signature pulse (availability dots, hero badge) */
+@keyframes rt-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: .4; }
+}
+
+/* Scroll-reveal utility used by kits */
+@keyframes rt-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}

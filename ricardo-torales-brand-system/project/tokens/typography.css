@@ -1,0 +1,58 @@
+/* ============================================================
+   TYPOGRAPHY — Ricardo Torales Brand System
+   Space Grotesk — display/headings/stat numbers (geometric, modern).
+   Hanken Grotesk — UI + body (clean grotesque, cohesive with display).
+   JetBrains Mono — technical / code specimen.
+   ============================================================ */
+:root {
+  /* Families */
+  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-sans:    'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Weights */
+  --fw-light:     300; /* @kind font */
+  --fw-regular:   400; /* @kind font */
+  --fw-medium:    500; /* @kind font */
+  --fw-semibold:  600; /* @kind font */
+  --fw-bold:      700; /* @kind font */
+
+  /* Type scale (rem) — clamp handled per-use for fluid headers */
+  --fs-hero:      4rem;     /* hero name */
+  --fs-h1:        2.3rem;   /* section title */
+  --fs-h2:        1.65rem;
+  --fs-h3:        1.1rem;   /* card title */
+  --fs-lead:      1.05rem;  /* intro paragraphs */
+  --fs-body:      1rem;     /* 16px base */
+  --fs-sm:        0.9rem;
+  --fs-xs:        0.8rem;
+  --fs-2xs:       0.72rem;  /* eyebrow labels, tags */
+
+  /* Line heights */
+  --lh-tight:     1.15; /* @kind font */
+  --lh-heading:   1.3; /* @kind font */
+  --lh-body:      1.7; /* @kind font */
+  --lh-relaxed:   1.75; /* @kind font */
+
+  /* Letter spacing — geometric grotesque wants tighter display tracking */
+  --ls-tight:     -0.035em;  /* @kind font */
+  --ls-normal:    0; /* @kind font */
+  --ls-wide:      0.06em;    /* @kind font */
+  --ls-eyebrow:   0.14em;    /* @kind font */
+
+  /* Semantic aliases */
+  --text-display-size:  var(--fs-hero);
+  --text-title-size:    var(--fs-h1);
+  --text-eyebrow-size:  0.75rem;
+}
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

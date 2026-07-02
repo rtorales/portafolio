@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Personal Brand Landing" description="Executive personal-brand page: dark ink hero, credibility stats, project cases, and contact CTA — Ricardo Torales system" -->
+<helmet>
+<script src="./ds-base.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<style>
+  @keyframes rt-pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  @keyframes rt-drift  { 0%{transform:translate(0,0) scale(1)} 50%{transform:translate(4%,-4%) scale(1.12)} 100%{transform:translate(0,0) scale(1)} }
+  @keyframes rt-drift2 { 0%{transform:translate(0,0) scale(1)} 50%{transform:translate(-5%,4%) scale(1.15)} 100%{transform:translate(0,0) scale(1)} }
+  .rt-reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+  .rt-reveal.is-in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){ .rt-reveal{opacity:1 !important;transform:none !important} }
+  .rt-glow{opacity:.55;transition:opacity .6s ease}
+  [data-glow="subtle"]  .rt-glow{opacity:.30}
+  [data-glow="notable"] .rt-glow{opacity:.55}
+  [data-glow="intense"] .rt-glow{opacity:.85}
+  .rt-navlink{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:-.01em;transition:color .2s}
+  .rt-navlink:hover{color:#fff}
+  .rt-case{transition:transform .3s cubic-bezier(.16,1,.3,1),border-color .3s,background .3s}
+  .rt-case:hover{transform:translateY(-4px);border-color:#c9c9ce;background:#fff}
+  .rt-case:hover .rt-arrow{transform:translate(4px,-4px);opacity:1}
+  .rt-arrow{transition:transform .3s cubic-bezier(.16,1,.3,1),opacity .3s;opacity:.45}
+</style>
+<script>
+(function(){
+  function tick(){
+    var h = window.innerHeight || 800;
+    var els = document.querySelectorAll('.rt-reveal:not(.is-in)');
+    for (var i=0;i<els.length;i++){
+      var r = els[i].getBoundingClientRect();
+      if (r.top < h * 1.05 && r.bottom > -80) els[i].classList.add('is-in');
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
+</helmet>
+<div data-glow="{{ glow }}" style="font-family:'Hanken Grotesk',system-ui,sans-serif;background:#fafafa;color:#52525b;overflow:hidden;">
+
+  <!-- ============ HERO (dark ink) ============ -->
+  <header style="position:relative;background:radial-gradient(120% 120% at 50% -10%,#1b1b20 0%,#0e0e11 52%,#08080a 100%);color:#fff;overflow:hidden;">
+    <!-- animated glow blobs -->
+    <div class="rt-glow" style="position:absolute;top:-14%;right:-6%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.20),transparent 65%);filter:blur(20px);animation:rt-drift 16s ease-in-out infinite;pointer-events:none;"></div>
+    <div class="rt-glow" style="position:absolute;bottom:-24%;left:-10%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 68%);filter:blur(24px);animation:rt-drift2 22s ease-in-out infinite;pointer-events:none;"></div>
+    <!-- grid texture -->
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(120% 90% at 50% 0%,#000,transparent 78%);pointer-events:none;"></div>
+
+    <!-- nav -->
+    <nav style="position:relative;max-width:1100px;margin:0 auto;padding:26px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div style="width:40px;height:40px;border-radius:11px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;letter-spacing:-1px;color:#fff;">RT</div>
+        <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.98rem;letter-spacing:-.01em;color:#fff;">Ricardo Torales</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:28px;">
+        <a class="rt-navlink" href="#perfil">Perfil</a>
+        <a class="rt-navlink" href="#proyectos">Proyectos</a>
+        <a class="rt-navlink" href="#contacto">Contacto</a>
+      </div>
+    </nav>
+
+    <!-- hero content -->
+    <div style="position:relative;max-width:1100px;margin:0 auto;padding:64px 24px 0;display:grid;grid-template-columns:1fr auto;gap:64px;align-items:center;">
+      <div class="rt-reveal is-in">
+        <sc-if value="{{ showAvailable }}" hint-placeholder-val="{{ true }}">
+          <span style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:100px;padding:6px 15px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:24px;">
+            <span style="width:6px;height:6px;background:#34d399;border-radius:50%;animation:rt-pulse 2.4s infinite;"></span>
+            Disponible para consultoría
+          </span>
+        </sc-if>
+        <h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(2.6rem,6vw,4.2rem);font-weight:700;line-height:1.02;letter-spacing:-.035em;margin:0 0 18px;color:#fff;">Ricardo Torales</h1>
+        <p style="font-size:clamp(1.05rem,2vw,1.28rem);color:rgba(255,255,255,.62);margin:0 0 30px;line-height:1.5;max-width:520px;font-weight:400;">
+          Gerente de Proyectos Tecnológicos — transformación digital, inteligencia artificial y automatización de procesos de alto impacto.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:38px;">
+          <x-import component-from-global-scope="RicardoToralesBrandSystem_e0aacc.Tag" tone="onDark" hint-size="auto,28px">Project Manager</x-import>
+          <x-import component-from-global-scope="RicardoToralesBrandSystem_e0aacc.Tag" tone="onDark" hint-size="auto,28px">Scrum Master</x-import>
+          <x-import component-from-global-scope="RicardoToralesBrandSystem_e0aacc.Tag" tone="onDark" hint-size="auto,28px">Dynamics 365</x-import>
+          <x-import component-from-global-scope="RicardoToralesBrandSystem_e0aacc.Tag" tone="onDark" hint-size="auto,28px">Azure AI</x-import>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <x-import component-from-global-scope="RicardoToralesBrandSystem_e0aacc.Button" variant="white" hint-size="auto,44px">Contactarme</x-import>
+          <x-import component-from-global-scope="RicardoToralesBrandSystem_e0aacc.Button" variant="outline" hint-size="auto,44px">Descargar CV</x-import>
+        </div>
+      </div>
+      <div class="rt-reveal is-in" style="transition-delay: .12s; width: 405px; position: relative">
+        <div style="position:relative;width:100%;aspect-ratio:4/5;">
+          <img src="../../assets/ricardo-torales.jpeg" alt="Ricardo Torales" style="width:100%;height:100%;object-fit:cover;object-position:center 12%;display:block;filter:contrast(1.04) brightness(1.02) saturate(1.05);-webkit-mask-image:linear-gradient(to bottom, transparent 0%, #000 11%, #000 60%, transparent 100%), linear-gradient(to right, transparent 0%, #000 11%, #000 89%, transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to bottom, transparent 0%, #000 11%, #000 60%, transparent 100%), linear-gradient(to right, transparent 0%, #000 11%, #000 89%, transparent 100%);mask-composite:intersect;">
+        </div>
+      </div>
+    </div>
+
+    <!-- stats strip (inside hero, on dark) -->
+    <div style="position:relative;max-width:1100px;margin:64px auto 0;padding:0 24px;">
+      <div class="rt-reveal is-in" style="display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.12);">
+        <div style="padding:26px 8px;text-align:center;border-right:1px solid rgba(255,255,255,.10);">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;color:#fff;line-height:1;letter-spacing:-.03em;">14<span style="color:rgba(255,255,255,.4);">+</span></div>
+          <div style="font-size:.74rem;font-weight:500;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-top:8px;">Años de experiencia</div>
+        </div>
+        <div style="padding:26px 8px;text-align:center;border-right:1px solid rgba(255,255,255,.10);">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;color:#fff;line-height:1;letter-spacing:-.03em;">9<span style="color:rgba(255,255,255,.4);">+</span></div>
+          <div style="font-size:.74rem;font-weight:500;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-top:8px;">Certificaciones</div>
+        </div>
+        <div style="padding:26px 8px;text-align:center;border-right:1px solid rgba(255,255,255,.10);">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;color:#fff;line-height:1;letter-spacing:-.03em;">3</div>
+          <div style="font-size:.74rem;font-weight:500;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-top:8px;">Roles activos</div>
+        </div>
+        <div style="padding:26px 8px;text-align:center;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;color:#fff;line-height:1;letter-spacing:-.03em;">2</div>
+          <div style="font-size:.74rem;font-weight:500;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-top:8px;">Maestrías</div>
+        </div>
+      </div>
+    </div>
+    <div style="height:72px;"></div>
+  </header>
+
+  <!-- ============ PERFIL (light reading) ============ -->
+  <section id="perfil" style="background:#fafafa;padding:96px 24px;">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:280px 1fr;gap:64px;align-items:start;">
+      <div class="rt-reveal">
+        <span style="display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0e0e11;">
+          <span style="width:24px;height:2px;background:#0e0e11;border-radius:2px;"></span>Perfil
+        </span>
+      </div>
+      <div class="rt-reveal" style="transition-delay:.08s;">
+        <p style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.5rem,2.6vw,2rem);font-weight:500;line-height:1.32;letter-spacing:-.02em;color:#0e0e11;margin:0 0 24px;">
+          Lidero iniciativas de transformación digital que conectan estrategia, tecnología y personas — con resultados medibles.
+        </p>
+        <p style="font-size:1.05rem;line-height:1.75;color:#52525b;margin:0 0 20px;max-width:640px;">
+          Más de 14 años dirigiendo proyectos de ERP, CRM e inteligencia artificial en entornos empresariales exigentes. Combino gestión ágil, arquitectura de procesos y una obsesión por el impacto: menos fricción, más valor entregado.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <x-import component-from-global-scope="RicardoToralesBrandSystem_e0aacc.Tag" hint-size="auto,26px">Transformación digital</x-import>
+          <x-import component-from-global-scope="RicardoToralesBrandSystem_e0aacc.Tag" hint-size="auto,26px">Power Platform</x-import>
+          <x-import component-from-global-scope="RicardoToralesBrandSystem_e0aacc.Tag" hint-size="auto,26px">Gestión de procesos</x-import>
+          <x-import component-from-global-scope="RicardoToralesBrandSystem_e0aacc.Tag" hint-size="auto,26px">Liderazgo de equipos</x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROYECTOS / CASOS ============ -->
+  <sc-if value="{{ showProjects }}" hint-placeholder-val="{{ true }}">
+  <section id="proyectos" style="background:#fff;border-top:1px solid #e4e4e7;padding:96px 24px;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="rt-reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px;">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0e0e11;margin-bottom:14px;">
+            <span style="width:24px;height:2px;background:#0e0e11;border-radius:2px;"></span>Proyectos
+          </span>
+          <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:700;line-height:1.08;letter-spacing:-.03em;color:#0e0e11;margin:0;">Casos con impacto medible</h2>
+        </div>
+        <p style="font-size:.98rem;color:#71717a;max-width:320px;margin:0;line-height:1.6;">Selección de iniciativas donde la tecnología movió el negocio.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+        <!-- case 1 -->
+        <article class="rt-case rt-reveal" style="background:#fafafa;border:1px solid #e4e4e7;border-radius:16px;padding:28px;display:flex;flex-direction:column;min-height:320px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#a1a1aa;letter-spacing:.04em;">01 · ERP</span>
+            <span class="rt-arrow" style="display:inline-flex;color:#0e0e11;">↗</span>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;margin-top:40px;">
+            <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#71717a;margin-bottom:10px;">Dynamics 365</span>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:600;color:#0e0e11;line-height:1.2;letter-spacing:-.02em;margin:0 0 14px;">Implementación ERP multi-empresa</h3>
+            <p style="font-size:.9rem;color:#52525b;line-height:1.6;margin:0 0 18px;">Unificación de finanzas y operaciones en un solo sistema para el grupo.</p>
+            <div style="padding-top:16px;border-top:1px solid #e4e4e7;">
+              <span style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:#0e0e11;letter-spacing:-.03em;">40%</span>
+              <span style="font-size:.82rem;color:#71717a;margin-left:8px;">cierre contable más rápido</span>
+            </div>
+          </div>
+        </article>
+        <!-- case 2 -->
+        <article class="rt-case rt-reveal" style="transition-delay:.08s;background:#fafafa;border:1px solid #e4e4e7;border-radius:16px;padding:28px;display:flex;flex-direction:column;min-height:320px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#a1a1aa;letter-spacing:.04em;">02 · RPA</span>
+            <span class="rt-arrow" style="display:inline-flex;color:#0e0e11;">↗</span>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;margin-top:40px;">
+            <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#71717a;margin-bottom:10px;">Power Platform</span>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:600;color:#0e0e11;line-height:1.2;letter-spacing:-.02em;margin:0 0 14px;">Automatización de procesos operativos</h3>
+            <p style="font-size:.9rem;color:#52525b;line-height:1.6;margin:0 0 18px;">Flujos automatizados que eliminan tareas manuales repetitivas.</p>
+            <div style="padding-top:16px;border-top:1px solid #e4e4e7;">
+              <span style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:#0e0e11;letter-spacing:-.03em;">12k</span>
+              <span style="font-size:.82rem;color:#71717a;margin-left:8px;">horas/año ahorradas</span>
+            </div>
+          </div>
+        </article>
+        <!-- case 3 -->
+        <article class="rt-case rt-reveal" style="transition-delay:.16s;background:#fafafa;border:1px solid #e4e4e7;border-radius:16px;padding:28px;display:flex;flex-direction:column;min-height:320px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#a1a1aa;letter-spacing:.04em;">03 · IA</span>
+            <span class="rt-arrow" style="display:inline-flex;color:#0e0e11;">↗</span>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;margin-top:40px;">
+            <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#71717a;margin-bottom:10px;">Azure AI</span>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:600;color:#0e0e11;line-height:1.2;letter-spacing:-.02em;margin:0 0 14px;">Asistentes de IA para atención y análisis</h3>
+            <p style="font-size:.9rem;color:#52525b;line-height:1.6;margin:0 0 18px;">Copilotos que aceleran respuestas y decisiones de negocio.</p>
+            <div style="padding-top:16px;border-top:1px solid #e4e4e7;">
+              <span style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:#0e0e11;letter-spacing:-.03em;">3×</span>
+              <span style="font-size:.82rem;color:#71717a;margin-left:8px;">respuesta más rápida</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- ============ CONTACTO (dark CTA) ============ -->
+  <section id="contacto" style="position:relative;background:radial-gradient(120% 140% at 50% 0%,#1b1b20 0%,#0e0e11 55%,#08080a 100%);color:#fff;text-align:center;padding:112px 24px;overflow:hidden;">
+    <div class="rt-glow" style="position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:640px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.14),transparent 68%);filter:blur(28px);pointer-events:none;"></div>
+    <div class="rt-reveal" style="position:relative;max-width:660px;margin:0 auto;">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:18px;">
+        <span style="width:24px;height:2px;background:rgba(255,255,255,.85);border-radius:2px;"></span>Contacto
+      </span>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:700;color:#fff;line-height:1.08;letter-spacing:-.03em;margin:0 0 18px;">Construyamos algo de alto impacto</h2>
+      <p style="color:rgba(255,255,255,.62);font-size:1.08rem;margin:0 auto 40px;line-height:1.65;max-width:520px;">Consultoría ejecutiva, automatización de procesos y transformación digital para empresas y personas.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <x-import component-from-global-scope="RicardoToralesBrandSystem_e0aacc.Button" variant="white" hint-size="auto,44px">Escribir por WhatsApp</x-import>
+        <x-import component-from-global-scope="RicardoToralesBrandSystem_e0aacc.Button" variant="outline" hint-size="auto,44px">Agendar consultoría</x-import>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1100, &quot;height&quot;: 1680 },
+  &quot;glow&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;subtle&quot;, &quot;notable&quot;, &quot;intense&quot;], &quot;default&quot;: &quot;notable&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Efectos&quot; },
+  &quot;available&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Contenido&quot; },
+  &quot;showProjects&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Contenido&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props || {};
+    return {
+      glow: p.glow || 'notable',
+      showAvailable: p.available !== false,
+      showProjects: p.showProjects !== false,
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Spacing Scale" subtitle="4pt-based rhythm — 4 → 88px" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--surface-card); padding: 20px 24px; }
+  .row { display: flex; align-items: flex-end; gap: 14px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .bar { background: var(--color-accent); border-radius: 2px; width: 22px; }
+  .lbl { font-family: var(--font-mono); font-size: .6rem; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="item"><div class="bar" style="height:var(--space-1)"></div><span class="lbl">4</span></div>
+    <div class="item"><div class="bar" style="height:var(--space-2)"></div><span class="lbl">8</span></div>
+    <div class="item"><div class="bar" style="height:var(--space-3)"></div><span class="lbl">12</span></div>
+    <div class="item"><div class="bar" style="height:var(--space-4)"></div><span class="lbl">16</span></div>
+    <div class="item"><div class="bar" style="height:var(--space-6)"></div><span class="lbl">24</span></div>
+    <div class="item"><div class="bar" style="height:var(--space-8)"></div><span class="lbl">32</span></div>
+    <div class="item"><div class="bar" style="height:var(--space-12)"></div><span class="lbl">48</span></div>
+    <div class="item"><div class="bar" style="height:var(--space-16)"></div><span class="lbl">64</span></div>
+  </div>
+</body>
+</html>

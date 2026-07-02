@@ -1,0 +1,27 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Neutrals · Zinc" subtitle="Neutral scale — surfaces, text, borders" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--surface-card); }
+  .row { display: flex; gap: 0; }
+  .sw { flex: 1; height: 150px; display: flex; flex-direction: column; justify-content: flex-end; padding: 10px 12px; }
+  .name { font-size: .68rem; font-weight: 700; letter-spacing: .03em; }
+  .hex { font-family: var(--font-mono); font-size: .62rem; opacity: .75; margin-top: 2px; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw" style="background:var(--white); border-right:1px solid var(--border-default); color:var(--text-strong)"><span class="name">White</span><span class="hex">#FFFFFF · card</span></div>
+    <div class="sw" style="background:var(--zinc-50); color:var(--text-strong)"><span class="name">Zinc 50</span><span class="hex">#FAFAFA · page</span></div>
+    <div class="sw" style="background:var(--zinc-100); color:var(--text-strong)"><span class="name">Zinc 100</span><span class="hex">#F4F4F5 · subtle</span></div>
+    <div class="sw" style="background:var(--zinc-200); color:var(--text-strong)"><span class="name">Zinc 200</span><span class="hex">#E4E4E7 · border</span></div>
+    <div class="sw" style="background:var(--zinc-400); color:#fff"><span class="name">Zinc 400</span><span class="hex">#A1A1AA</span></div>
+    <div class="sw" style="background:var(--zinc-500); color:#fff"><span class="name">Zinc 500</span><span class="hex">#71717A · muted</span></div>
+    <div class="sw" style="background:var(--zinc-600); color:#fff"><span class="name">Zinc 600</span><span class="hex">#52525B · body</span></div>
+    <div class="sw" style="background:var(--zinc-800); color:#fff"><span class="name">Zinc 800</span><span class="hex">#27272A · strong</span></div>
+  </div>
+</body>
+</html>

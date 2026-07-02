@@ -1,0 +1,24 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Accent & Glow" subtitle="Monochrome accent — ink on light, white glow on dark" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; font-family: var(--font-sans); background: var(--surface-card); }
+  .row { display: flex; gap: 0; }
+  .sw { flex: 1; height: 150px; display: flex; flex-direction: column; justify-content: flex-end; padding: 12px 14px; }
+  .name { font-size: .72rem; font-weight: 700; letter-spacing: .04em; }
+  .hex { font-family: var(--font-mono); font-size: .68rem; opacity: .85; margin-top: 2px; }
+  .tok { font-family: var(--font-mono); font-size: .62rem; opacity: .7; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw" style="background:var(--color-accent); color:#fff"><span class="name">Accent</span><span class="hex">#0E0E11</span><span class="tok">--color-accent · ink ★</span></div>
+    <div class="sw" style="background:var(--color-accent-alt); color:#fff"><span class="name">Accent Alt</span><span class="hex">#3F3F46</span><span class="tok">--color-accent-alt</span></div>
+    <div class="sw" style="background:var(--ink-900); color:#fff"><span class="name">Glow / on-dark</span><span class="hex">rgba(255,255,255,.92)</span><span class="tok">--color-glow · white on ink</span></div>
+    <div class="sw" style="background:var(--gradient-accent); color:#fff"><span class="name">Silver Ring</span><span class="hex">f4f4f5 → 52525b</span><span class="tok">--gradient-accent · avatar</span></div>
+  </div>
+</body>
+</html>

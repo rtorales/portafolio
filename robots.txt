@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /ricardo-torales-brand-system/
+
+Sitemap: https://ricardotorales.com/sitemap.xml
