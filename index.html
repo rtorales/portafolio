@@ -892,6 +892,261 @@
     .certs-footer a:hover { color: var(--zinc-500); }
 
     /* ============================================================
+       DESARROLLOS PERSONALES
+    ============================================================ */
+    .desarrollos {
+      background: var(--zinc-50);
+      padding: 96px 0;
+    }
+
+    .dev-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 72px;
+    }
+
+    .dev-card {
+      background: var(--white);
+      border: 1px solid var(--zinc-200);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform .3s var(--ease-out), box-shadow .3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .dev-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+    .dev-card-accent {
+      height: 4px;
+      border-radius: 0;
+    }
+    .dev-card-accent--green  { background: linear-gradient(90deg, #10b981, #34d399); }
+    .dev-card-accent--violet { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+
+    .dev-card-header {
+      padding: 28px 28px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .dev-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .dev-icon-wrap--green  { background: #ecfdf3; }
+    .dev-icon-wrap--violet { background: #f5f3ff; }
+
+    .dev-card-meta { flex: 1; }
+
+    .dev-app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--font-mono);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      padding: 3px 10px;
+      margin-bottom: 10px;
+    }
+    .dev-app-badge--green  { color: #065f46; background: #ecfdf3; border: 1px solid #bbf7d0; }
+    .dev-app-badge--violet { color: #5b21b6; background: #f5f3ff; border: 1px solid #ddd6fe; }
+    .dev-app-badge::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+    }
+    .dev-app-badge--green::before  { background: #10b981; }
+    .dev-app-badge--violet::before { background: #7c3aed; }
+
+    .dev-card-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -.025em;
+      color: var(--ink-900);
+      line-height: 1.2;
+      margin: 0 0 6px;
+    }
+
+    .dev-card-tagline {
+      font-size: .9rem;
+      color: var(--zinc-500);
+      line-height: 1.55;
+    }
+
+    .dev-card-body { padding: 20px 28px 0; flex: 1; }
+
+    .dev-problem {
+      background: var(--zinc-50);
+      border: 1px solid var(--zinc-200);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+    }
+    .dev-problem-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--zinc-400);
+      margin-bottom: 6px;
+    }
+    .dev-problem p {
+      font-size: .88rem;
+      color: var(--zinc-600);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .dev-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .dev-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .88rem;
+      color: var(--zinc-600);
+      line-height: 1.5;
+    }
+    .dev-feat-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .dev-feat-icon--green  { background: #ecfdf3; color: #10b981; }
+    .dev-feat-icon--violet { background: #f5f3ff; color: #7c3aed; }
+
+    .dev-tech-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+    .dev-tech {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      color: var(--zinc-500);
+      background: var(--zinc-100);
+      border: 1px solid var(--zinc-200);
+      border-radius: 6px;
+      padding: 3px 8px;
+    }
+
+    .dev-card-footer {
+      padding: 20px 28px 28px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+
+    .dev-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: .85rem;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity .2s, transform .2s var(--ease-out);
+    }
+    .dev-btn-primary:hover { opacity: .85; transform: translateY(-1px); }
+    .dev-btn-primary--green  { background: var(--ink-900); color: #fff; }
+    .dev-btn-primary--violet { background: var(--ink-900); color: #fff; }
+
+    .dev-btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: .85rem;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 10px;
+      border: 1.5px solid var(--zinc-300);
+      background: transparent;
+      color: var(--ink-900);
+      text-decoration: none;
+      transition: border-color .2s, transform .2s var(--ease-out);
+    }
+    .dev-btn-outline:hover { border-color: var(--ink-900); color: var(--ink-900); transform: translateY(-1px); }
+
+    .dev-cta-box {
+      background: var(--ink-900);
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .dev-cta-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(80% 120% at 50% -10%, rgba(255,255,255,.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .dev-cta-tagline {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      margin-bottom: 14px;
+    }
+    .dev-cta-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -.03em;
+      color: #fff;
+      margin: 0 0 12px;
+      line-height: 1.15;
+    }
+    .dev-cta-desc {
+      font-size: .95rem;
+      color: rgba(255,255,255,.55);
+      max-width: 520px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+    .dev-cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .dev-grid { grid-template-columns: 1fr; }
+      .dev-cta-box { padding: 36px 24px; }
+    }
+
+    /* ============================================================
        CONTACTO (banda oscura ink)
     ============================================================ */
     .contacto {
@@ -1018,6 +1273,7 @@
         <li><a href="#competencias">Competencias</a></li>
         <li><a href="#experiencia">Experiencia</a></li>
         <li><a href="#formacion">Formación</a></li>
+        <li><a href="#desarrollos">Desarrollos</a></li>
         <li><a href="#contacto" class="nav-cta">Contactar</a></li>
       </ul>
       <a href="#contacto" class="nav-cta-mobile">Contactar</a>
@@ -1628,6 +1884,191 @@
           <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
       </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DESARROLLOS PERSONALES
+  ============================================================ -->
+  <section id="desarrollos" class="desarrollos">
+    <div class="container">
+      <div class="section-head rt-reveal">
+        <div>
+          <span class="eyebrow">Desarrollos propios</span>
+          <h2 class="section-title">Proyectos que construí por convicción</h2>
+        </div>
+        <p class="section-intro">Aplicaciones reales, desplegadas en producción, que resuelven problemas concretos — y que puedo replicar para tu organización.</p>
+      </div>
+
+      <div class="dev-grid">
+
+        <!-- FAMILYFINANCE -->
+        <article class="dev-card rt-reveal">
+          <div class="dev-card-accent dev-card-accent--green"></div>
+          <div class="dev-card-header">
+            <div class="dev-icon-wrap dev-icon-wrap--green" aria-hidden="true">
+              <!-- Finance icon -->
+              <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <rect x="2" y="2" width="60" height="60" rx="16" fill="#10b981"/>
+                <path d="M22 18h22M22 18v28M22 32h14" stroke="#fff" stroke-width="4.5" stroke-linecap="round"/>
+                <circle cx="44" cy="46" r="3.5" fill="#fff"/>
+              </svg>
+            </div>
+            <div class="dev-card-meta">
+              <div class="dev-app-badge dev-app-badge--green">En producción · App web</div>
+              <h3 class="dev-card-title">FamilyFinance Pro</h3>
+              <p class="dev-card-tagline">Gestión financiera familiar inteligente, pensada para Paraguay.</p>
+            </div>
+          </div>
+
+          <div class="dev-card-body">
+            <div class="dev-problem">
+              <div class="dev-problem-label">El problema que resuelve</div>
+              <p>Las familias paraguayas no tenían una herramienta de finanzas en Guaraníes (Gs.), con flujo de caja real, control de préstamos y proyecciones — sin depender de planillas manuales desactualizadas.</p>
+            </div>
+
+            <ul class="dev-features">
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--green" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Flujo de caja con saldo corrido</strong> — seguimiento entrada por entrada con proyecciones del mes.</span>
+              </li>
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--green" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Gestión de préstamos y cuotas</strong> — planes de pago, avance y capital pendiente.</span>
+              </li>
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--green" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Proyecciones a 12 meses</strong> — línea de saldo acumulado con marcador de «HOY».</span>
+              </li>
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--green" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Multi-cuenta y exportación Excel</strong> — bancos, efectivo y ahorros; descarga .xlsx lista para presentar.</span>
+              </li>
+            </ul>
+
+            <div class="dev-tech-row">
+              <span class="dev-tech">Next.js</span>
+              <span class="dev-tech">React</span>
+              <span class="dev-tech">TypeScript</span>
+              <span class="dev-tech">Tailwind CSS</span>
+              <span class="dev-tech">Vercel</span>
+              <span class="dev-tech">Auth seguro</span>
+            </div>
+          </div>
+
+          <div class="dev-card-footer">
+            <a href="https://familyfinance-omega.vercel.app/" target="_blank" rel="noopener noreferrer" class="dev-btn-primary dev-btn-primary--green" id="btn-familyfinance-demo">
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Ver demo en vivo
+            </a>
+            <a href="#contacto" class="dev-btn-outline" id="btn-familyfinance-inquire">
+              Quiero algo similar
+            </a>
+          </div>
+        </article>
+
+        <!-- EKKLESIA -->
+        <article class="dev-card rt-reveal" style="transition-delay:.1s;">
+          <div class="dev-card-accent dev-card-accent--violet"></div>
+          <div class="dev-card-header">
+            <div class="dev-icon-wrap dev-icon-wrap--violet" aria-hidden="true">
+              <svg viewBox="0 0 72 72" width="28" height="28" fill="none" aria-hidden="true">
+                <rect x="8" y="34" width="5" height="22" rx="1.8" fill="hsl(263 70% 50%)" opacity=".38"/>
+                <rect x="17" y="28" width="5" height="28" rx="1.8" fill="hsl(263 70% 50%)" opacity=".6"/>
+                <rect x="50" y="28" width="5" height="28" rx="1.8" fill="hsl(263 70% 50%)" opacity=".6"/>
+                <rect x="59" y="34" width="5" height="22" rx="1.8" fill="hsl(263 70% 50%)" opacity=".38"/>
+                <rect x="33.5" y="4" width="5" height="52" rx="1.8" fill="hsl(263 70% 50%)"/>
+                <rect x="24" y="20" width="24" height="5" rx="1.8" fill="hsl(263 70% 50%)"/>
+                <circle cx="36" cy="22.5" r="2.8" fill="hsl(43 96% 56%)"/>
+              </svg>
+            </div>
+            <div class="dev-card-meta">
+              <div class="dev-app-badge dev-app-badge--violet">Beta abierta · App web</div>
+              <h3 class="dev-card-title">Ekklesia</h3>
+              <p class="dev-card-tagline">Plataforma de gestión integral para iglesias evangelistas.</p>
+            </div>
+          </div>
+
+          <div class="dev-card-body">
+            <div class="dev-problem">
+              <div class="dev-problem-label">El problema que resuelve</div>
+              <p>Los equipos de ministerio coordinaban por WhatsApp sin visibilidad centralizada: quién toca, qué canciones, cuándo y en qué rol. Ekklesia reemplaza ese caos con una plataforma diseñada específicamente para la dinámica de una iglesia.</p>
+            </div>
+
+            <ul class="dev-features">
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--violet" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Agenda de servicios</strong> — vista semanal y mensual, servicios regulares y eventos especiales.</span>
+              </li>
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--violet" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Ministerio de alabanza</strong> — integrantes, roles, instrumentos y asignación por servicio.</span>
+              </li>
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--violet" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Biblioteca de canciones</strong> — tonalidad, tempo, etiquetas y búsqueda rápida.</span>
+              </li>
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--violet" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Control de accesos multi-rol</strong> — Propietario, Admin, Líder, Editor y Visitante.</span>
+              </li>
+            </ul>
+
+            <div class="dev-tech-row">
+              <span class="dev-tech">Next.js</span>
+              <span class="dev-tech">React</span>
+              <span class="dev-tech">TypeScript</span>
+              <span class="dev-tech">shadcn/ui</span>
+              <span class="dev-tech">Vercel</span>
+              <span class="dev-tech">Mobile-First</span>
+            </div>
+          </div>
+
+          <div class="dev-card-footer">
+            <a href="https://ekklesia-app-kappa.vercel.app/" target="_blank" rel="noopener noreferrer" class="dev-btn-primary dev-btn-primary--violet" id="btn-ekklesia-demo">
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Ver demo en vivo
+            </a>
+            <a href="#contacto" class="dev-btn-outline" id="btn-ekklesia-inquire">
+              Quiero algo similar
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- CTA de cierre -->
+      <div class="dev-cta-box rt-reveal">
+        <p class="dev-cta-tagline">Capacidad de desarrollo · Full-Stack · Producto propio</p>
+        <h3 class="dev-cta-title">¿Tenés una idea que merece convertirse en producto?</h3>
+        <p class="dev-cta-desc">Puedo diseñar, desarrollar y desplegar la solución que tu negocio, organización o comunidad necesita — con la misma mentalidad de producto que aplico en estos proyectos.</p>
+        <div class="dev-cta-actions">
+          <a href="https://wa.me/595981226529" target="_blank" rel="noopener noreferrer" class="btn btn-white" id="btn-dev-cta-whatsapp">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Hablemos por WhatsApp
+          </a>
+          <a href="mailto:ricardotorales@outlook.com" class="btn btn-outline" style="border-color:rgba(255,255,255,.25); color:#fff;" id="btn-dev-cta-email">
+            Escribir por email
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
