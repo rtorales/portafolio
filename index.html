@@ -183,6 +183,24 @@
     @keyframes rt-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
     @keyframes rt-drift  { 0% { transform: translate(0,0) scale(1); } 50% { transform: translate(4%,-4%) scale(1.12); } 100% { transform: translate(0,0) scale(1); } }
     @keyframes rt-drift2 { 0% { transform: translate(0,0) scale(1); } 50% { transform: translate(-5%,4%) scale(1.15); } 100% { transform: translate(0,0) scale(1); } }
+    @keyframes rt-blink { 50% { opacity: 0; } }
+    @keyframes rt-shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    @keyframes rt-scrollwheel {
+      0% { transform: translateY(0); opacity: 1; }
+      70% { transform: translateY(10px); opacity: 0; }
+      100% { transform: translateY(10px); opacity: 0; }
+    }
+    @keyframes rt-marquee { to { transform: translateX(-50%); } }
+
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
 
     /* El estado oculto solo aplica cuando hay JS (clase .js en <html>);
        sin JS el contenido queda visible. */
@@ -197,6 +215,10 @@
       .rt-reveal { opacity: 1 !important; transform: none !important; }
       .rt-glow, [class*="pulse"] { animation: none !important; }
       html { scroll-behavior: auto; }
+      .hero-name { animation: none !important; }
+      .marquee-track { animation: none !important; }
+      .scroll-wheel { animation: none !important; }
+      .rt-canvas { display: none !important; }
     }
 
     /* ============================================================
@@ -429,6 +451,12 @@
       letter-spacing: -.035em;
       margin: 0 0 18px;
       color: #fff;
+      background: linear-gradient(110deg, #fff 38%, rgba(255,255,255,.5) 50%, #fff 62%);
+      background-size: 220% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rt-shimmer 8s linear infinite;
     }
     .hero-title {
       font-size: clamp(1.05rem, 2vw, 1.28rem);
@@ -439,6 +467,93 @@
       font-weight: 400;
     }
     .hero-title strong { color: rgba(255,255,255,.92); font-weight: 600; }
+    .hero-typed-line { display: block; min-height: 1.5em; }
+    .type-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.05em;
+      background: rgba(255,255,255,.85);
+      margin-left: 3px;
+      vertical-align: -0.15em;
+      animation: rt-blink 1s step-end infinite;
+    }
+
+    /* Canvas de partículas (fondos oscuros) */
+    .rt-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    /* Indicador de scroll (mouse animado) */
+    .hero-scroll {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 9px;
+      padding-bottom: 34px;
+      text-decoration: none;
+    }
+    .hero-scroll-label {
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.38);
+      transition: color .2s ease;
+    }
+    .hero-scroll:hover .hero-scroll-label { color: rgba(255,255,255,.7); }
+    .scroll-mouse {
+      width: 21px;
+      height: 33px;
+      border: 1.5px solid rgba(255,255,255,.32);
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+    }
+    .scroll-wheel {
+      width: 3px;
+      height: 7px;
+      background: rgba(255,255,255,.75);
+      border-radius: 2px;
+      margin-top: 5px;
+      animation: rt-scrollwheel 1.8s ease-in-out infinite;
+    }
+
+    /* Marquee de tecnologías */
+    .marquee {
+      background: var(--ink-950);
+      border-top: 1px solid rgba(255,255,255,.07);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      overflow: hidden;
+      padding: 15px 0;
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: rt-marquee 42s linear infinite;
+      will-change: transform;
+    }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    .marquee-group {
+      display: flex;
+      align-items: center;
+      gap: 44px;
+      padding-right: 44px;
+      flex-shrink: 0;
+    }
+    .marquee-item {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.42);
+      white-space: nowrap;
+    }
+    .marquee-sep { color: rgba(255,255,255,.18); font-size: .7rem; }
     .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 38px; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
     .hero-contact { display: flex; flex-wrap: wrap; gap: 10px 22px; }
@@ -475,7 +590,7 @@
       position: relative;
       max-width: var(--container-max);
       margin: 56px auto 0;
-      padding: 0 24px 72px;
+      padding: 0 24px 36px;
     }
     .hero-stats-grid {
       display: grid;
@@ -1287,6 +1402,7 @@
     <div class="rt-glow hero-glow-1" aria-hidden="true"></div>
     <div class="rt-glow hero-glow-2" aria-hidden="true"></div>
     <div class="hero-grid-texture" aria-hidden="true"></div>
+    <canvas class="rt-canvas" aria-hidden="true"></canvas>
 
     <div class="hero-inner">
       <div class="rt-reveal is-in">
@@ -1297,7 +1413,8 @@
         <h1 class="hero-name">Ricardo Torales</h1>
         <p class="hero-title">
           Gerente de Proyectos Tecnológicos —
-          <strong>transformación digital, inteligencia artificial y automatización de procesos de alto impacto.</strong>
+          <span class="sr-only">transformación digital, inteligencia artificial y automatización de procesos de alto impacto.</span>
+          <strong class="hero-typed-line" aria-hidden="true"><span id="typed">transformación digital</span><span class="type-cursor"></span></strong>
         </p>
         <div class="hero-tags">
           <span class="tag tag--dark">Project Manager</span>
@@ -1354,40 +1471,85 @@
     <div class="hero-stats" aria-label="Estadísticas profesionales">
       <div class="hero-stats-grid rt-reveal is-in">
         <div class="stat">
-          <div class="stat-number">14<span>+</span></div>
+          <div class="stat-number" data-target="14">14<span>+</span></div>
           <div class="stat-label">Años de experiencia</div>
         </div>
         <div class="stat">
-          <div class="stat-number">34</div>
+          <div class="stat-number" data-target="34">34</div>
           <div class="stat-label">Certificaciones</div>
         </div>
         <div class="stat">
-          <div class="stat-number">3</div>
+          <div class="stat-number" data-target="3">3</div>
           <div class="stat-label">Roles activos</div>
         </div>
         <div class="stat">
-          <div class="stat-number">2</div>
+          <div class="stat-number" data-target="2">2</div>
           <div class="stat-label">Maestrías</div>
         </div>
         <div class="stat">
-          <div class="stat-number">15<span>+</span></div>
+          <div class="stat-number" data-target="15">15<span>+</span></div>
           <div class="stat-label">Profesionales liderados</div>
         </div>
         <div class="stat">
-          <div class="stat-number">10<span>+</span></div>
+          <div class="stat-number" data-target="10">10<span>+</span></div>
           <div class="stat-label">Plataformas empresariales</div>
         </div>
         <div class="stat">
-          <div class="stat-number">12k</div>
+          <div class="stat-number" data-target="12">12<span>k</span></div>
           <div class="stat-label">Horas/año automatizadas</div>
         </div>
         <div class="stat">
-          <div class="stat-number">4<span>+</span></div>
+          <div class="stat-number" data-target="4">4<span>+</span></div>
           <div class="stat-label">Industrias</div>
         </div>
       </div>
     </div>
+
+    <a class="hero-scroll" href="#perfil" aria-label="Ir a la sección Perfil">
+      <span class="scroll-mouse" aria-hidden="true"><span class="scroll-wheel"></span></span>
+      <span class="hero-scroll-label">Scroll</span>
+    </a>
   </header>
+
+  <!-- ============================================================
+       MARQUEE DE TECNOLOGÍAS
+  ============================================================ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-group">
+        <span class="marquee-item">Dynamics 365</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">Salesforce</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">SAP B1</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">Azure AI</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">Power Platform</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">Copilot Studio</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">PMBOK</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">SCRUM</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">ITIL</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">RPA</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">Business Intelligence</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">SQL Server</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">.NET</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">Angular</span><span class="marquee-sep">▸</span>
+      </div>
+      <div class="marquee-group">
+        <span class="marquee-item">Dynamics 365</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">Salesforce</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">SAP B1</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">Azure AI</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">Power Platform</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">Copilot Studio</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">PMBOK</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">SCRUM</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">ITIL</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">RPA</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">Business Intelligence</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">SQL Server</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">.NET</span><span class="marquee-sep">▸</span>
+        <span class="marquee-item">Angular</span><span class="marquee-sep">▸</span>
+      </div>
+    </div>
+  </div>
 
   <!-- ============================================================
        PERFIL
@@ -2077,6 +2239,7 @@
   ============================================================ -->
   <section id="contacto" class="contacto">
     <div class="rt-glow contacto-glow" aria-hidden="true"></div>
+    <canvas class="rt-canvas" aria-hidden="true"></canvas>
     <div class="contacto-inner rt-reveal">
       <span class="eyebrow eyebrow--dark">Contacto</span>
       <h2>Construyamos algo de alto impacto</h2>
@@ -2132,7 +2295,16 @@
         });
       }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-      document.querySelectorAll('.rt-reveal:not(.is-in)').forEach((el) => revealObserver.observe(el));
+      // Stagger automático en grillas (retardo por posición)
+    document.querySelectorAll('.skills-grid, .cert-grid, .edu-grid, .cases-grid, .contact-cards, .dev-grid').forEach((grid) => {
+      Array.from(grid.children).forEach((el, i) => {
+        if (el.classList.contains('rt-reveal') && !el.style.transitionDelay) {
+          el.style.transitionDelay = ((i % 4) * 0.07) + 's';
+        }
+      });
+    });
+
+    document.querySelectorAll('.rt-reveal:not(.is-in)').forEach((el) => revealObserver.observe(el));
 
       // Enlace activo en la navegación según sección visible
       const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
@@ -2151,6 +2323,154 @@
     } else {
       document.querySelectorAll('.rt-reveal').forEach((el) => el.classList.add('is-in'));
     }
+
+    // ============================================================
+    // Animaciones de dinamismo (typewriter, contadores, partículas)
+    // Todas respetan prefers-reduced-motion.
+    // ============================================================
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // --- Typewriter en el subtítulo del hero ---
+    (function () {
+      const el = document.getElementById('typed');
+      if (!el) return;
+      const phrases = [
+        'transformación digital',
+        'inteligencia artificial',
+        'automatización de procesos',
+        'PMO & gobernanza de TI',
+        'hiperautomatización'
+      ];
+      if (reducedMotion) {
+        el.textContent = phrases[0];
+        const cursor = document.querySelector('.type-cursor');
+        if (cursor) cursor.style.display = 'none';
+        return;
+      }
+      let phrase = 0, chars = phrases[0].length, deleting = false;
+      function tick() {
+        const current = phrases[phrase];
+        if (!deleting) {
+          chars++;
+          if (chars >= current.length) { chars = current.length; deleting = true; setTimeout(tick, 2200); el.textContent = current; return; }
+        } else {
+          chars--;
+          if (chars <= 0) { chars = 0; deleting = false; phrase = (phrase + 1) % phrases.length; }
+        }
+        el.textContent = current.slice(0, chars);
+        setTimeout(tick, deleting ? 32 : 58);
+      }
+      setTimeout(tick, 2200);
+    })();
+
+    // --- Contadores animados en las estadísticas ---
+    (function () {
+      const nums = document.querySelectorAll('.stat-number[data-target]');
+      if (!nums.length || reducedMotion || !('IntersectionObserver' in window)) return;
+      function animate(el) {
+        const target = parseInt(el.dataset.target, 10);
+        const suffix = el.querySelector('span');
+        const start = performance.now();
+        const dur = 1300;
+        function frame(now) {
+          const t = Math.min((now - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - t, 3);
+          el.firstChild.textContent = Math.round(target * eased);
+          if (t < 1) requestAnimationFrame(frame);
+        }
+        // El primer nodo de texto lleva el número; el span (sufijo) queda intacto
+        if (el.firstChild && el.firstChild.nodeType === 3) requestAnimationFrame(frame);
+      }
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animate(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+      nums.forEach((el) => counterObserver.observe(el));
+    })();
+
+    // --- Fondo de partículas (constelación) en bandas oscuras ---
+    (function () {
+      if (reducedMotion || window.innerWidth < 720) return;
+      const canvases = document.querySelectorAll('canvas.rt-canvas');
+      if (!canvases.length) return;
+      const DPR = Math.min(window.devicePixelRatio || 1, 2);
+      const LINK_DIST = 110;
+
+      canvases.forEach((canvas) => {
+        const ctx = canvas.getContext('2d');
+        const parent = canvas.parentElement;
+        let w = 0, h = 0, raf = null, visible = false;
+        let particles = [];
+
+        function resize() {
+          w = parent.clientWidth;
+          h = parent.clientHeight;
+          canvas.width = w * DPR;
+          canvas.height = h * DPR;
+          ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+          const count = Math.min(60, Math.round((w * h) / 26000));
+          particles = Array.from({ length: count }, () => ({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: (Math.random() - .5) * .35,
+            vy: (Math.random() - .5) * .35,
+            r: Math.random() * 1.3 + .6
+          }));
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, w, h);
+          for (const p of particles) {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0) p.x = w; else if (p.x > w) p.x = 0;
+            if (p.y < 0) p.y = h; else if (p.y > h) p.y = 0;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255,255,255,.38)';
+            ctx.fill();
+          }
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x;
+              const dy = particles[i].y - particles[j].y;
+              const d = Math.hypot(dx, dy);
+              if (d < LINK_DIST) {
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.strokeStyle = 'rgba(255,255,255,' + (.11 * (1 - d / LINK_DIST)).toFixed(3) + ')';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+              }
+            }
+          }
+          raf = requestAnimationFrame(draw);
+        }
+
+        function start() { if (!raf && visible && !document.hidden) { raf = requestAnimationFrame(draw); } }
+        function stop() { if (raf) { cancelAnimationFrame(raf); raf = null; } }
+
+        // Solo anima cuando la banda es visible y la pestaña está activa
+        new IntersectionObserver((entries) => {
+          visible = entries[0].isIntersecting;
+          visible ? start() : stop();
+        }, { threshold: 0 }).observe(parent);
+
+        document.addEventListener('visibilitychange', () => { document.hidden ? stop() : start(); });
+
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(resize, 150);
+        });
+
+        resize();
+      });
+    })();
   </script>
 
 </body>
