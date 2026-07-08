@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /ricardo-torales-brand-system/
 
-Sitemap: https://rtorales.github.io/portafolio/sitemap.xml
+Sitemap: https://www.ricardotorales.com/sitemap.xml

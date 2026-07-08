@@ -2,7 +2,7 @@
 
 Sitio personal de **Ricardo Torales**, Gerente de Proyectos de Tecnología y Consultor en transformación digital, IA y automatización de procesos (Asunción, Paraguay).
 
-🔗 **Live:** [rtorales.github.io/portafolio](https://rtorales.github.io/portafolio/)
+🔗 **Live:** [www.ricardotorales.com](https://www.ricardotorales.com/)
 
 ## Stack
 
