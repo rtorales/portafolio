@@ -1,0 +1,25 @@
+# Ricardo Torales Ozorio
+
+> Consultor Independiente de TI y Senior IT Project Manager radicado en Paraguay. Especialista en implementación de sistemas corporativos (ERP/CRM), desarrollo de software y estrategia tecnológica.
+
+Este sitio web sirve como portafolio profesional, currículum y punto de contacto para oportunidades de consultoría, auditoría de TI y roles de liderazgo senior en tecnología.
+
+## Sobre Mí
+Soy un profesional de Tecnología de la Información con amplia trayectoria en la dirección técnica y gestión de proyectos. Actualmente me encuentro cursando una Maestría en Gestión de Proyectos y mi enfoque se centra en alinear la tecnología con los objetivos estratégicos del negocio.
+
+## Áreas Clave de Experiencia y Servicios
+- **Gestión de Proyectos y Gobernanza:** Liderazgo de proyectos tecnológicos complejos, auditorías de TI e implementación de marcos de trabajo como ITIL.
+- **Implementación ERP y CRM:** Experiencia profunda en la auditoría, migración y despliegue de sistemas como Microsoft Dynamics 365 (ej. Proyecto NEXGEN) y SAP Business One.
+- **Análisis de Datos e Inteligencia de Negocios:** Creación de reportes ejecutivos y visualización de datos utilizando Power BI y SQL.
+- **Desarrollo Web Moderno:** Construcción de aplicaciones web utilizando Next.js, Supabase, Tailwind CSS, Angular y ecosistemas en la nube como Firebase.
+- **Estrategia de Inteligencia Artificial:** Integración de herramientas de IA en procesos de gestión de talento y optimización de flujos de trabajo.
+
+## Estructura del Sitio y Enlaces de Interés
+A continuación, se detallan las secciones principales del sitio para facilitar la navegación:
+
+- [Inicio](https://www.ricardotorales.com/): Resumen ejecutivo de mi perfil profesional y propuesta de valor.
+- [Proyectos](https://www.ricardotorales.com/#proyectos): Detalles sobre implementaciones pasadas, consultorías de gobernanza y desarrollo de aplicaciones web.
+- [Contacto](https://www.ricardotorales.com/#contacto): Vías de comunicación para propuestas laborales, consultorías o colaboraciones.
+
+## Notas Adicionales
+Para consultas profesionales, revisión de arquitectura de sistemas o propuestas para roles de liderazgo, por favor utilizar la sección de contacto del sitio web.
