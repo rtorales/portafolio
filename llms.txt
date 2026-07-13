@@ -30,6 +30,16 @@ Este sitio es el portafolio profesional, currículum y punto de contacto de Rica
 - Maestría en Gestión de Sistemas Informáticos
 - Licenciatura en Ciencias Informáticas
 
+## Blog
+
+Artículos sobre inteligencia artificial, transformación digital, automatización y ciberseguridad para líderes de TI:
+
+- [IA generativa en la empresa: guía práctica para líderes de TI](https://www.ricardotorales.com/blog/ia-generativa-empresas-paraguay/): Casos de uso reales, gobernanza de datos y errores que frenan la adopción de IA generativa.
+- [Ciberseguridad para PYMES: 7 controles esenciales](https://www.ricardotorales.com/blog/ciberseguridad-pymes-paraguay/): Controles de bajo costo y alto impacto para proteger pequeñas empresas.
+- [Automatización de procesos con Power Platform](https://www.ricardotorales.com/blog/automatizacion-procesos-power-platform/): Hoja de ruta para automatizar procesos manuales con Power Automate y Power Apps.
+- [Microsoft Copilot en el trabajo: ¿productividad real o hype?](https://www.ricardotorales.com/blog/microsoft-copilot-productividad-empresarial/): Análisis del valor real de Copilot y cómo medir su retorno.
+- [Arquitectura Zero Trust: por qué el perímetro ya no alcanza](https://www.ricardotorales.com/blog/arquitectura-zero-trust-empresa/): Qué significa Zero Trust en la práctica y cómo iniciar la transición.
+
 ## Contacto
 
 - Email: ricardotorales@outlook.com

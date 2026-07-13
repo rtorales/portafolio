@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Arquitectura Zero Trust: por qué el perímetro ya no alcanza | Ricardo Torales</title>
+  <meta name="description" content="El modelo de seguridad basado en perímetro murió. Qué significa Zero Trust en la práctica y cómo iniciar la transición sin frenar la operación del negocio." />
+  <link rel="canonical" href="https://www.ricardotorales.com/blog/arquitectura-zero-trust-empresa/" />
+  <meta name="author" content="Ricardo Torales" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Ricardo Torales" />
+  <meta property="og:title" content="Arquitectura Zero Trust: por qué el perímetro tradicional ya no alcanza" />
+  <meta property="og:description" content="El modelo 'confiar pero verificar' murió. Qué significa Zero Trust en la práctica y cómo iniciar la transición sin frenar el negocio." />
+  <meta property="og:url" content="https://www.ricardotorales.com/blog/arquitectura-zero-trust-empresa/" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://www.ricardotorales.com/img/ricardo-torales.jpeg" />
+  <meta property="article:published_time" content="2026-06-25T09:00:00-03:00" />
+  <meta property="article:modified_time" content="2026-06-25T09:00:00-03:00" />
+  <meta property="article:author" content="Ricardo Torales" />
+  <meta property="article:section" content="Ciberseguridad" />
+  <meta property="article:tag" content="Zero Trust" />
+  <meta property="article:tag" content="Ciberseguridad" />
+  <meta property="article:tag" content="Arquitectura de Seguridad" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Arquitectura Zero Trust: por qué el perímetro ya no alcanza" />
+  <meta name="twitter:description" content="Qué significa Zero Trust en la práctica y cómo iniciar la transición sin frenar la operación." />
+  <meta name="twitter:image" content="https://www.ricardotorales.com/img/ricardo-torales.jpeg" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/blog/assets/blog.css" />
+
+  <script>document.documentElement.className = 'js';</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.ricardotorales.com/blog/arquitectura-zero-trust-empresa/#article",
+        "headline": "Arquitectura Zero Trust: por qué el perímetro tradicional ya no alcanza",
+        "description": "El modelo de seguridad basado en perímetro murió. Qué significa Zero Trust en la práctica y cómo iniciar la transición sin frenar la operación del negocio.",
+        "image": "https://www.ricardotorales.com/img/ricardo-torales.jpeg",
+        "datePublished": "2026-06-25T09:00:00-03:00",
+        "dateModified": "2026-06-25T09:00:00-03:00",
+        "inLanguage": "es",
+        "articleSection": "Ciberseguridad",
+        "keywords": "Zero Trust, ciberseguridad, arquitectura de seguridad, identidad, microsegmentación, seguridad empresarial",
+        "wordCount": 990,
+        "author": {
+          "@type": "Person",
+          "@id": "https://www.ricardotorales.com/#person",
+          "name": "Ricardo Torales",
+          "url": "https://www.ricardotorales.com/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://www.ricardotorales.com/#person",
+          "name": "Ricardo Torales"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.ricardotorales.com/blog/arquitectura-zero-trust-empresa/"
+        },
+        "isPartOf": { "@id": "https://www.ricardotorales.com/blog/#blog" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.ricardotorales.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.ricardotorales.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Arquitectura Zero Trust", "item": "https://www.ricardotorales.com/blog/arquitectura-zero-trust-empresa/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="Inicio">
+        <span class="nav-monogram" aria-hidden="true">RT</span>
+        <span class="nav-name">Ricardo Torales</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#perfil">Perfil</a></li>
+        <li><a href="/#proyectos">Proyectos</a></li>
+        <li><a href="/#experiencia">Experiencia</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/#contacto" class="nav-cta">Contactar</a></li>
+      </ul>
+      <a href="/#contacto" class="nav-cta-mobile">Contactar</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="/">Inicio</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Arquitectura Zero Trust
+    </nav>
+  </div>
+
+  <article>
+    <header class="article-header">
+      <span class="tag--cat">Ciberseguridad</span>
+      <h1 class="article-title">Arquitectura Zero Trust: por qué el perímetro tradicional ya no alcanza</h1>
+      <p class="article-lead">Durante décadas, la seguridad empresarial funcionó como un castillo: un muro fuerte y un foso, y adentro todos eran de confianza. El problema es que el trabajo remoto, la nube y los ataques modernos ya cruzaron el foso.</p>
+      <div class="article-meta">
+        <div class="article-author">
+          <img class="article-author-avatar" src="/img/ricardo-torales.jpeg" alt="Ricardo Torales" width="42" height="42" loading="lazy" />
+          <div>
+            <div class="article-author-name">Ricardo Torales</div>
+            <div class="article-author-role">Gerente de Proyectos de Tecnología · PMO</div>
+          </div>
+        </div>
+        <div class="article-meta-stats">
+          <time datetime="2026-06-25">25 jun 2026</time>
+          <span class="dot"></span>
+          <span>8 min de lectura</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="article-body">
+      <p>El modelo de seguridad tradicional se basaba en una idea simple: construir un perímetro fuerte —firewalls, VPN, red corporativa— y confiar en todo lo que estuviera dentro. Funcionaba cuando los empleados trabajaban en la oficina, con equipos de la empresa, accediendo a servidores en el mismo edificio. Ese mundo ya no existe.</p>
+
+      <p>Hoy la gente trabaja desde casa, desde el celular, desde cafeterías. Las aplicaciones viven en la nube. Los proveedores necesitan acceso a ciertos sistemas. El "adentro" y el "afuera" se difuminaron, y con ellos, la utilidad del muro. Peor aún: una vez que un atacante cruza el perímetro —con una contraseña robada, por ejemplo— tiene libertad de movimiento dentro de la red. Ahí es donde entra <strong>Zero Trust</strong>.</p>
+
+      <h2>Qué es realmente Zero Trust</h2>
+      <p>Zero Trust se resume en un principio: <strong>"nunca confíes, siempre verifica"</strong>. En lugar de asumir que algo es seguro por estar dentro de la red, cada acceso se verifica como si viniera de una red abierta y hostil. No importa si la solicitud viene de la oficina o de otro continente: se valida la identidad, el dispositivo y el contexto, cada vez.</p>
+
+      <blockquote>Zero Trust no es un producto que se compra. Es una estrategia de arquitectura que se construye por capas, a lo largo del tiempo.</blockquote>
+
+      <p>Conviene desarmar un malentendido común: ningún proveedor "te vende Zero Trust". Hay tecnologías que lo habilitan, pero el modelo es un enfoque de diseño, no una licencia.</p>
+
+      <h2>Los tres pilares</h2>
+      <p>Una implementación de Zero Trust se apoya en tres verificaciones constantes:</p>
+      <ul>
+        <li><strong>Identidad:</strong> confirmar que el usuario es quien dice ser, con autenticación fuerte (MFA) y políticas basadas en riesgo. La identidad se vuelve el nuevo perímetro.</li>
+        <li><strong>Dispositivo:</strong> validar que el equipo desde el que se accede cumple los requisitos de seguridad —actualizado, cifrado, gestionado— antes de conceder acceso.</li>
+        <li><strong>Acceso de mínimo privilegio:</strong> dar solo el acceso necesario, por el tiempo necesario. Si una cuenta se compromete, el daño queda contenido.</li>
+      </ul>
+
+      <h2>Microsegmentación: contener el daño</h2>
+      <p>En la red plana tradicional, entrar en un punto daba acceso a casi todo. La microsegmentación divide la red en zonas pequeñas y aisladas, de modo que un atacante que comprometa un segmento no pueda moverse lateralmente hacia los datos críticos. Es la diferencia entre un incendio contenido en una habitación y uno que consume todo el edificio.</p>
+
+      <div class="callout">
+        <span class="callout-label">Aterrizaje práctico</span>
+        <p>No hace falta reconstruir todo de golpe. La transición realista empieza por <strong>la identidad</strong>: MFA en todo, acceso condicional y revisión de privilegios. Es el pilar de mayor impacto y el punto de partida natural.</p>
+      </div>
+
+      <h2>Cómo empezar sin frenar el negocio</h2>
+      <p>El error sería intentar un "big bang" que paralice la operación. Zero Trust se adopta por etapas:</p>
+      <ul>
+        <li><strong>Fase 1 — Identidad:</strong> implementar MFA universal y políticas de acceso condicional. El mayor retorno por el menor esfuerzo.</li>
+        <li><strong>Fase 2 — Dispositivos:</strong> asegurar y gestionar los equipos que acceden a recursos corporativos.</li>
+        <li><strong>Fase 3 — Segmentación:</strong> aislar los sistemas y datos más críticos primero, y expandir desde ahí.</li>
+        <li><strong>Fase 4 — Visibilidad:</strong> monitorear y analizar continuamente para detectar comportamientos anómalos.</li>
+      </ul>
+
+      <div class="key-takeaways">
+        <h2>Para llevar</h2>
+        <ul>
+          <li>El perímetro tradicional perdió sentido con la nube y el trabajo remoto.</li>
+          <li>Zero Trust es un principio de diseño —"nunca confíes, siempre verifica"— no un producto.</li>
+          <li>Se apoya en tres pilares: identidad, dispositivo y mínimo privilegio.</li>
+          <li>La microsegmentación contiene el daño de una brecha.</li>
+          <li>Empieza por la identidad y avanza por fases, sin frenar la operación.</li>
+        </ul>
+      </div>
+
+      <p>Zero Trust no es una moda de la industria de seguridad: es la respuesta lógica a un entorno donde el perímetro dejó de existir. La transición requiere tiempo y compromiso de la dirección, pero cada fase reduce riesgo de forma tangible desde el primer día. Y en un contexto donde los incidentes son cuestión de cuándo y no de si, esa reducción es una de las mejores inversiones que una organización puede hacer.</p>
+    </div>
+
+    <aside class="author-box">
+      <div class="author-box-inner">
+        <img src="/img/ricardo-torales.jpeg" alt="Ricardo Torales" width="64" height="64" loading="lazy" />
+        <div>
+          <div class="author-box-name">Ricardo Torales</div>
+          <div class="author-box-role">Gerente de Proyectos de Tecnología · PMO &amp; Business Transformation</div>
+          <p>Más de 14 años en gobernanza de TI, arquitectura de seguridad y transformación digital en empresas de Paraguay y la región.</p>
+          <div class="author-box-links">
+            <a href="/#contacto">Contactar →</a>
+            <a href="https://www.linkedin.com/in/ricardo-torales" target="_blank" rel="noopener">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </article>
+
+  <section class="related" aria-label="Artículos relacionados">
+    <h2>Seguir leyendo</h2>
+    <div class="related-grid">
+      <article class="related-card">
+        <span class="tag--cat">Ciberseguridad</span>
+        <h3><a href="/blog/ciberseguridad-pymes-paraguay/">Ciberseguridad para PYMES: 7 controles esenciales</a></h3>
+      </article>
+      <article class="related-card">
+        <span class="tag--cat">Inteligencia Artificial</span>
+        <h3><a href="/blog/ia-generativa-empresas-paraguay/">IA generativa en la empresa: guía para líderes de TI</a></h3>
+      </article>
+      <article class="related-card">
+        <span class="tag--cat">Automatización</span>
+        <h3><a href="/blog/automatizacion-procesos-power-platform/">Automatización de procesos con Power Platform</a></h3>
+      </article>
+    </div>
+  </section>
+
+  <section class="article-cta">
+    <div class="article-cta-inner">
+      <h2>¿Modernizando tu arquitectura de seguridad?</h2>
+      <p>Acompaño a organizaciones en la transición hacia Zero Trust por fases, con foco en impacto y continuidad operativa.</p>
+      <a href="/#contacto" class="btn btn-white">Conversemos</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Ricardo Torales · Gerente de Tecnología &amp; Consultor en Automatización · Asunción, Paraguay · <a href="mailto:ricardotorales@outlook.com">ricardotorales@outlook.com</a></p>
+    <p class="footer-updated">Publicado el <time datetime="2026-06-25">25 de junio de 2026</time></p>
+  </footer>
+
+  <script>
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); obs.unobserve(e.target); } });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.rt-reveal').forEach((el) => obs.observe(el));
+    }
+  </script>
+</body>
+</html>

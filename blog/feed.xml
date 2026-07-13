@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog de Ricardo Torales — IA, Tecnología y Ciberseguridad</title>
+    <link>https://www.ricardotorales.com/blog/</link>
+    <atom:link href="https://www.ricardotorales.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Análisis y guías prácticas sobre inteligencia artificial, transformación digital, automatización de procesos y ciberseguridad para líderes de TI en Latinoamérica.</description>
+    <language>es</language>
+    <lastBuildDate>Mon, 13 Jul 2026 09:00:00 -0300</lastBuildDate>
+
+    <item>
+      <title>IA generativa en la empresa: guía práctica para líderes de TI</title>
+      <link>https://www.ricardotorales.com/blog/ia-generativa-empresas-paraguay/</link>
+      <guid isPermaLink="true">https://www.ricardotorales.com/blog/ia-generativa-empresas-paraguay/</guid>
+      <pubDate>Mon, 13 Jul 2026 09:00:00 -0300</pubDate>
+      <category>Inteligencia Artificial</category>
+      <description>Cómo pasar del entusiasmo a resultados medibles con IA generativa: casos de uso reales, gobernanza de datos y los errores que frenan la adopción empresarial en Latinoamérica.</description>
+    </item>
+
+    <item>
+      <title>Ciberseguridad para PYMES: 7 controles esenciales que no puedes ignorar</title>
+      <link>https://www.ricardotorales.com/blog/ciberseguridad-pymes-paraguay/</link>
+      <guid isPermaLink="true">https://www.ricardotorales.com/blog/ciberseguridad-pymes-paraguay/</guid>
+      <pubDate>Fri, 10 Jul 2026 09:00:00 -0300</pubDate>
+      <category>Ciberseguridad</category>
+      <description>El 43% de los ciberataques apuntan a pequeñas empresas. Siete controles de bajo costo y alto impacto para proteger tu negocio sin un equipo de seguridad dedicado.</description>
+    </item>
+
+    <item>
+      <title>Automatización de procesos con Power Platform: del caos a la eficiencia</title>
+      <link>https://www.ricardotorales.com/blog/automatizacion-procesos-power-platform/</link>
+      <guid isPermaLink="true">https://www.ricardotorales.com/blog/automatizacion-procesos-power-platform/</guid>
+      <pubDate>Mon, 06 Jul 2026 09:00:00 -0300</pubDate>
+      <category>Automatización</category>
+      <description>Una hoja de ruta para identificar, priorizar y automatizar procesos manuales con Power Automate y Power Apps, sin escribir una línea de código.</description>
+    </item>
+
+    <item>
+      <title>Microsoft Copilot en el trabajo: ¿productividad real o hype?</title>
+      <link>https://www.ricardotorales.com/blog/microsoft-copilot-productividad-empresarial/</link>
+      <guid isPermaLink="true">https://www.ricardotorales.com/blog/microsoft-copilot-productividad-empresarial/</guid>
+      <pubDate>Wed, 01 Jul 2026 09:00:00 -0300</pubDate>
+      <category>Inteligencia Artificial</category>
+      <description>Un análisis honesto de dónde Copilot genera valor tangible, dónde decepciona y cómo medir el retorno antes de comprar licencias para toda la empresa.</description>
+    </item>
+
+    <item>
+      <title>Arquitectura Zero Trust: por qué el perímetro tradicional ya no alcanza</title>
+      <link>https://www.ricardotorales.com/blog/arquitectura-zero-trust-empresa/</link>
+      <guid isPermaLink="true">https://www.ricardotorales.com/blog/arquitectura-zero-trust-empresa/</guid>
+      <pubDate>Thu, 25 Jun 2026 09:00:00 -0300</pubDate>
+      <category>Ciberseguridad</category>
+      <description>El modelo "confiar pero verificar" murió. Qué significa Zero Trust en la práctica y cómo iniciar la transición sin frenar la operación del negocio.</description>
+    </item>
+
+  </channel>
+</rss>
