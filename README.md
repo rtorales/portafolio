@@ -1,4 +1,4 @@
-# Ricardo Torales — Portafolio Profesional
+﻿# Ricardo Torales — Portafolio Profesional
 
 Sitio personal de **Ricardo Torales**, Gerente de Proyectos de Tecnología y Consultor en transformación digital, IA y automatización de procesos (Asunción, Paraguay).
 
@@ -27,5 +27,5 @@ Sitio personal de **Ricardo Torales**, Gerente de Proyectos de Tecnología y Con
 
 ## Contacto
 
-- ✉️ ricardotorales@outlook.com
+- ✉️ info@ricardotorales.com
 - 💼 [linkedin.com/in/ricardo-torales](https://linkedin.com/in/ricardo-torales)

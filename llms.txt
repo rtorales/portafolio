@@ -1,4 +1,4 @@
-# Ricardo Torales
+﻿# Ricardo Torales
 
 > Gerente de Proyectos de Tecnología con más de 14 años de trayectoria ejecutiva en transformación digital, ERP, CRM e Inteligencia Artificial. Actualmente PMO & Business Transformation Specialist en Grupo Chacomer (Asunción, Paraguay). Especialista en Dynamics 365, Salesforce, SAP Business One, Azure AI y Power Platform, con marcos PMBOK, Scrum e ITIL. 2 maestrías y 34 certificaciones verificables.
 
@@ -42,6 +42,6 @@ Artículos sobre inteligencia artificial, transformación digital, automatizaci�
 
 ## Contacto
 
-- Email: ricardotorales@outlook.com
+- Email: info@ricardotorales.com
 - Ubicación: Asunción, Paraguay
 - Idiomas: español, inglés, portugués

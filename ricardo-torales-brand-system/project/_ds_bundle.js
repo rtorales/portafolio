@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":3,"namespace":"RicardoToralesBrandSystem_e0aacc","components":[{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"SectionLabel","sourcePath":"components/core/SectionLabel.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Avatar","sourcePath":"components/profile/Avatar.jsx"},{"name":"ContactCard","sourcePath":"components/profile/ContactCard.jsx"},{"name":"LangBar","sourcePath":"components/profile/LangBar.jsx"},{"name":"SkillCard","sourcePath":"components/profile/SkillCard.jsx"},{"name":"StatItem","sourcePath":"components/profile/StatItem.jsx"},{"name":"TimelineItem","sourcePath":"components/profile/TimelineItem.jsx"}],"sourceHashes":{"components/core/Badge.jsx":"193d8fb7c0a3","components/core/Button.jsx":"88ab3e38fa07","components/core/Card.jsx":"e08358950290","components/core/SectionLabel.jsx":"519f659be4d7","components/core/Tag.jsx":"0ad0af5a5f61","components/profile/Avatar.jsx":"953d9cc8c9dd","components/profile/ContactCard.jsx":"557dd77f5b05","components/profile/LangBar.jsx":"df174be3a723","components/profile/SkillCard.jsx":"603331f50566","components/profile/StatItem.jsx":"25bcaa591680","components/profile/TimelineItem.jsx":"5ef80cfe2c1e","ui_kits/portfolio/icons.jsx":"f05529fcd971","ui_kits/portfolio/sections.jsx":"de8b1a0d17cc"},"inlinedExternals":[],"unexposedExports":[]} */
+﻿/* @ds-bundle: {"format":3,"namespace":"RicardoToralesBrandSystem_e0aacc","components":[{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"SectionLabel","sourcePath":"components/core/SectionLabel.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Avatar","sourcePath":"components/profile/Avatar.jsx"},{"name":"ContactCard","sourcePath":"components/profile/ContactCard.jsx"},{"name":"LangBar","sourcePath":"components/profile/LangBar.jsx"},{"name":"SkillCard","sourcePath":"components/profile/SkillCard.jsx"},{"name":"StatItem","sourcePath":"components/profile/StatItem.jsx"},{"name":"TimelineItem","sourcePath":"components/profile/TimelineItem.jsx"}],"sourceHashes":{"components/core/Badge.jsx":"193d8fb7c0a3","components/core/Button.jsx":"88ab3e38fa07","components/core/Card.jsx":"e08358950290","components/core/SectionLabel.jsx":"519f659be4d7","components/core/Tag.jsx":"0ad0af5a5f61","components/profile/Avatar.jsx":"953d9cc8c9dd","components/profile/ContactCard.jsx":"557dd77f5b05","components/profile/LangBar.jsx":"df174be3a723","components/profile/SkillCard.jsx":"603331f50566","components/profile/StatItem.jsx":"25bcaa591680","components/profile/TimelineItem.jsx":"5ef80cfe2c1e","ui_kits/portfolio/icons.jsx":"f05529fcd971","ui_kits/portfolio/sections.jsx":"de8b1a0d17cc"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -973,7 +973,7 @@ function Hero() {
     }
   }, [[/*#__PURE__*/React.createElement(I.mail, {
     size: 14
-  }), 'ricardotorales@outlook.com'], [/*#__PURE__*/React.createElement(I.phone, {
+  }), 'info@ricardotorales.com'], [/*#__PURE__*/React.createElement(I.phone, {
     size: 14
   }), '+595 981 226 529'], [/*#__PURE__*/React.createElement(I.linkedin, {
     size: 14
@@ -1300,7 +1300,7 @@ function Contacto() {
       size: 18
     }),
     href: "#"
-  }, "ricardotorales@outlook.com"), /*#__PURE__*/React.createElement(ContactCard, {
+  }, "info@ricardotorales.com"), /*#__PURE__*/React.createElement(ContactCard, {
     icon: /*#__PURE__*/React.createElement(I.phone, {
       size: 18
     }),

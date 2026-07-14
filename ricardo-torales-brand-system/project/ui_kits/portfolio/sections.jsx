@@ -1,4 +1,4 @@
-// Portfolio UI kit — full-screen recreation of the Ricardo Torales site.
+﻿// Portfolio UI kit — full-screen recreation of the Ricardo Torales site.
 // Composes the design-system components + local icons. Exposes sections on window.
 const DS = window.RicardoToralesBrandSystem_e0aacc;
 const { Button, Tag, Badge, SectionLabel, Card, StatItem, SkillCard, TimelineItem, ContactCard, LangBar, Avatar } = DS;
@@ -49,7 +49,7 @@ function Hero() {
               <Button variant="outline" icon={<I.download size={16} />}>Descargar CV (PDF)</Button>
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
-              {[[<I.mail size={14} />, 'ricardotorales@outlook.com'], [<I.phone size={14} />, '+595 981 226 529'], [<I.linkedin size={14} />, 'linkedin.com/in/ricardo-torales'], [<I.pin size={14} />, 'Asunción, Paraguay']].map(([ic, tx], i) => (
+              {[[<I.mail size={14} />, 'info@ricardotorales.com'], [<I.phone size={14} />, '+595 981 226 529'], [<I.linkedin size={14} />, 'linkedin.com/in/ricardo-torales'], [<I.pin size={14} />, 'Asunción, Paraguay']].map(([ic, tx], i) => (
                 <span key={i} style={{ display: 'flex', alignItems: 'center', gap: '7px', fontSize: '.85rem', color: 'rgba(255,255,255,.7)' }}>
                   <span style={{ opacity: .7, display: 'inline-flex' }}>{ic}</span>{tx}
                 </span>
@@ -170,7 +170,7 @@ function Contacto() {
           Abierto a consultoría ejecutiva, alianzas estratégicas y proyectos de transformación digital, IA y automatización.
         </p>
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '16px', marginBottom: '48px' }}>
-          <ContactCard icon={<I.mail size={18} />} href="#">ricardotorales@outlook.com</ContactCard>
+          <ContactCard icon={<I.mail size={18} />} href="#">info@ricardotorales.com</ContactCard>
           <ContactCard icon={<I.phone size={18} />} href="#">+595 981 226 529</ContactCard>
           <ContactCard icon={<I.linkedin size={18} />} href="#">linkedin.com/in/ricardo-torales</ContactCard>
         </div>
