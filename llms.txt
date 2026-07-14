@@ -34,6 +34,8 @@ Este sitio es el portafolio profesional, currículum y punto de contacto de Rica
 
 Artículos sobre inteligencia artificial, transformación digital, automatización y ciberseguridad para líderes de TI:
 
+- [Harness de IA y agentes autónomos: OpenClaw vs Hermes](https://www.ricardotorales.com/blog/harness-ia-agentes-openclaw-hermes/): Qué es el arnés (harness) que convierte un modelo en agente autónomo, y comparación de OpenClaw y Hermes con sus ventajas, desventajas y riesgos de seguridad.
+- [Ransomware en Paraguay: casos reales y cómo prevenirlo](https://www.ricardotorales.com/blog/ransomware-paraguay-prevencion/): Casos verificados de ransomware en Paraguay (Tigo Business, sector salud, incidentes estatales), por qué crece la amenaza y cómo prevenirla.
 - [IA generativa en la empresa: guía práctica para líderes de TI](https://www.ricardotorales.com/blog/ia-generativa-empresas-paraguay/): Casos de uso reales, gobernanza de datos y errores que frenan la adopción de IA generativa.
 - [Ciberseguridad para PYMES: 7 controles esenciales](https://www.ricardotorales.com/blog/ciberseguridad-pymes-paraguay/): Controles de bajo costo y alto impacto para proteger pequeñas empresas.
 - [Automatización de procesos con Power Platform](https://www.ricardotorales.com/blog/automatizacion-procesos-power-platform/): Hoja de ruta para automatizar procesos manuales con Power Automate y Power Apps.

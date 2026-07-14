@@ -8,13 +8,25 @@
   </url>
   <url>
     <loc>https://www.ricardotorales.com/blog/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.ricardotorales.com/blog/harness-ia-agentes-openclaw-hermes/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.ricardotorales.com/blog/ia-generativa-empresas-paraguay/</loc>
     <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ricardotorales.com/blog/ransomware-paraguay-prevencion/</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

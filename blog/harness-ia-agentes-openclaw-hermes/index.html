@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Harness de IA y agentes autónomos: OpenClaw vs Hermes | Ricardo Torales</title>
+  <meta name="description" content="Qué es un harness o arnés de IA, cómo convierte un modelo en agente autónomo, y comparación de OpenClaw y Hermes: ventajas, desventajas y riesgos de seguridad." />
+  <link rel="canonical" href="https://www.ricardotorales.com/blog/harness-ia-agentes-openclaw-hermes/" />
+  <meta name="author" content="Ricardo Torales" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Ricardo Torales" />
+  <meta property="og:title" content="Harness de IA y agentes autónomos: OpenClaw vs Hermes" />
+  <meta property="og:description" content="Qué es un arnés de IA, cómo convierte un modelo en agente autónomo, y comparación de OpenClaw y Hermes: ventajas, desventajas y riesgos." />
+  <meta property="og:url" content="https://www.ricardotorales.com/blog/harness-ia-agentes-openclaw-hermes/" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://www.ricardotorales.com/img/ricardo-torales.jpeg" />
+  <meta property="article:published_time" content="2026-07-14T09:00:00-03:00" />
+  <meta property="article:modified_time" content="2026-07-14T09:00:00-03:00" />
+  <meta property="article:author" content="Ricardo Torales" />
+  <meta property="article:section" content="Inteligencia Artificial" />
+  <meta property="article:tag" content="Agentes de IA" />
+  <meta property="article:tag" content="AI Harness" />
+  <meta property="article:tag" content="OpenClaw" />
+  <meta property="article:tag" content="Hermes Agent" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Harness de IA y agentes autónomos: OpenClaw vs Hermes" />
+  <meta name="twitter:description" content="Qué es un arnés de IA y cómo se comparan OpenClaw y Hermes: ventajas, desventajas y riesgos de seguridad." />
+  <meta name="twitter:image" content="https://www.ricardotorales.com/img/ricardo-torales.jpeg" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/blog/assets/blog.css" />
+
+  <script>document.documentElement.className = 'js';</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.ricardotorales.com/blog/harness-ia-agentes-openclaw-hermes/#article",
+        "headline": "Harness de IA y agentes autónomos: OpenClaw vs Hermes",
+        "description": "Qué es un harness o arnés de IA, cómo convierte un modelo en agente autónomo, y comparación de OpenClaw y Hermes: ventajas, desventajas y riesgos de seguridad.",
+        "image": "https://www.ricardotorales.com/img/ricardo-torales.jpeg",
+        "datePublished": "2026-07-14T09:00:00-03:00",
+        "dateModified": "2026-07-14T09:00:00-03:00",
+        "inLanguage": "es",
+        "articleSection": "Inteligencia Artificial",
+        "keywords": "harness de IA, arnés de IA, agentes autónomos, OpenClaw, Hermes Agent, agentes self-hosted, LLM, scaffolding de IA",
+        "wordCount": 1180,
+        "author": {
+          "@type": "Person",
+          "@id": "https://www.ricardotorales.com/#person",
+          "name": "Ricardo Torales",
+          "url": "https://www.ricardotorales.com/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://www.ricardotorales.com/#person",
+          "name": "Ricardo Torales"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.ricardotorales.com/blog/harness-ia-agentes-openclaw-hermes/"
+        },
+        "isPartOf": { "@id": "https://www.ricardotorales.com/blog/#blog" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.ricardotorales.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.ricardotorales.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Harness de IA y agentes autónomos", "item": "https://www.ricardotorales.com/blog/harness-ia-agentes-openclaw-hermes/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="Inicio">
+        <span class="nav-monogram" aria-hidden="true">RT</span>
+        <span class="nav-name">Ricardo Torales</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#perfil">Perfil</a></li>
+        <li><a href="/#proyectos">Proyectos</a></li>
+        <li><a href="/#experiencia">Experiencia</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/#contacto" class="nav-cta">Contactar</a></li>
+      </ul>
+      <a href="/#contacto" class="nav-cta-mobile">Contactar</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="/">Inicio</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Harness de IA y agentes autónomos
+    </nav>
+  </div>
+
+  <article>
+    <header class="article-header">
+      <span class="tag--cat">Inteligencia Artificial</span>
+      <h1 class="article-title">Harness de IA y agentes autónomos: OpenClaw vs Hermes</h1>
+      <p class="article-lead">Un modelo de lenguaje, por sí solo, solo predice texto. Lo que lo convierte en un agente capaz de actuar en el mundo es el "arnés" que lo rodea. Entenderlo es clave para cualquier líder que evalúe agentes de IA en 2026.</p>
+      <div class="article-meta">
+        <div class="article-author">
+          <img class="article-author-avatar" src="/img/ricardo-torales.jpeg" alt="Ricardo Torales" width="42" height="42" loading="lazy" />
+          <div>
+            <div class="article-author-name">Ricardo Torales</div>
+            <div class="article-author-role">Gerente de Proyectos de Tecnología · PMO</div>
+          </div>
+        </div>
+        <div class="article-meta-stats">
+          <time datetime="2026-07-14">14 jul 2026</time>
+          <span class="dot"></span>
+          <span>9 min de lectura</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="article-body">
+      <p>Hay una confusión frecuente cuando se habla de inteligencia artificial: creer que el modelo <em>es</em> el agente. No lo es. Un modelo de lenguaje grande (LLM) —GPT, Claude, Hermes— es, en esencia, un motor que predice la siguiente palabra. Poderoso, pero pasivo. No tiene memoria entre conversaciones, no puede ejecutar acciones, no sabe usar herramientas. Lo que transforma ese motor en un agente que responde tus mensajes, administra tu servidor o automatiza tus tareas es una capa de ingeniería que en inglés se llama <strong>harness</strong> — el "arnés" de la IA.</p>
+
+      <h2>¿Qué es un harness (arnés) de IA?</h2>
+      <p>Si el LLM es el músculo, el harness es el esqueleto y el sistema nervioso que lo hacen útil. Es todo el andamiaje que rodea al modelo para convertirlo en algo que actúa:</p>
+      <ul>
+        <li><strong>El bucle de razonamiento:</strong> el ciclo de "pensar → actuar → observar el resultado → volver a pensar" que permite al agente encadenar pasos hacia un objetivo.</li>
+        <li><strong>Las herramientas:</strong> las conexiones que le dan manos — leer y escribir archivos, ejecutar comandos, consultar una base de datos, enviar un mensaje, llamar a una API.</li>
+        <li><strong>La memoria:</strong> el mecanismo que le permite recordar contexto entre tareas y conversaciones, algo que el modelo por sí solo no tiene.</li>
+        <li><strong>Los permisos y las barreras:</strong> qué puede y qué no puede hacer, qué acciones requieren confirmación humana. Aquí es donde vive la seguridad.</li>
+        <li><strong>Los canales:</strong> cómo interactúas con él — un chat, WhatsApp, Telegram, la terminal, un webhook.</li>
+      </ul>
+      <p>La analogía útil: el modelo es el motor de un auto; el harness es el chasis, el volante, los frenos y el tablero. Puedes tener el mejor motor del mundo, pero sin ese arnés no vas a ninguna parte — y sin buenos frenos, el poder se vuelve peligroso.</p>
+
+      <blockquote>El modelo decide qué hacer. El harness determina qué puede hacer realmente — y qué tan seguro es dejarlo hacerlo.</blockquote>
+
+      <h2>El auge de los agentes autónomos self-hosted</h2>
+      <p>Durante 2026, dos proyectos de código abierto llevaron esta idea al gran público, permitiendo a cualquiera correr su propio agente de IA en un servidor privado (VPS): <strong>OpenClaw</strong> y <strong>Hermes Agent</strong>. Ambos son, en esencia, harnesses: envuelven un modelo de lenguaje y lo convierten en un asistente que vive en tu infraestructura, con tus datos y bajo tu control. Pero encarnan dos filosofías distintas.</p>
+
+      <h3>OpenClaw: el asistente personal multicanal</h3>
+      <p>Creado por el desarrollador Peter Steinberger, OpenClaw se volvió un fenómeno: según reportes de la comunidad, superó las 100.000 estrellas en GitHub en su primera semana, a fines de enero de 2026. Su propuesta es ser un asistente personal que te responde en los canales que ya usas —WhatsApp, Telegram, Slack, Discord, Signal y muchos más— y que <em>ejecuta</em> tareas reales en tu máquina: gestión de archivos, ejecución de código, administración del sistema. Su fuerte es la orquestación multimodelo (puede enrutar distintas tareas a Claude, GPT o modelos locales) y su alcance como asistente omnipresente.</p>
+
+      <h3>Hermes Agent: el agente server-first</h3>
+      <p>Lanzado bajo licencia MIT, Hermes Agent optimiza para otro escenario: correr de forma liviana y económica en un servidor, sin escritorio, accesible por SSH o HTTP e integrado con flujos de automatización (cron, scripts, n8n). Su principio distintivo es un <strong>bucle de aprendizaje cerrado</strong>: el agente mejora en tus flujos de trabajo específicos con el tiempo, ajustándose después de cada tarea. Según comparativas publicadas en 2026, Hermes alcanzó el primer puesto en los rankings globales de OpenRouter, superando en volumen de uso a OpenClaw.</p>
+
+      <div class="callout">
+        <span class="callout-label">La distinción clave</span>
+        <p>OpenClaw optimiza para <strong>alcance</strong>: estar en todos tus canales como asistente personal. Hermes optimiza para <strong>eficiencia de servidor</strong>: un proceso liviano, barato y automatizable. No es "cuál es mejor", sino "mejor para qué".</p>
+      </div>
+
+      <h2>OpenClaw vs Hermes: comparación práctica</h2>
+      <ul>
+        <li><strong>Enfoque:</strong> OpenClaw → asistente personal multicanal · Hermes → agente server-first para automatización.</li>
+        <li><strong>Modelos:</strong> OpenClaw orquesta varios proveedores; Hermes usa un proveedor por perfil y se integra naturalmente con los modelos Hermes.</li>
+        <li><strong>Recursos:</strong> Hermes corre en 4–8 GB de RAM en un VPS de bajo costo; OpenClaw pesa más por su alcance multicanal.</li>
+        <li><strong>Costo estimado:</strong> según comparativas de 2026, Hermes parte de un piso más bajo (~USD 5/mes de VPS) frente a las opciones gestionadas de OpenClaw (~USD 24/mes), sin contar el consumo de los modelos.</li>
+        <li><strong>Diferenciador:</strong> Hermes aprende de tus flujos con el tiempo; OpenClaw te encuentra donde ya trabajas.</li>
+      </ul>
+
+      <h2>Ventajas de los agentes con harness propio</h2>
+      <ul>
+        <li><strong>Control y privacidad:</strong> al ser self-hosted, tus datos permanecen en tu servidor y no en un tercero. Para una empresa, esto es determinante en cumplimiento.</li>
+        <li><strong>Libertad de modelo:</strong> eliges qué LLM usar y puedes cambiarlo, evitando el bloqueo de proveedor.</li>
+        <li><strong>Automatización real:</strong> no solo responden, actúan — cierran el ciclo entre "decidir" y "ejecutar".</li>
+        <li><strong>Costo predecible:</strong> corriendo en tu infraestructura, controlas el gasto mejor que con servicios cerrados por asiento.</li>
+      </ul>
+
+      <h2>Desventajas y riesgos — el lado que no se debe ignorar</h2>
+      <p>Aquí es donde mi mirada de gobernanza de TI se enciende. Un agente autónomo con acceso a ejecutar comandos es, por definición, una superficie de ataque poderosa. Y la historia reciente lo confirma:</p>
+      <ul>
+        <li><strong>Vulnerabilidades críticas:</strong> a comienzos de 2026 se divulgó públicamente una falla de ejecución remota de código "de un clic" en OpenClaw (CVE-2026-25253). Al momento de la divulgación, se reportaron más de 40.000 instancias expuestas en internet, una mayoría de ellas vulnerables.</li>
+        <li><strong>Riesgo de cadena de suministro:</strong> el marketplace de extensiones de OpenClaw sufrió un episodio de envenenamiento en el que una firma de seguridad identificó cientos de entradas maliciosas. Instalar una "skill" de terceros sin control puede introducir código hostil.</li>
+        <li><strong>Ejecución autónoma sin frenos:</strong> un agente con permisos amplios y sin confirmación humana puede borrar datos, filtrar información o actuar sobre instrucciones maliciosas ocultas en el contenido que procesa.</li>
+        <li><strong>Carga de mantenimiento:</strong> self-hosted significa que la seguridad, las actualizaciones y el monitoreo son tu responsabilidad, no la del proveedor.</li>
+      </ul>
+
+      <div class="key-takeaways">
+        <h2>Para llevar</h2>
+        <ul>
+          <li>El modelo predice; el harness (arnés) es lo que lo convierte en un agente capaz de actuar.</li>
+          <li>OpenClaw y Hermes son dos harnesses self-hosted con filosofías distintas: alcance multicanal vs eficiencia de servidor.</li>
+          <li>La gran ventaja es el control: tus datos, tu modelo, tu infraestructura.</li>
+          <li>El gran riesgo es la seguridad: ejecución autónoma, vulnerabilidades y cadena de suministro exigen gobernanza.</li>
+          <li>Antes de desplegar un agente, define permisos mínimos, aísla su entorno y exige confirmación humana en acciones sensibles.</li>
+        </ul>
+      </div>
+
+      <p>Los agentes autónomos son una de las fronteras más interesantes de la IA aplicada. Pero conviene abordarlos como lo que son: sistemas poderosos que actúan por sí mismos. La pregunta correcta no es "¿qué agente instalo?", sino "¿qué arnés le pongo para que su poder trabaje a favor del negocio y no en su contra?". Ese equilibrio entre capacidad y control es, precisamente, el trabajo de un buen líder de tecnología.</p>
+
+      <p class="article-note" style="font-size:.86rem;color:var(--zinc-500);border-top:1px solid var(--zinc-200);padding-top:16px;">Nota: OpenClaw y Hermes evolucionan rápidamente. Las cifras de adopción, costos y vulnerabilidades citadas corresponden a comparativas y reportes públicos de 2026 y pueden haber cambiado. Verifica siempre la documentación oficial y los avisos de seguridad vigentes antes de desplegar.</p>
+    </div>
+
+    <aside class="author-box">
+      <div class="author-box-inner">
+        <img src="/img/ricardo-torales.jpeg" alt="Ricardo Torales" width="64" height="64" loading="lazy" />
+        <div>
+          <div class="author-box-name">Ricardo Torales</div>
+          <div class="author-box-role">Gerente de Proyectos de Tecnología · PMO &amp; Business Transformation</div>
+          <p>Más de 14 años liderando transformación digital, adopción de IA y gobernanza de TI en empresas de Paraguay y la región. Especialista en integrar tecnología emergente con criterio de negocio y seguridad.</p>
+          <div class="author-box-links">
+            <a href="/#contacto">Contactar →</a>
+            <a href="https://www.linkedin.com/in/ricardo-torales" target="_blank" rel="noopener">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </article>
+
+  <section class="related" aria-label="Artículos relacionados">
+    <h2>Seguir leyendo</h2>
+    <div class="related-grid">
+      <article class="related-card">
+        <span class="tag--cat">Inteligencia Artificial</span>
+        <h3><a href="/blog/ia-generativa-empresas-paraguay/">IA generativa en la empresa: guía para líderes de TI</a></h3>
+      </article>
+      <article class="related-card">
+        <span class="tag--cat">Inteligencia Artificial</span>
+        <h3><a href="/blog/microsoft-copilot-productividad-empresarial/">Microsoft Copilot: ¿productividad real o hype?</a></h3>
+      </article>
+      <article class="related-card">
+        <span class="tag--cat">Ciberseguridad</span>
+        <h3><a href="/blog/arquitectura-zero-trust-empresa/">Arquitectura Zero Trust: el perímetro ya no alcanza</a></h3>
+      </article>
+    </div>
+  </section>
+
+  <section class="article-cta">
+    <div class="article-cta-inner">
+      <h2>¿Evaluando agentes de IA para tu organización?</h2>
+      <p>Ayudo a equipos a adoptar IA agéntica con el equilibrio correcto entre capacidad, control y seguridad.</p>
+      <a href="/#contacto" class="btn btn-white">Conversemos</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Ricardo Torales · Gerente de Tecnología &amp; Consultor en Automatización · Asunción, Paraguay · <a href="mailto:ricardotorales@outlook.com">ricardotorales@outlook.com</a></p>
+    <p class="footer-updated">Publicado el <time datetime="2026-07-14">14 de julio de 2026</time></p>
+  </footer>
+
+  <script>
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); obs.unobserve(e.target); } });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.rt-reveal').forEach((el) => obs.observe(el));
+    }
+  </script>
+</body>
+</html>
