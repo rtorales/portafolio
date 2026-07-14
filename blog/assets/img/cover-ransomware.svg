@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="Ilustración: ransomware y datos cifrados">
+  <defs>
+    <radialGradient id="bg" cx="62%" cy="6%" r="120%">
+      <stop offset="0%" stop-color="#26201f"/>
+      <stop offset="55%" stop-color="#0e0e11"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+
+  <!-- Grilla de datos cifrados (asteriscos) -->
+  <g font-family="ui-monospace, Menlo, monospace" font-size="30" fill="#ffffff" fill-opacity="0.14">
+    <text x="150" y="200">* * * * *</text>
+    <text x="150" y="260">* * * * *</text>
+    <text x="150" y="320">* * * * *</text>
+    <text x="150" y="380">* * * * *</text>
+  </g>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="30" fill="#ffffff" fill-opacity="0.14">
+    <text x="760" y="230">* * * *</text>
+    <text x="760" y="290">* * * *</text>
+    <text x="760" y="350">* * * *</text>
+    <text x="760" y="410">* * * *</text>
+  </g>
+
+  <!-- Candado central -->
+  <g transform="translate(600,300)">
+    <rect x="-70" y="0" width="140" height="112" rx="16" fill="#16161b" stroke="#ffffff" stroke-opacity="0.85" stroke-width="3"/>
+    <path d="M-42 0 v-30 a42 42 0 0 1 84 0 v30" fill="none" stroke="#ffffff" stroke-opacity="0.75" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="0" cy="48" r="12" fill="#ffffff" fill-opacity="0.9"/>
+    <rect x="-4" y="52" width="8" height="30" rx="4" fill="#ffffff" fill-opacity="0.9"/>
+  </g>
+
+  <!-- Triángulo de alerta -->
+  <g transform="translate(600,150)">
+    <path d="M0 -34 L34 26 L-34 26 Z" fill="none" stroke="#ffffff" stroke-opacity="0.6" stroke-width="3.5" stroke-linejoin="round"/>
+    <rect x="-3.5" y="-14" width="7" height="24" rx="3.5" fill="#ffffff" fill-opacity="0.85"/>
+    <circle cx="0" cy="18" r="4" fill="#ffffff" fill-opacity="0.85"/>
+  </g>
+
+  <text x="72" y="540" font-family="ui-monospace, Menlo, monospace" font-size="22" letter-spacing="6" fill="#ffffff" fill-opacity="0.32">RANSOMWARE · PY</text>
+</svg>

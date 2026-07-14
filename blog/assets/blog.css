@@ -197,13 +197,16 @@ a:hover { color: var(--zinc-500); }
 }
 .post-card-cover {
   aspect-ratio: 16 / 9; position: relative; overflow: hidden;
-  display: flex; align-items: flex-end; padding: 18px;
+  display: flex; align-items: flex-start; padding: 18px;
   color: #fff; isolation: isolate;
 }
 .post-card-cover::after {
   content: ''; position: absolute; inset: 0; z-index: -1;
   background: var(--cover, var(--gradient-hero));
+  background-size: cover; background-position: center;
+  transition: transform .4s var(--ease-out);
 }
+.post-card:hover .post-card-cover::after { transform: scale(1.04); }
 .post-card-cover .tag--cat {
   color: #fff; background: rgba(255,255,255,.14);
   border-color: rgba(255,255,255,.25); backdrop-filter: blur(4px);
@@ -268,6 +271,16 @@ a:hover { color: var(--zinc-500); }
   font-family: var(--font-mono); font-size: .74rem; color: var(--zinc-400);
 }
 .article-meta-stats .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--zinc-300); }
+
+/* Imagen hero del artículo */
+.article-hero {
+  max-width: 880px; margin: 34px auto 4px; padding: 0 24px;
+}
+.article-hero img {
+  width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover;
+  border-radius: 16px; border: 1px solid var(--zinc-200);
+  box-shadow: var(--shadow-lg); background: var(--ink-950);
+}
 
 /* Cuerpo del artículo — tipografía editorial */
 .article-body {

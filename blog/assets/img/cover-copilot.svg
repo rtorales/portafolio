@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="Ilustración: asistente de IA Copilot">
+  <defs>
+    <radialGradient id="bg" cx="40%" cy="4%" r="120%">
+      <stop offset="0%" stop-color="#26262d"/>
+      <stop offset="55%" stop-color="#0e0e11"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+
+  <!-- Burbuja de chat -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2.5">
+    <path d="M470 210 h260 a26 26 0 0 1 26 26 v128 a26 26 0 0 1 -26 26 h-150 l-58 46 v-46 h-52 a26 26 0 0 1 -26 -26 v-128 a26 26 0 0 1 26 -26 z"/>
+  </g>
+  <g stroke="#ffffff" stroke-opacity="0.28" stroke-width="8" stroke-linecap="round">
+    <line x1="510" y1="262" x2="690" y2="262"/>
+    <line x1="510" y1="300" x2="650" y2="300"/>
+  </g>
+
+  <!-- Spark / estrella IA -->
+  <g fill="#ffffff" fill-opacity="0.9">
+    <path d="M770 180 l14 40 40 14 -40 14 -14 40 -14 -40 -40 -14 40 -14 z"/>
+  </g>
+  <g fill="#ffffff" fill-opacity="0.4">
+    <path d="M700 350 l8 22 22 8 -22 8 -8 22 -8 -22 -22 -8 22 -8 z"/>
+  </g>
+
+  <text x="72" y="520" font-family="ui-monospace, Menlo, monospace" font-size="22" letter-spacing="6" fill="#ffffff" fill-opacity="0.32">AI · COPILOT</text>
+</svg>

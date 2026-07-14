@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="Ilustración: arquitectura Zero Trust, anillos de verificación">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="6%" r="120%">
+      <stop offset="0%" stop-color="#1d1d23"/>
+      <stop offset="55%" stop-color="#0e0e11"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+
+  <!-- Anillos concéntricos de verificación (punteados) -->
+  <g fill="none" stroke="#ffffff" transform="translate(600,300)">
+    <circle r="70" stroke-opacity="0.5" stroke-width="2"/>
+    <circle r="120" stroke-opacity="0.28" stroke-width="2" stroke-dasharray="6 10"/>
+    <circle r="176" stroke-opacity="0.18" stroke-width="2" stroke-dasharray="4 14"/>
+    <circle r="232" stroke-opacity="0.12" stroke-width="2" stroke-dasharray="2 18"/>
+  </g>
+
+  <!-- Nodos de identidad sobre los anillos -->
+  <g fill="#0e0e11" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2">
+    <circle cx="600" cy="180" r="11"/>
+    <circle cx="720" cy="300" r="11"/>
+    <circle cx="600" cy="420" r="11"/>
+    <circle cx="480" cy="300" r="11"/>
+    <circle cx="776" cy="176" r="9"/>
+    <circle cx="424" cy="424" r="9"/>
+  </g>
+
+  <!-- Candado central -->
+  <g transform="translate(600,300)">
+    <rect x="-34" y="-6" width="68" height="56" rx="9" fill="#16161b" stroke="#ffffff" stroke-opacity="0.85" stroke-width="2.5"/>
+    <path d="M-20 -6 v-16 a20 20 0 0 1 40 0 v16" fill="none" stroke="#ffffff" stroke-opacity="0.75" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="0" cy="20" r="6" fill="#ffffff" fill-opacity="0.9"/>
+  </g>
+
+  <text x="72" y="530" font-family="ui-monospace, Menlo, monospace" font-size="22" letter-spacing="6" fill="#ffffff" fill-opacity="0.32">ZERO · TRUST</text>
+</svg>
