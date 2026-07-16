@@ -272,12 +272,12 @@ a:hover { color: var(--zinc-500); }
 }
 .article-meta-stats .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--zinc-300); }
 
-/* Imagen hero del artículo */
+/* Imagen hero del artículo — alineada a la columna de lectura */
 .article-hero {
-  max-width: 880px; margin: 34px auto 4px; padding: 0 24px;
+  max-width: var(--reading-max); margin: 32px auto 4px; padding: 0 24px;
 }
 .article-hero img {
-  width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover;
+  display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover;
   border-radius: 16px; border: 1px solid var(--zinc-200);
   box-shadow: var(--shadow-lg); background: var(--ink-950);
 }
