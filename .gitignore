@@ -1,1 +1,38 @@
 .claude/
+
+# ----------------------------------------------------------------------
+# Documentación confidencial de clientes (subsitios cifrados)
+# Solo deben publicarse los .enc; NUNCA la clave ni el material en claro.
+# ----------------------------------------------------------------------
+
+# Claves maestras y secretos
+CLAVE_MAESTRA*
+*clave*maestra*
+*.key
+*.pem
+*.p12
+.env
+.env.*
+
+# Material sin cifrar (por si alguna vez se copia dentro del repo)
+**/site_*_plano/
+**/*_PLANO/
+**/notas/
+**/informe-final.html
+**/Informe_Final_*.pdf
+**/Informe_Final_*.docx
+**/Cierre_Directorio_*.pptx
+**/Cierre_Directorio_*.pdf
+**/*_Okara_Vault/
+_extract/
+
+# Documentos fuente
+*.docx
+*.pptx
+*.xlsx
+
+# Temporales
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db

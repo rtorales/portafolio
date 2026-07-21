@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Documentación protegida · Auditoría SAP B1</title>
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/okara_icon.png">
+<style>
+#gate{position:fixed;inset:0;background:linear-gradient(135deg,#1B1030,#3B2A63);display:flex;align-items:center;
+justify-content:center;padding:1.2rem;z-index:9999;font-family:Inter,system-ui,sans-serif}
+#gate .box{background:#fff;border-radius:16px;padding:2.4rem;max-width:520px;width:100%;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+#gate img{height:40px;margin-bottom:1.2rem}
+#gate h1{font-size:1.35rem;margin:0 0 .4rem;color:#251A35}
+#gate p{color:#5A6577;font-size:.92rem;margin:0 0 1.4rem;line-height:1.55}
+#gate input{width:100%;padding:.85rem 1rem;border:1px solid #E3E7EF;border-radius:10px;font-family:'JetBrains Mono',monospace;
+font-size:.9rem;background:#F7F8FC;letter-spacing:.02em}
+#gate input:focus{outline:2px solid #9396FF;outline-offset:-1px;background:#fff}
+#gate button{width:100%;margin-top:.9rem;padding:.85rem;border:0;border-radius:10px;background:#251A35;color:#fff;
+font-weight:700;font-size:.95rem;cursor:pointer;font-family:inherit}
+#gate button:hover{background:#3B2A63}
+#gate button:disabled{opacity:.6;cursor:wait}
+#err{color:#B21F16;font-size:.86rem;margin-top:.8rem;display:none}
+#hint{font-size:.78rem;color:#8A93A5;margin-top:1.2rem;line-height:1.5}
+#app{display:none}
+</style></head>
+<body>
+<div id="gate"><div class="box">
+  <img src="assets/okara_icon.png" alt="">
+  <h1>Documentación confidencial</h1>
+  <p>Auditoría Técnica Integral SAP Business One · Proquitec S.A.<br>
+     Ingresá la clave maestra para descifrar el contenido.</p>
+  <form id="f" autocomplete="off">
+    <input id="k" type="password" placeholder="clave maestra" spellcheck="false" autocomplete="off">
+    <button id="b" type="submit">Descifrar y entrar</button>
+  </form>
+  <div id="err"></div>
+  <div id="hint">El contenido está cifrado con AES-256-GCM. La clave no se transmite ni se almacena en el servidor:
+  el descifrado ocurre en tu navegador.</div>
+</div></div>
+
+<div id="app">
+<header class="top"><div class="top-in">
+  <button class="btn-menu" id="mb" aria-label="Menú">☰</button>
+  <a class="brand" href="#/"><img src="assets/okara_icon.png" alt="Okara">
+  <span>Auditoría SAP B1<small>Proquitec S.A. · Okara</small></span></a>
+  <div class="top-sp"></div>
+  <button id="lock" title="Bloquear" style="background:none;border:1px solid var(--line);border-radius:8px;
+  padding:.35rem .7rem;cursor:pointer;font:600 12px Inter,sans-serif;color:var(--mut)">Bloquear</button>
+  <img class="pq" src="assets/proquitec_logo.png" alt="Proquitec">
+</div></header>
+<div class="wrap">
+  <aside class="side" id="sd">
+    <input id="q" class="search" type="search" placeholder="Buscar…" autocomplete="off">
+    <div id="nav"></div>
+  </aside>
+  <main id="main"></main>
+</div>
+<footer class="ft"><div class="ft-in">
+  <div><b>Auditoría Técnica Integral SAP Business One</b><br>Proquitec S.A. · Okara · Confidencial</div>
+  <div style="text-align:right">Ricardo Torales Ozorio<br><a href="mailto:rtorales@okara.com.py">rtorales@okara.com.py</a></div>
+</div></footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+const CFG = {"salt": "rSHbM0nTh8iB8mK8oR3ksg==", "iter": 310000, "dl": {"Cierre_Directorio_Auditoria_SAP_B1_Proquitec.pdf": "seg/fcff5ce016cba3c2.enc", "Informe_Final_Auditoria_SAP_B1_Proquitec.pdf": "seg/174bd6b40aa90d3a.enc"}};
+let KEY = null, DATA = null;
+
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const norm = s => s.toLowerCase().replace(/[^0-9a-f]/g, '');
+
+async function derive(pass){
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(norm(pass)), 'PBKDF2', false, ['deriveKey']);
+  return crypto.subtle.deriveKey({name:'PBKDF2', salt:b64(CFG.salt), iterations:CFG.iter, hash:'SHA-256'},
+    base, {name:'AES-GCM', length:256}, false, ['decrypt']);
+}
+async function bajar(url){
+  const r = await fetch(url, {cache:'no-store'});
+  if(!r.ok) throw new Error('no se pudo obtener ' + url);
+  return new Uint8Array(await r.arrayBuffer());
+}
+async function descifrar(buf){
+  return new Uint8Array(await crypto.subtle.decrypt({name:'AES-GCM', iv:buf.slice(0,12)}, KEY, buf.slice(12)));
+}
+
+document.getElementById('f').addEventListener('submit', async e => {
+  e.preventDefault();
+  const btn = document.getElementById('b'), err = document.getElementById('err');
+  btn.disabled = true; btn.textContent = 'Descifrando…'; err.style.display = 'none';
+  try{
+    KEY = await derive(document.getElementById('k').value);
+    const plano = await descifrar(await bajar('seg/app.enc'));
+    DATA = JSON.parse(new TextDecoder().decode(plano));
+    sessionStorage.setItem('k_ok', document.getElementById('k').value);
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    arrancar();
+  }catch(ex){
+    err.textContent = 'Clave incorrecta.'; err.style.display = 'block';
+    btn.disabled = false; btn.textContent = 'Descifrar y entrar'; KEY = null;
+  }
+});
+
+function arrancar(){
+  document.getElementById('nav').innerHTML = DATA.nav;
+  mermaid.initialize({startOnLoad:false, theme:'base', securityLevel:'loose',
+    themeVariables:{fontFamily:'Inter,system-ui,sans-serif', fontSize:'14px', primaryColor:'#F2F1FC',
+    primaryTextColor:'#1C2330', primaryBorderColor:'#9396FF', lineColor:'#6B5CE0',
+    secondaryColor:'#EAF2FA', tertiaryColor:'#FFFFFF', clusterBkg:'#FAFBFE', clusterBorder:'#E3E7EF'}});
+  addEventListener('hashchange', pintar);
+  pintar();
+  const q = document.getElementById('q');
+  q.addEventListener('input', function(){
+    const v = this.value.trim().toLowerCase();
+    document.querySelectorAll('#nav li').forEach(li => {
+      li.style.display = (!v || li.textContent.toLowerCase().indexOf(v) > -1) ? '' : 'none';
+    });
+    document.querySelectorAll('#nav .sec-t').forEach(h => {
+      const ul = h.nextElementSibling; let vis = 0;
+      if(ul) ul.querySelectorAll('li').forEach(li => { if(li.style.display !== 'none') vis++; });
+      h.style.display = vis ? '' : 'none';
+    });
+  });
+  const mb = document.getElementById('mb'), sd = document.getElementById('sd');
+  mb.onclick = () => sd.classList.toggle('open');
+  document.getElementById('lock').onclick = () => { sessionStorage.removeItem('k_ok'); location.reload(); };
+}
+
+function pintar(){
+  const r = location.hash.replace(/^#/, '') || '/';
+  const base = r.split('#')[0];
+  const pg = DATA.rutas[base] || DATA.rutas['/'];
+  document.getElementById('main').innerHTML = pg.h;
+  document.title = pg.t + ' · Auditoría SAP B1 Proquitec';
+  document.querySelectorAll('#nav a').forEach(a => {
+    a.classList.toggle('on', a.getAttribute('href') === '#' + base);
+  });
+  try{ mermaid.run({nodes: document.querySelectorAll('#main .mermaid')}); }catch(e){}
+  document.querySelectorAll('#main [data-dl],#main [data-seg]').forEach(a => a.onclick = abrir);
+  const anc = r.split('#')[1];
+  if(anc){ const el = document.getElementById(anc); if(el) el.scrollIntoView(); }
+  else scrollTo(0,0);
+}
+
+async function abrir(e){
+  e.preventDefault();
+  const a = e.currentTarget;
+  a.style.opacity = .5;
+  try{
+    let url, nombre, tipo;
+    if(a.dataset.dl){ url = CFG.dl[a.dataset.dl]; nombre = a.dataset.dl; tipo = 'application/pdf'; }
+    else if(a.dataset.seg === 'informe'){ url = 'seg/informe.enc'; nombre = 'informe-final.html'; tipo = 'text/html'; }
+    else { url = 'seg/mapa.enc'; nombre = 'mapa.html'; tipo = 'text/html'; }
+    const b = new Blob([await descifrar(await bajar(url))], {type: tipo});
+    const o = URL.createObjectURL(b);
+    if(tipo === 'application/pdf'){
+      const l = document.createElement('a'); l.href = o; l.download = nombre; l.click();
+    } else { open(o, '_blank'); }
+    setTimeout(() => URL.revokeObjectURL(o), 60000);
+  }catch(ex){ alert('No se pudo descifrar el archivo.'); }
+  a.style.opacity = 1;
+}
+
+// reabrir sesión ya desbloqueada (misma pestaña)
+(async () => {
+  const g = sessionStorage.getItem('k_ok');
+  if(!g) return;
+  try{
+    KEY = await derive(g);
+    DATA = JSON.parse(new TextDecoder().decode(await descifrar(await bajar('seg/app.enc'))));
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    arrancar();
+  }catch(e){ sessionStorage.removeItem('k_ok'); }
+})();
+</script>
+</body></html>
