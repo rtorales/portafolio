@@ -34,6 +34,7 @@ Este sitio es el portafolio profesional, currículum y punto de contacto de Rica
 
 Artículos sobre inteligencia artificial, transformación digital, automatización y ciberseguridad para líderes de TI:
 
+- [La carrera de la IA se acelera: Kimi K3, GPT-5.6 y Claude (julio 2026)](https://www.ricardotorales.com/blog/carrera-ia-2026-kimi-gpt-claude/): Análisis del ritmo vertiginoso de la IA en 2026 con datos del Artificial Analysis Intelligence Index: Kimi K3 en el podio, GPT-5.6 a un punto de Claude, y qué debe hacer un líder de tecnología cuando el ranking cambia cada semana (arquitecturas independientes del modelo, costo por tarea, decisiones reversibles).
 - [Harness de IA y agentes autónomos: OpenClaw vs Hermes](https://www.ricardotorales.com/blog/harness-ia-agentes-openclaw-hermes/): Qué es el arnés (harness) que convierte un modelo en agente autónomo, y comparación de OpenClaw y Hermes con sus ventajas, desventajas y riesgos de seguridad.
 - [Ransomware en Paraguay: casos reales y cómo prevenirlo](https://www.ricardotorales.com/blog/ransomware-paraguay-prevencion/): Casos verificados de ransomware en Paraguay (Tigo Business, sector salud, incidentes estatales), por qué crece la amenaza y cómo prevenirla.
 - [IA generativa en la empresa: guía práctica para líderes de TI](https://www.ricardotorales.com/blog/ia-generativa-empresas-paraguay/): Casos de uso reales, gobernanza de datos y errores que frenan la adopción de IA generativa.
