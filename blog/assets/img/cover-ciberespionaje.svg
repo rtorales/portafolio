@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="Ilustración: ciberespionaje estatal, red infiltrada y exfiltración de datos">
+  <defs>
+    <radialGradient id="bg" cx="45%" cy="4%" r="120%">
+      <stop offset="0%" stop-color="#24242c"/>
+      <stop offset="55%" stop-color="#0e0e11"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+    <marker id="ex" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#ffffff" fill-opacity="0.75"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+
+  <!-- Perímetro institucional vulnerado (línea cortada) -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="2.5">
+    <path d="M250 150 H700 M760 150 H950 V300 M950 360 V450 H250 V150"/>
+  </g>
+
+  <!-- Nodos internos de la red -->
+  <g stroke="#ffffff" stroke-opacity="0.14" stroke-width="1.5">
+    <line x1="380" y1="240" x2="520" y2="300"/>
+    <line x1="520" y1="300" x2="380" y2="360"/>
+    <line x1="520" y1="300" x2="680" y2="240"/>
+    <line x1="520" y1="300" x2="680" y2="360"/>
+  </g>
+  <g fill="#16161b" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2">
+    <circle cx="380" cy="240" r="14"/>
+    <circle cx="380" cy="360" r="14"/>
+    <circle cx="680" cy="240" r="14"/>
+    <circle cx="680" cy="360" r="14"/>
+  </g>
+  <!-- Nodo comprometido -->
+  <circle cx="520" cy="300" r="26" fill="#16161b" stroke="#ffffff" stroke-opacity="0.9" stroke-width="3"/>
+  <circle cx="520" cy="300" r="40" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="2" stroke-dasharray="5 9"/>
+
+  <!-- Exfiltración: paquetes saliendo por la brecha -->
+  <path d="M556 288 C 660 250, 780 190, 900 150" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="2.5" stroke-dasharray="10 8" marker-end="url(#ex)"/>
+  <g fill="#ffffff">
+    <rect x="648" y="236" width="13" height="13" rx="2.5" fill-opacity="0.55" transform="rotate(-24 654 242)"/>
+    <rect x="742" y="196" width="13" height="13" rx="2.5" fill-opacity="0.75" transform="rotate(-24 748 202)"/>
+    <rect x="834" y="164" width="13" height="13" rx="2.5" fill-opacity="0.9" transform="rotate(-24 840 170)"/>
+  </g>
+
+  <text x="72" y="530" font-family="ui-monospace, Menlo, monospace" font-size="22" letter-spacing="6" fill="#ffffff" fill-opacity="0.32">CIBERESPIONAJE · PY</text>
+</svg>
