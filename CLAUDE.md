@@ -36,6 +36,14 @@ The downloadable **`CV_Ricardo_Torales.pdf` is generated, never hand-edited.** S
 ```
 Job titles/dates must stay consistent across **`index.html` (timeline + Person schema)**, **`cv.html`**, and the PDF.
 
+## Brand images for search & social (generated, never hand-edited)
+
+`favicon.ico` (16/32/48), `favicon-{48,96,192,512}.png`, `apple-touch-icon.png` and `img/og-image.jpg` are all produced by **`python generate-brand-images.py`** (Pillow). Edit the `NOMBRE`/`CARGO`/`SUB`/`CROP` constants at the top of that script — not the images — and re-run it when the portrait or job title changes.
+
+- **Favicon must be `/favicon.ico` at the root with absolute paths in every page.** Google looks for it there; a relative `href="favicon.svg"` alone made Search show the generic globe icon.
+- **`og:image` must be a raster 1200×630 JPEG/PNG under ~300 KB** — WhatsApp/LinkedIn/X do not render SVG previews and crop non-1.91:1 images badly. Every page points at `img/og-image.jpg`; keep `og:image:width/height/type` in sync with the actual file.
+- After changing an OG image, previews stay stale until each platform re-scrapes: force it via LinkedIn Post Inspector and Facebook Sharing Debugger.
+
 ## Architecture
 
 - **`index.html`** is the entire homepage — ~2800 lines with **all CSS and JS inline** (no external CSS/JS except Google Fonts). A `:root` design-token system drives everything: `--ink-950/900/800` (dark surfaces), `--zinc-50…600` (neutrals), `--reading-max: 720px`, `--ease-out`, font vars (Space Grotesk / Hanken Grotesk / JetBrains Mono). Palette is deliberately **monochrome**; reuse these tokens rather than hard-coding colors.
