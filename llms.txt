@@ -6,8 +6,8 @@ Este sitio es el portafolio profesional, currículum y punto de contacto de Rica
 
 ## Perfil profesional
 
-- [Portafolio profesional](https://www.ricardotorales.com/): Perfil completo con experiencia, competencias, formación, certificaciones y proyectos.
-- [CV en PDF](https://www.ricardotorales.com/CV_Ricardo_Torales.pdf): Currículum descargable actualizado.
+- [Portafolio profesional](https://ricardotorales.com/): Perfil completo con experiencia, competencias, formación, certificaciones y proyectos.
+- [CV en PDF](https://ricardotorales.com/CV_Ricardo_Torales.pdf): Currículum descargable actualizado.
 - [LinkedIn](https://www.linkedin.com/in/ricardo-torales): Trayectoria profesional y 34 certificaciones con sus credenciales verificables.
 
 ## Especialidad
@@ -34,15 +34,15 @@ Este sitio es el portafolio profesional, currículum y punto de contacto de Rica
 
 Artículos sobre inteligencia artificial, transformación digital, automatización y ciberseguridad para líderes de TI:
 
-- [Ciberespionaje estatal en Paraguay: qué significa para tu empresa](https://www.ricardotorales.com/blog/ciberespionaje-paraguay-flax-typhoon/): Análisis de la atribución pública que hizo Paraguay en julio de 2026 sobre la infiltración de sistemas del Estado por actores vinculados al gobierno chino (grupo Flax Typhoon), con estadísticas del CERT-PY que muestran que el 47,98% de los incidentes gestionados en 2026 corresponden al sector privado, y cinco medidas concretas de gobernanza para empresas.
-- [La carrera de la IA se acelera: Kimi K3, GPT-5.6 y Claude (julio 2026)](https://www.ricardotorales.com/blog/carrera-ia-2026-kimi-gpt-claude/): Análisis del ritmo vertiginoso de la IA en 2026 con datos del Artificial Analysis Intelligence Index: Kimi K3 en el podio, GPT-5.6 a un punto de Claude, y qué debe hacer un líder de tecnología cuando el ranking cambia cada semana (arquitecturas independientes del modelo, costo por tarea, decisiones reversibles).
-- [Harness de IA y agentes autónomos: OpenClaw vs Hermes](https://www.ricardotorales.com/blog/harness-ia-agentes-openclaw-hermes/): Qué es el arnés (harness) que convierte un modelo en agente autónomo, y comparación de OpenClaw y Hermes con sus ventajas, desventajas y riesgos de seguridad.
-- [Ransomware en Paraguay: casos reales y cómo prevenirlo](https://www.ricardotorales.com/blog/ransomware-paraguay-prevencion/): Casos verificados de ransomware en Paraguay (Tigo Business, sector salud, incidentes estatales), por qué crece la amenaza y cómo prevenirla.
-- [IA generativa en la empresa: guía práctica para líderes de TI](https://www.ricardotorales.com/blog/ia-generativa-empresas-paraguay/): Casos de uso reales, gobernanza de datos y errores que frenan la adopción de IA generativa.
-- [Ciberseguridad para PYMES: 7 controles esenciales](https://www.ricardotorales.com/blog/ciberseguridad-pymes-paraguay/): Controles de bajo costo y alto impacto para proteger pequeñas empresas.
-- [Automatización de procesos con Power Platform](https://www.ricardotorales.com/blog/automatizacion-procesos-power-platform/): Hoja de ruta para automatizar procesos manuales con Power Automate y Power Apps.
-- [Microsoft Copilot en el trabajo: ¿productividad real o hype?](https://www.ricardotorales.com/blog/microsoft-copilot-productividad-empresarial/): Análisis del valor real de Copilot y cómo medir su retorno.
-- [Arquitectura Zero Trust: por qué el perímetro ya no alcanza](https://www.ricardotorales.com/blog/arquitectura-zero-trust-empresa/): Qué significa Zero Trust en la práctica y cómo iniciar la transición.
+- [Ciberespionaje estatal en Paraguay: qué significa para tu empresa](https://ricardotorales.com/blog/ciberespionaje-paraguay-flax-typhoon/): Análisis de la atribución pública que hizo Paraguay en julio de 2026 sobre la infiltración de sistemas del Estado por actores vinculados al gobierno chino (grupo Flax Typhoon), con estadísticas del CERT-PY que muestran que el 47,98% de los incidentes gestionados en 2026 corresponden al sector privado, y cinco medidas concretas de gobernanza para empresas.
+- [La carrera de la IA se acelera: Kimi K3, GPT-5.6 y Claude (julio 2026)](https://ricardotorales.com/blog/carrera-ia-2026-kimi-gpt-claude/): Análisis del ritmo vertiginoso de la IA en 2026 con datos del Artificial Analysis Intelligence Index: Kimi K3 en el podio, GPT-5.6 a un punto de Claude, y qué debe hacer un líder de tecnología cuando el ranking cambia cada semana (arquitecturas independientes del modelo, costo por tarea, decisiones reversibles).
+- [Harness de IA y agentes autónomos: OpenClaw vs Hermes](https://ricardotorales.com/blog/harness-ia-agentes-openclaw-hermes/): Qué es el arnés (harness) que convierte un modelo en agente autónomo, y comparación de OpenClaw y Hermes con sus ventajas, desventajas y riesgos de seguridad.
+- [Ransomware en Paraguay: casos reales y cómo prevenirlo](https://ricardotorales.com/blog/ransomware-paraguay-prevencion/): Casos verificados de ransomware en Paraguay (Tigo Business, sector salud, incidentes estatales), por qué crece la amenaza y cómo prevenirla.
+- [IA generativa en la empresa: guía práctica para líderes de TI](https://ricardotorales.com/blog/ia-generativa-empresas-paraguay/): Casos de uso reales, gobernanza de datos y errores que frenan la adopción de IA generativa.
+- [Ciberseguridad para PYMES: 7 controles esenciales](https://ricardotorales.com/blog/ciberseguridad-pymes-paraguay/): Controles de bajo costo y alto impacto para proteger pequeñas empresas.
+- [Automatización de procesos con Power Platform](https://ricardotorales.com/blog/automatizacion-procesos-power-platform/): Hoja de ruta para automatizar procesos manuales con Power Automate y Power Apps.
+- [Microsoft Copilot en el trabajo: ¿productividad real o hype?](https://ricardotorales.com/blog/microsoft-copilot-productividad-empresarial/): Análisis del valor real de Copilot y cómo medir su retorno.
+- [Arquitectura Zero Trust: por qué el perímetro ya no alcanza](https://ricardotorales.com/blog/arquitectura-zero-trust-empresa/): Qué significa Zero Trust en la práctica y cómo iniciar la transición.
 
 ## Contacto
 
