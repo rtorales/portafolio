@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Orquestación de agentes de IA: cuándo uno no alcanza y cuánto cuesta que sean varios | Ricardo Torales</title>
+  <meta name="description" content="Patrones de orquestación multiagente, por qué un solo agente choca contra un techo, y cómo decidir entre suscripción y consumo por API para trabajos complejos. Guía de decisión para líderes de TI." />
+  <link rel="canonical" href="https://ricardotorales.com/blog/orquestacion-agentes-ia-suscripciones/" />
+  <meta name="author" content="Ricardo Torales" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Ricardo Torales" />
+  <meta property="og:title" content="Orquestación de agentes de IA: cuándo uno no alcanza y cuánto cuesta que sean varios" />
+  <meta property="og:description" content="Patrones de orquestación multiagente y cómo decidir entre suscripción y consumo por API para trabajos complejos. Guía de decisión para líderes de TI." />
+  <meta property="og:url" content="https://ricardotorales.com/blog/orquestacion-agentes-ia-suscripciones/" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://ricardotorales.com/img/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-08-04T09:00:00-03:00" />
+  <meta property="article:modified_time" content="2026-08-04T09:00:00-03:00" />
+  <meta property="article:author" content="Ricardo Torales" />
+  <meta property="article:section" content="Inteligencia Artificial" />
+  <meta property="article:tag" content="Orquestación de agentes" />
+  <meta property="article:tag" content="Agentes de IA" />
+  <meta property="article:tag" content="Costos de IA" />
+  <meta property="article:tag" content="Gobernanza de TI" />
+  <meta property="fb:app_id" content="4234406980437487" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Orquestación de agentes de IA: cuándo uno no alcanza y cuánto cuesta que sean varios" />
+  <meta name="twitter:description" content="Cuándo conviene un equipo de agentes en vez de uno solo, y cómo elegir entre suscripción y consumo por API." />
+  <meta name="twitter:image" content="https://ricardotorales.com/img/og-image.jpg" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/blog/assets/blog.css?v=2" />
+
+  <script>document.documentElement.className = 'js';</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://ricardotorales.com/blog/orquestacion-agentes-ia-suscripciones/#article",
+        "headline": "Orquestación de agentes de IA: cuándo uno no alcanza y cuánto cuesta que sean varios",
+        "description": "Patrones de orquestación multiagente, por qué un solo agente choca contra un techo, y cómo decidir entre suscripción y consumo por API para trabajos complejos.",
+        "image": "https://ricardotorales.com/img/og-image.jpg",
+        "datePublished": "2026-08-04T09:00:00-03:00",
+        "dateModified": "2026-08-04T09:00:00-03:00",
+        "inLanguage": "es",
+        "articleSection": "Inteligencia Artificial",
+        "keywords": "orquestación de agentes, multiagente, agentes de IA, orquestador worker, suscripción vs API, costos de IA, punto de equilibrio, gobernanza de TI, subagentes",
+        "wordCount": 1552,
+        "author": {
+          "@type": "Person",
+          "@id": "https://ricardotorales.com/#person",
+          "name": "Ricardo Torales",
+          "url": "https://ricardotorales.com/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://ricardotorales.com/#person",
+          "name": "Ricardo Torales"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://ricardotorales.com/blog/orquestacion-agentes-ia-suscripciones/"
+        },
+        "isPartOf": { "@id": "https://ricardotorales.com/blog/#blog" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ricardotorales.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ricardotorales.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Orquestación de agentes de IA", "item": "https://ricardotorales.com/blog/orquestacion-agentes-ia-suscripciones/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="Inicio">
+        <span class="nav-monogram" aria-hidden="true">RT</span>
+        <span class="nav-name">Ricardo Torales</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#perfil">Perfil</a></li>
+        <li><a href="/#proyectos">Proyectos</a></li>
+        <li><a href="/#experiencia">Experiencia</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/#contacto" class="nav-cta">Contactar</a></li>
+      </ul>
+      <a href="/#contacto" class="nav-cta-mobile">Contactar</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="/">Inicio</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Orquestación de agentes de IA
+    </nav>
+  </div>
+
+  <article>
+    <header class="article-header">
+      <span class="tag--cat">Inteligencia Artificial</span>
+      <h1 class="article-title">Orquestación de agentes de IA: cuándo uno no alcanza y cuánto cuesta que sean varios</h1>
+      <p class="article-lead">Pasamos de "tengo un asistente de IA" a "tengo un equipo de agentes que se reparten el trabajo". El salto promete velocidad, pero cambia dos cosas que un directorio no puede ignorar: la arquitectura de coordinación y la estructura de costos. Esta es la guía de decisión que uso.</p>
+      <div class="article-meta">
+        <div class="article-author">
+          <img class="article-author-avatar" src="/img/ricardo-torales.jpeg" alt="Ricardo Torales" width="42" height="42" loading="lazy" />
+          <div>
+            <div class="article-author-name">Ricardo Torales</div>
+            <div class="article-author-role">Gerente de Proyectos de Tecnología · PMO</div>
+          </div>
+        </div>
+        <div class="article-meta-stats">
+          <time datetime="2026-08-04">4 ago 2026</time>
+          <span class="dot"></span>
+          <span>10 min de lectura</span>
+        </div>
+      </div>
+    </header>
+
+    <figure class="article-hero rt-reveal">
+      <img src="/blog/assets/img/cover-orquestacion-agentes.svg" alt="Ilustración: un agente orquestador delega trabajo a cinco agentes especializados que luego consolidan resultados" width="1200" height="600" loading="lazy" />
+    </figure>
+
+    <div class="article-body">
+      <p>Hace un año, la conversación sobre IA en las empresas giraba en torno a un chat. Hoy gira en torno a un <em>equipo</em>. La palabra que aparece en toda arquitectura seria de 2026 es <strong>orquestación</strong>: varios agentes especializados trabajando en paralelo bajo la coordinación de otro que reparte, supervisa y consolida.</p>
+
+      <p>No es una moda de laboratorio. Según reportes de Gartner citados por analistas del sector, las consultas empresariales sobre sistemas multiagente crecieron más de <strong>1.400%</strong> entre principios de 2024 y mediados de 2025, con proyecciones de que un 40% de las aplicaciones empresariales incorporen agentes hacia fines de 2026. La pregunta ya no es si van a llegar a tu organización, sino con qué criterio los vas a montar y pagar.</p>
+
+      <h2>Por qué un solo agente choca contra un techo</h2>
+      <p>Antes de sumar agentes conviene entender por qué uno deja de alcanzar. Hay tres límites concretos, y ninguno se resuelve "esperando un modelo mejor":</p>
+      <ul>
+        <li><strong>La ventana de contexto es un techo duro.</strong> Un agente solo puede tener presente cierta cantidad de información a la vez. En un proyecto grande —un ERP, una base de código, un expediente extenso— la tarea no entra completa. Y cuando el contexto se satura, la calidad cae antes de que aparezca ningún error visible.</li>
+        <li><strong>No hay especialización.</strong> Un agente generalista que salta entre analizar datos, escribir código y redactar un informe rinde peor en cada una de esas cosas que tres agentes con instrucciones, herramientas y permisos acotados a su dominio.</li>
+        <li><strong>No hay paralelismo.</strong> Un agente trabaja en serie. Cinco tareas independientes tardan cinco veces lo que tarda una.</li>
+      </ul>
+      <p>El desarrollador Addy Osmani, de Google, lo resume en una frase que vale para cualquier industria: tres agentes enfocados superan de forma consistente a un agente generalista trabajando el triple de tiempo. La ganancia no viene solo de la velocidad, sino del <strong>aislamiento</strong>: cuando cada agente tiene su propio contexto acotado, los errores no se contaminan entre sí.</p>
+
+      <h2>Los cinco patrones que se usan en producción</h2>
+      <p>La literatura técnica de 2026 converge en cinco formas de coordinar agentes. Traducidas a lenguaje de gestión, son cinco maneras de organizar un equipo:</p>
+      <ul>
+        <li><strong>Secuencial (cadena):</strong> el resultado de un agente alimenta al siguiente. Es la línea de montaje. Simple y predecible; el problema es que un eslabón lento frena todo.</li>
+        <li><strong>Paralelo (abanico):</strong> se abre la tarea en partes independientes, se ejecutan a la vez y se consolidan. Es donde está la ganancia de tiempo real.</li>
+        <li><strong>Jerárquico (orquestador y trabajadores):</strong> un agente coordinador descompone, delega a especialistas y arma el resultado final. El patrón más usado en sistemas serios.</li>
+        <li><strong>Enrutamiento (handoff):</strong> un clasificador decide qué especialista atiende cada caso. Piense en la mesa de entrada de un centro de soporte.</li>
+        <li><strong>Bucle (iteración con evaluación):</strong> el agente produce, otro evalúa, se corrige y se repite hasta cumplir un criterio. Es lo más parecido a un control de calidad.</li>
+      </ul>
+      <p>En la práctica, los sistemas de producción <strong>combinan varios</strong>: un orquestador jerárquico que abre trabajo en paralelo y cierra con un bucle de verificación.</p>
+
+      <div class="callout">
+        <span class="callout-label">El riesgo del patrón estrella</span>
+        <p>El orquestador jerárquico concentra una debilidad: es un <strong>punto único de falla</strong>. Si clasifica mal una tarea, la manda al especialista equivocado — y ese error de clasificación se multiplica a medida que crece el volumen. Antes de escalar, hay que medir con qué frecuencia el coordinador se equivoca al repartir.</p>
+      </div>
+
+      <h2>La economía: por qué orquestar puede salir más barato</h2>
+      <p>Acá aparece el hallazgo contraintuitivo. Sumar agentes suena a multiplicar el gasto, pero bien diseñado hace lo contrario. La clave está en <strong>no usar el mismo modelo para todo</strong>: el orquestador —que necesita criterio para descomponer y decidir— usa un modelo capaz y caro; los trabajadores —que ejecutan tareas acotadas y bien definidas— usan modelos más económicos.</p>
+      <p>Análisis del sector ubican el ahorro de este esquema entre un <strong>40% y 60%</strong> frente a resolver todo con el modelo más potente. Es exactamente la lógica de cualquier organización: no ponés a tu gerente más caro a hacer carga de datos.</p>
+      <p>Esto enlaza con algo que ya vimos cuando analizamos <a href="/blog/carrera-ia-2026-kimi-gpt-claude/">la convergencia de los modelos de frontera</a>: si la diferencia de capacidad entre el primero y el quinto del ranking es mínima, pero la de costo es de decenas de veces, la ventaja competitiva no está en usar el mejor modelo — está en <em>saber qué parte del trabajo merece cuál</em>.</p>
+
+      <h2>Suscripción o consumo: el eje que define tu factura</h2>
+      <p>La segunda decisión —y la que más consultas me genera— es cómo pagar. Hay dos modelos y responden a lógicas opuestas:</p>
+      <ul>
+        <li><strong>Suscripción (tarifa plana):</strong> un monto fijo mensual por usuario, con límites de uso. Costo predecible, cero fricción administrativa. Los planes profesionales de los principales proveedores se ubican en 2026 en escalones de aproximadamente USD 20, USD 100 y USD 200 mensuales según intensidad de uso.</li>
+        <li><strong>Consumo por API (pago por uso):</strong> se paga por volumen procesado. Escala con el trabajo real y permite enrutar cada tarea al modelo más barato que la resuelva, pero el gasto es variable — y si no se controla, sorprende.</li>
+      </ul>
+      <p>La forma correcta de decidir no es preguntar "cuál es más barato", sino <strong>dónde está tu punto de equilibrio</strong>:</p>
+
+      <figure class="data-figure" style="max-width:720px;margin:28px auto;padding:0 4px;">
+        <svg viewBox="0 0 720 380" role="img" aria-label="Gráfico: el costo de una suscripción se mantiene plano mientras el consumo por API crece con el volumen; ambos se cruzan en un punto de equilibrio." style="width:100%;height:auto;font-family:'JetBrains Mono',ui-monospace,monospace;">
+          <!-- ejes -->
+          <line x1="86" y1="36" x2="86" y2="300" stroke="#a1a1aa" stroke-width="1.5"/>
+          <line x1="86" y1="300" x2="672" y2="300" stroke="#a1a1aa" stroke-width="1.5"/>
+          <!-- gridlines -->
+          <g stroke="#e4e4e7" stroke-width="1">
+            <line x1="86" y1="234" x2="672" y2="234"/>
+            <line x1="86" y1="168" x2="672" y2="168"/>
+            <line x1="86" y1="102" x2="672" y2="102"/>
+          </g>
+          <!-- suscripcion: escalones planos -->
+          <path d="M86 258 H286 V204 H466 V138 H672" fill="none" stroke="#1b1b20" stroke-width="3.5" stroke-linejoin="round"/>
+          <!-- consumo API: curva creciente -->
+          <path d="M86 292 C 210 286, 300 250, 386 206 S 560 96, 672 52" fill="none" stroke="#71717a" stroke-width="3.5" stroke-dasharray="9 7"/>
+          <!-- punto de equilibrio -->
+          <circle cx="386" cy="206" r="7" fill="#0e0e11"/>
+          <line x1="386" y1="206" x2="386" y2="300" stroke="#0e0e11" stroke-width="1.4" stroke-dasharray="4 5"/>
+          <text x="396" y="192" font-size="13" font-weight="600" fill="#0e0e11">Punto de equilibrio</text>
+          <!-- etiquetas de series -->
+          <rect x="500" y="248" width="22" height="4" rx="2" fill="#1b1b20"/>
+          <text x="530" y="256" font-size="13" fill="#0e0e11">Suscripción</text>
+          <rect x="500" y="272" width="22" height="4" rx="2" fill="#71717a"/>
+          <text x="530" y="280" font-size="13" fill="#0e0e11">Consumo por API</text>
+          <!-- zonas -->
+          <text x="150" y="336" font-size="12" fill="#71717a">conviene consumo</text>
+          <text x="470" y="336" font-size="12" fill="#71717a">conviene suscripción</text>
+          <!-- ejes: titulos -->
+          <text x="86" y="26" font-size="12" fill="#a1a1aa">Costo mensual</text>
+          <text x="672" y="322" font-size="12" fill="#a1a1aa" text-anchor="end">Volumen de trabajo →</text>
+        </svg>
+        <figcaption style="font-family:var(--font-mono);font-size:.74rem;color:var(--zinc-500);margin-top:10px;line-height:1.5;">
+          Esquema conceptual de elaboración propia. La suscripción avanza por escalones fijos; el consumo por API crece con el volumen. La posición exacta del cruce depende de los precios vigentes de cada proveedor y del perfil de uso de cada organización.
+        </figcaption>
+      </figure>
+
+      <p>La lectura práctica, según comparativas publicadas en 2026:</p>
+      <ul>
+        <li><strong>Uso interactivo y sostenido de una persona</strong> (alguien que trabaja con el agente todos los días): la suscripción gana casi siempre. Es el caso de un analista, un desarrollador, un consultor.</li>
+        <li><strong>Cargas de producción automatizadas</strong> (procesos que corren solos, a escala, sin humano al teclado): el consumo por API gana, porque permite enrutar cada tarea al modelo más barato que la resuelva.</li>
+        <li><strong>Uso bajo o esporádico</strong>: consumo por API, sin dudas. Pagar una suscripción para usarla ocasionalmente es el desperdicio más común que veo.</li>
+      </ul>
+
+      <blockquote>La suscripción compra previsibilidad. La API compra elasticidad. La mayoría de las organizaciones necesita las dos — en distintos lugares.</blockquote>
+
+      <h3>El esquema híbrido, que es lo que suelo recomendar</h3>
+      <p>En la práctica, el diseño que mejor funciona en una empresa mediana no es elegir uno, sino repartir: <strong>suscripciones para las personas</strong> que usan IA de forma intensiva y diaria —previsibilidad presupuestaria, sin fricción— y <strong>consumo por API para los procesos automatizados</strong> —donde el volumen es alto, la tarea es repetitiva y se puede enrutar al modelo más barato que cumpla.</p>
+      <p>Y una advertencia sobre los términos de uso: las suscripciones están pensadas para uso interactivo de una persona. Montar una flota de agentes automatizados sobre una cuenta de suscripción suele chocar con límites de uso y, en muchos casos, con las condiciones del proveedor. Si el trabajo es automatizado y a escala, la vía correcta —técnica y contractual— es la API.</p>
+
+      <h2>El costo que nadie presupuesta: la verificación</h2>
+      <p>Hay un cambio de fondo que conviene entender antes de escalar. Cuando los agentes se multiplican, el cuello de botella deja de ser <em>generar</em> el trabajo y pasa a ser <strong>verificarlo</strong>. Producir cinco propuestas en paralelo es barato y rápido; revisarlas con criterio, no.</p>
+      <p>De ahí la regla que aplico sin excepción, y que ya planteaba al hablar del <a href="/blog/harness-ia-agentes-openclaw-hermes/">arnés que convierte un modelo en agente</a>: nunca dar por buena la salida de un agente sin verificación. Cuando hay varios trabajando en paralelo, esa disciplina deja de ser una buena práctica y pasa a ser el control interno que sostiene todo el esquema.</p>
+      <p>Por eso también existe un punto de saturación. La experiencia reportada por quienes operan estos sistemas ubica el rango útil en torno a <strong>tres a cinco agentes en paralelo</strong>: más allá, el costo de coordinarlos y revisar su salida crece más rápido que el beneficio.</p>
+
+      <div class="key-takeaways">
+        <h2>Para llevar</h2>
+        <ul>
+          <li>Un solo agente choca contra tres techos: contexto limitado, falta de especialización y ausencia de paralelismo.</li>
+          <li>Cinco patrones dominan en producción — secuencial, paralelo, jerárquico, enrutamiento y bucle — y los sistemas serios los combinan.</li>
+          <li>Orquestar bien puede <em>reducir</em> el gasto entre 40% y 60%: modelo caro para coordinar, modelos baratos para ejecutar.</li>
+          <li>Suscripción para personas con uso diario e intensivo; consumo por API para procesos automatizados y de alto volumen.</li>
+          <li>El cuello de botella se mudó de generar a verificar. Tres a cinco agentes en paralelo suele ser el punto útil.</li>
+        </ul>
+      </div>
+
+      <p>La orquestación de agentes es, en el fondo, un problema de gestión disfrazado de problema técnico: repartir trabajo según capacidad, asignar el recurso más caro solo donde agrega criterio, y montar un control de calidad que no dependa de la buena fe del ejecutor. Nada de eso es nuevo para quien dirigió equipos. Lo nuevo es la velocidad a la que ahora se puede hacer — y que el costo de organizarlo mal aparece en la factura del mes siguiente.</p>
+
+      <p class="article-note" style="font-size:.86rem;color:var(--zinc-500);border-top:1px solid var(--zinc-200);padding-top:16px;">Nota: los precios de suscripciones y APIs de IA cambian con frecuencia — durante 2026 hubo recortes de hasta dos tercios en algunos modelos. Las cifras citadas provienen de comparativas y reportes públicos del sector a agosto de 2026 y se ofrecen como orden de magnitud, no como referencia de compra. Verificá siempre los precios y las condiciones de uso vigentes con cada proveedor antes de decidir.</p>
+    </div>
+
+    <aside class="author-box">
+      <div class="author-box-inner">
+        <img src="/img/ricardo-torales.jpeg" alt="Ricardo Torales" width="64" height="64" loading="lazy" />
+        <div>
+          <div class="author-box-name">Ricardo Torales</div>
+          <div class="author-box-role">Gerente de Proyectos de Tecnología · PMO &amp; Business Transformation</div>
+          <p>Más de 14 años liderando transformación digital, adopción de IA y gobernanza de TI en empresas de Paraguay y la región. Especialista en integrar tecnología emergente con criterio de negocio y seguridad.</p>
+          <div class="author-box-links">
+            <a href="/#contacto">Contactar →</a>
+            <a href="https://www.linkedin.com/in/ricardo-torales" target="_blank" rel="noopener">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </article>
+
+  <section class="related" aria-label="Artículos relacionados">
+    <h2>Seguir leyendo</h2>
+    <div class="related-grid">
+      <article class="related-card">
+        <span class="tag--cat">Inteligencia Artificial</span>
+        <h3><a href="/blog/harness-ia-agentes-openclaw-hermes/">Harness de IA y agentes autónomos: OpenClaw vs Hermes</a></h3>
+      </article>
+      <article class="related-card">
+        <span class="tag--cat">Inteligencia Artificial</span>
+        <h3><a href="/blog/carrera-ia-2026-kimi-gpt-claude/">La carrera de la IA se acelera: Kimi K3, GPT-5.6 y Claude</a></h3>
+      </article>
+      <article class="related-card">
+        <span class="tag--cat">Automatización</span>
+        <h3><a href="/blog/automatizacion-procesos-power-platform/">Automatización de procesos con Power Platform</a></h3>
+      </article>
+    </div>
+  </section>
+
+  <section class="article-cta">
+    <div class="article-cta-inner">
+      <h2>¿Diseñando tu arquitectura de agentes?</h2>
+      <p>Ayudo a equipos a definir qué automatizar, con qué modelo y bajo qué esquema de costos — con gobernanza desde el primer día.</p>
+      <a href="/#contacto" class="btn btn-white">Conversemos</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Ricardo Torales · Gerente de Tecnología &amp; Consultor en Automatización · Asunción, Paraguay · <a href="mailto:ricardotorales@outlook.com">ricardotorales@outlook.com</a></p>
+    <p class="footer-updated">Publicado el <time datetime="2026-08-04">4 de agosto de 2026</time></p>
+  </footer>
+
+  <script>
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); obs.unobserve(e.target); } });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.rt-reveal').forEach((el) => obs.observe(el));
+    }
+  </script>
+</body>
+</html>

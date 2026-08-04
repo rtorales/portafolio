@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="Ilustración: un agente orquestador que delega trabajo a varios agentes especializados">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="6%" r="120%">
+      <stop offset="0%" stop-color="#26262f"/>
+      <stop offset="55%" stop-color="#0e0e11"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#ffffff" fill-opacity="0.55"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+
+  <!-- Enlaces del orquestador a los trabajadores -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.30" stroke-width="2" marker-end="url(#ar)">
+    <path d="M600 232 C 600 290, 330 280, 300 348"/>
+    <path d="M600 232 C 600 290, 470 300, 450 348"/>
+    <path d="M600 232 C 600 300, 620 300, 600 348"/>
+    <path d="M600 232 C 600 290, 730 300, 750 348"/>
+    <path d="M600 232 C 600 290, 870 280, 900 348"/>
+  </g>
+
+  <!-- Orquestador -->
+  <circle cx="600" cy="180" r="66" fill="#16161b" stroke="#ffffff" stroke-opacity="0.85" stroke-width="3"/>
+  <circle cx="600" cy="180" r="86" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2" stroke-dasharray="6 10"/>
+  <g fill="#ffffff" fill-opacity="0.9">
+    <rect x="583" y="163" width="34" height="6" rx="3"/>
+    <rect x="583" y="177" width="34" height="6" rx="3"/>
+    <rect x="583" y="191" width="22" height="6" rx="3"/>
+  </g>
+
+  <!-- Agentes trabajadores -->
+  <g>
+    <circle cx="300" cy="392" r="40" fill="#16161b" stroke="#ffffff" stroke-opacity="0.42" stroke-width="2.5"/>
+    <circle cx="450" cy="392" r="40" fill="#16161b" stroke="#ffffff" stroke-opacity="0.55" stroke-width="2.5"/>
+    <circle cx="600" cy="392" r="40" fill="#16161b" stroke="#ffffff" stroke-opacity="0.70" stroke-width="2.5"/>
+    <circle cx="750" cy="392" r="40" fill="#16161b" stroke="#ffffff" stroke-opacity="0.55" stroke-width="2.5"/>
+    <circle cx="900" cy="392" r="40" fill="#16161b" stroke="#ffffff" stroke-opacity="0.42" stroke-width="2.5"/>
+  </g>
+  <!-- Puntos internos de los trabajadores -->
+  <g fill="#ffffff" fill-opacity="0.55">
+    <circle cx="300" cy="392" r="7"/><circle cx="450" cy="392" r="7"/>
+    <circle cx="600" cy="392" r="7"/><circle cx="750" cy="392" r="7"/>
+    <circle cx="900" cy="392" r="7"/>
+  </g>
+
+  <!-- Barra de consolidacion -->
+  <path d="M300 448 H900" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2" stroke-dasharray="4 8"/>
+
+  <text x="72" y="530" font-family="ui-monospace, Menlo, monospace" font-size="22" letter-spacing="6" fill="#ffffff" fill-opacity="0.32">ORQUESTACIÓN · AGENTES</text>
+</svg>
