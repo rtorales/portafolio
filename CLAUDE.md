@@ -4,12 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Personal portfolio + blog for **Ricardo Torales** (executive IT / project-management brand, Asunción, Paraguay), served at **https://www.ricardotorales.com**. It is a **static HTML/CSS/JS site with no build step and no dependencies** — no `package.json`, no bundler, no framework. Do not introduce npm/Node tooling; a `npx <pkg>` here has nothing to operate on. All site content and copy is in **Spanish**; keep that voice (executive, "sin humo, con criterio de negocio", governance/business lens for IT leaders in Paraguay/LatAm).
+Personal portfolio + blog for **Ricardo Torales** (executive IT / project-management brand, Asunción, Paraguay), served at **https://ricardotorales.com**. It is a **static HTML/CSS/JS site with no build step and no dependencies** — no `package.json`, no bundler, no framework. Do not introduce npm/Node tooling; a `npx <pkg>` here has nothing to operate on. All site content and copy is in **Spanish**; keep that voice (executive, "sin humo, con criterio de negocio", governance/business lens for IT leaders in Paraguay/LatAm).
 
 ## Deploy model (important)
 
 - Hosted on **GitHub Pages** from the **`main` branch root** (default Pages builder — there is no `.github/workflows`). **Pushing to `main` publishes the live site** in ~1–2 minutes. There is no staging.
 - Custom domain is pinned by the **`CNAME`** file (`ricardotorales.com`) — never delete it; losing it breaks the domain on the next deploy.
+- **Canonical host is the apex, `https://ricardotorales.com` — never `www`.** GitHub Pages 301-redirects `www` → apex, so any absolute URL written with `www` points at a redirect. When every `canonical`, `og:url`, sitemap entry and JSON-LD `@id` said `www`, social scrapers had to follow a hop before reading the tags (WhatsApp/Telegram sometimes dropped the preview) and engagement counts split across two URLs. Both hostnames serve fine and the TLS cert covers both, but **every absolute URL committed to this repo must be apex**. Guard before publishing:
+  ```bash
+  grep -rn "www\.ricardotorales\.com" --include="*.html" --include="*.xml" --include="*.txt" .   # must return nothing
+  ```
 - Confirm a deploy finished before claiming success — poll the Actions API, e.g.:
   ```bash
   curl -s "https://api.github.com/repos/rtorales/portafolio/actions/runs?per_page=1" | python -c "import sys,json;r=json.load(sys.stdin)['workflow_runs'][0];print(r['run_number'],r['status'],r['conclusion'])"
@@ -53,7 +57,7 @@ Job titles/dates must stay consistent across **`index.html` (timeline + Person s
 ### Blog subsystem (`blog/`)
 
 - **`blog/index.html`** is the hub: a card grid **plus** a `Blog` JSON-LD whose `blogPost[]` array lists every post. **`blog/assets/blog.css`** is the shared stylesheet for the hub and all posts.
-- Each post is **`blog/<slug>/index.html`** — a self-contained page that **clones the same template**. Use an existing recent post as the structural template (e.g. `blog/harness-ia-agentes-openclaw-hermes/index.html`; `blog/carrera-ia-2026-kimi-gpt-claude/index.html` also shows the inline-SVG data-chart pattern).
+- Each post is **`blog/<slug>/index.html`** — a self-contained page that **clones the same template**. Copy the newest post rather than an old one, so the `<head>` conventions (apex URLs, `fb:app_id`, favicon block) come along: **`blog/orquestacion-agentes-ia-suscripciones/index.html`** is the current reference and also shows the inline-SVG data-chart pattern (`<figure class="data-figure">` + `<figcaption>` citing the source).
 - **Cache-busting convention:** posts link the stylesheet as `/blog/assets/blog.css?v=N`. If you change `blog.css` in a way existing pages depend on, bump `N` across the pages that need it.
 - **Cover images** are per-post branded SVGs in `blog/assets/img/cover-*.svg` (monochrome, dark radial-gradient bg + dot pattern + geometric motif, `viewBox="0 0 1200 600"`). Referenced two ways: as the hub card's `--cover: url(...)` and as the article hero `<figure class="article-hero">`. **Hero `<img>` must set `height:auto` in CSS** — the raw `width/height` attributes otherwise override the `aspect-ratio` and distort it (a bug fixed once already).
 - **Do not embed screenshots or images from copyrighted third-party sites.** Recreate data as your own on-brand SVG with a `<figcaption>` citing the source + link (facts aren't copyrightable; their chart images are).
@@ -61,7 +65,7 @@ Job titles/dates must stay consistent across **`index.html` (timeline + Person s
 ### Adding a blog post — the four touchpoints
 
 A new post is only "integrated" when all of these are updated together:
-1. `blog/<slug>/index.html` — the post (BlogPosting + BreadcrumbList JSON-LD; `author`/`publisher` reference `@id https://www.ricardotorales.com/#person`; `datePublished`/`dateModified` = real date; accurate `wordCount`; 1–2 internal links to related posts).
+1. `blog/<slug>/index.html` — the post (BlogPosting + BreadcrumbList JSON-LD; `author`/`publisher` reference `@id https://ricardotorales.com/#person`; `datePublished`/`dateModified` = real date; accurate `wordCount` — count it, don't estimate; 1–2 internal links to related posts). The `<head>` must also carry `fb:app_id` and the full favicon block, like every other page.
 2. `blog/index.html` — add a card (first in `.posts-grid`) **and** a first entry in the schema `blogPost[]`.
 3. `sitemap.xml` — add the post `<url>`; bump `<lastmod>` on `/` and `/blog/`.
 4. `llms.txt` — add a bullet (first item under `## Blog`).
@@ -70,6 +74,8 @@ A new post is only "integrated" when all of these are updated together:
 
 - The homepage `Person` node (`@id .../#person`) is the canonical brand entity: `sameAs`, `memberOf`/`award` (MITIC designation), `knowsAbout`, `hasCredential`, `nationality`. Only add `sameAs` URLs that resolve (verify with a request first). Keep site titles consistent with the user's LinkedIn to reinforce the entity.
 - `robots.txt` disallows `/ricardo-torales-brand-system/`; `llms.txt` is the AI-crawler summary and lists posts.
+- Every page carries `fb:app_id` (public Meta App ID, safe in HTML) — it exists only to clear the "missing required property" warning in Meta's Sharing Debugger; the app has no permissions or products. Its **app secret must never enter the repo**.
+- `local/` is gitignored — the user drops screenshots and scratch files there for you to read. Never commit its contents, and don't treat what's in it as part of the site.
 
 ## Encrypted client subsites (e.g. `auditoriaproquitec/`)
 
@@ -77,4 +83,6 @@ Client deliverables are published as **client-side AES-256-GCM encrypted** mini-
 
 ## External automation to be aware of
 
-A **scheduled cloud agent on claude.ai auto-generates and publishes a new blog post every Tuesday 08:00 (America/Asunción)** — so posts may appear on `main` that this session didn't create. It follows the four-touchpoints flow above and, by design, **falls back to a `post-borrador-<date>` branch + PR instead of publishing** if it can't verify facts or the site fails validation. If you see an unexpected `[REVISAR]` PR or a new post, that's its output.
+A scheduled cloud agent on claude.ai (routine `trig_015ygicXJGqGu14mTaFSShfu`) was set up to auto-generate and publish a weekly blog post every Tuesday 08:00 America/Asunción.
+
+**It is DISABLED (`enabled: false`) as of 2026-08-01 and must stay that way unless the user asks otherwise.** The user turned it off because a run consumed a large amount of tokens: it fired once (2026-07-28) and produced nothing — no post, no `post-borrador-*` branch, no PR. Do not re-enable it, and do not create a replacement routine, without an explicit request. Blog posts are currently written on demand in-session.
