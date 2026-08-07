@@ -30,6 +30,14 @@ Este sitio es el portafolio profesional, currículum y punto de contacto de Rica
 - Maestría en Gestión de Sistemas Informáticos
 - Licenciatura en Ciencias Informáticas
 
+## Desarrollos propios
+
+Aplicaciones construidas y desplegadas en producción por Ricardo Torales:
+
+- [NutriSnap](https://nutrisnap.ricardotorales.com): Seguimiento nutricional y físico mediante visión por computadora. Se registra una comida o un entrenamiento sacando una foto: un modelo multimodal identifica el contenido, estima la porción y devuelve calorías y macronutrientes estructurados, con la meta de completar un registro en menos de 10 segundos. Incluye panel diario con anillos y macros, historial por semana/mes/año y curva de peso. Next.js, React, TypeScript, Capacitor (web, iOS y Android desde un mismo monorepo), PostgreSQL con aislamiento por usuario (RLS).
+- [Ekklesia](https://ekklesia-app-kappa.vercel.app/): Plataforma de gestión integral para iglesias: agenda de servicios, biblioteca de canciones y control de accesos multi-rol. Next.js, React, TypeScript.
+- [FamilyFinance Pro](https://familyfinance-omega.vercel.app/): Aplicación de finanzas familiares. Next.js, React, TypeScript.
+
 ## Blog
 
 Artículos sobre inteligencia artificial, transformación digital, automatización y ciberseguridad para líderes de TI:
