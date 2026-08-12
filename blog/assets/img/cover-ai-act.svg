@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="Ilustración: obligaciones de transparencia sobre sistemas de inteligencia artificial">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="6%" r="120%">
+      <stop offset="0%" stop-color="#26262f"/>
+      <stop offset="55%" stop-color="#0e0e11"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+
+  <!-- Circulo de estrellas (referencia a la UE, geometrico y monocromo) -->
+  <g fill="#ffffff" fill-opacity="0.30">
+    <circle cx="600" cy="128" r="5"/>
+    <circle cx="686" cy="151" r="5"/>
+    <circle cx="749" cy="214" r="5"/>
+    <circle cx="772" cy="300" r="5"/>
+    <circle cx="749" cy="386" r="5"/>
+    <circle cx="686" cy="449" r="5"/>
+    <circle cx="600" cy="472" r="5"/>
+    <circle cx="514" cy="449" r="5"/>
+    <circle cx="451" cy="386" r="5"/>
+    <circle cx="428" cy="300" r="5"/>
+    <circle cx="451" cy="214" r="5"/>
+    <circle cx="514" cy="151" r="5"/>
+  </g>
+
+  <!-- Nucleo: sistema de IA bajo escrutinio -->
+  <circle cx="600" cy="300" r="96" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2" stroke-dasharray="6 10"/>
+  <rect x="546" y="246" width="108" height="108" rx="16" fill="#16161b" stroke="#ffffff" stroke-opacity="0.85" stroke-width="3"/>
+
+  <!-- Marca de "contenido etiquetado": sello dentro del nucleo -->
+  <path d="M578 302 l14 14 l30 -32" fill="none" stroke="#ffffff" stroke-opacity="0.92" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Cuatro etiquetas de transparencia -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="2">
+    <path d="M600 204 V150"/>
+    <path d="M696 300 H768"/>
+    <path d="M600 396 V450"/>
+    <path d="M504 300 H432"/>
+  </g>
+  <g fill="#ffffff" fill-opacity="0.10" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2">
+    <rect x="252" y="278" width="176" height="44" rx="9"/>
+    <rect x="772" y="278" width="176" height="44" rx="9"/>
+    <rect x="512" y="106" width="176" height="44" rx="9"/>
+    <rect x="512" y="450" width="176" height="44" rx="9"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#ffffff" fill-opacity="0.72" text-anchor="middle" letter-spacing="1">
+    <text x="340" y="306">CHATBOT</text>
+    <text x="860" y="306">DEEPFAKE</text>
+    <text x="600" y="134">CONTENIDO IA</text>
+    <text x="600" y="478">BIOMETRÍA</text>
+  </g>
+
+  <text x="72" y="548" font-family="ui-monospace, Menlo, monospace" font-size="21" letter-spacing="6" fill="#ffffff" fill-opacity="0.32">AI ACT · ART. 50</text>
+</svg>
