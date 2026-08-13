@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Consultoría en transformación digital en Paraguay | Ricardo Torales</title>
+  <meta name="description" content="Consultoría en transformación digital para empresas de Paraguay: diagnóstico, hoja de ruta y gobernanza de proyectos de ERP, CRM e IA. Más de 14 años dirigiendo TI, con criterio de negocio y sin humo." />
+  <link rel="canonical" href="https://ricardotorales.com/consultoria-transformacion-digital/" />
+  <meta name="author" content="Ricardo Torales" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ricardo Torales" />
+  <meta property="og:title" content="Consultoría en transformación digital en Paraguay" />
+  <meta property="og:description" content="Diagnóstico, hoja de ruta y gobernanza de proyectos de ERP, CRM e IA para empresas paraguayas. Más de 14 años dirigiendo TI, con criterio de negocio." />
+  <meta property="og:url" content="https://ricardotorales.com/consultoria-transformacion-digital/" />
+  <meta property="og:locale" content="es_PY" />
+  <meta property="og:image" content="https://ricardotorales.com/img/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="fb:app_id" content="4234406980437487" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Consultoría en transformación digital en Paraguay" />
+  <meta name="twitter:description" content="Diagnóstico, hoja de ruta y gobernanza de proyectos de ERP, CRM e IA para empresas paraguayas." />
+  <meta name="twitter:image" content="https://ricardotorales.com/img/og-image.jpg" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/blog/assets/blog.css?v=2" />
+
+  <style>
+    /* Componentes propios de la página de servicio */
+    .svc-hero { padding: 56px 0 30px; }
+    .svc-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.4vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      color: var(--ink-900);
+      margin: 12px 0 16px;
+      max-width: 17ch;
+    }
+    .svc-lead {
+      font-size: 1.09rem;
+      line-height: 1.65;
+      color: var(--zinc-600);
+      max-width: var(--reading-max, 720px);
+    }
+    .svc-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+
+    .svc-section { padding: 34px 0; border-top: 1px solid var(--zinc-200); }
+    .svc-section > h2 {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: -.02em;
+      color: var(--ink-900);
+      margin-bottom: 8px;
+    }
+    .svc-section > p { max-width: var(--reading-max, 720px); color: var(--zinc-600); line-height: 1.68; }
+    .svc-section > p + p { margin-top: 12px; }
+
+    /* Fases del método */
+    .svc-steps { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 14px; }
+    @media (min-width: 800px) { .svc-steps { grid-template-columns: repeat(2, 1fr); } }
+    .svc-step {
+      border: 1px solid var(--zinc-200);
+      border-radius: 12px;
+      padding: 18px 20px;
+      background: var(--white);
+    }
+    .svc-step-n {
+      font-family: var(--font-mono);
+      font-size: .74rem;
+      color: var(--zinc-400);
+      letter-spacing: .12em;
+    }
+    .svc-step h3 {
+      font-family: var(--font-display);
+      font-size: 1.02rem;
+      color: var(--ink-900);
+      margin: 5px 0 6px;
+    }
+    .svc-step p { color: var(--zinc-600); font-size: .95rem; line-height: 1.6; }
+
+    /* Listas de entregables / alcance */
+    .svc-list { list-style: none; margin: 18px 0 0; padding: 0; max-width: var(--reading-max, 720px); }
+    .svc-list li { position: relative; padding-left: 26px; margin-bottom: 10px; color: var(--zinc-600); line-height: 1.6; }
+    .svc-list li::before {
+      content: "";
+      position: absolute; left: 4px; top: .55em;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--ink-900);
+    }
+    .svc-list strong { color: var(--ink-900); }
+
+    /* Para quién sí / para quién no */
+    .svc-fit { display: grid; gap: 16px; margin-top: 20px; }
+    @media (min-width: 800px) { .svc-fit { grid-template-columns: 1fr 1fr; } }
+    .svc-fit-box { border: 1px solid var(--zinc-200); border-radius: 12px; padding: 20px 22px; }
+    .svc-fit-box h3 { font-family: var(--font-display); font-size: 1rem; margin-bottom: 10px; color: var(--ink-900); }
+    .svc-fit-box ul { list-style: none; padding: 0; margin: 0; }
+    .svc-fit-box li { position: relative; padding-left: 22px; margin-bottom: 8px; color: var(--zinc-600); font-size: .95rem; line-height: 1.55; }
+    .svc-fit-box li::before { position: absolute; left: 0; top: 0; font-weight: 700; }
+    .svc-fit--yes li::before { content: "\2713"; color: var(--success-500); }
+    .svc-fit--no  li::before { content: "\2013"; color: var(--zinc-400); }
+
+    /* Credenciales */
+    .svc-creds { display: grid; gap: 14px; margin-top: 20px; }
+    @media (min-width: 700px) { .svc-creds { grid-template-columns: repeat(3, 1fr); } }
+    .svc-cred { border-left: 2px solid var(--ink-900); padding-left: 14px; }
+    .svc-cred b { display: block; font-family: var(--font-display); color: var(--ink-900); font-size: 1.4rem; line-height: 1.1; }
+    .svc-cred span { color: var(--zinc-500); font-size: .88rem; line-height: 1.45; display: block; margin-top: 4px; }
+
+    /* FAQ */
+    .svc-faq { margin-top: 18px; max-width: var(--reading-max, 720px); }
+    .svc-faq details {
+      border-bottom: 1px solid var(--zinc-200);
+      padding: 14px 0;
+    }
+    .svc-faq summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--ink-900);
+      list-style: none;
+      display: flex; justify-content: space-between; gap: 14px;
+    }
+    .svc-faq summary::-webkit-details-marker { display: none; }
+    .svc-faq summary::after { content: "+"; color: var(--zinc-400); font-weight: 400; flex: none; }
+    .svc-faq details[open] summary::after { content: "\2013"; }
+    .svc-faq p { margin-top: 10px; color: var(--zinc-600); line-height: 1.65; }
+  </style>
+
+  <script>document.documentElement.className = 'js';</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://ricardotorales.com/consultoria-transformacion-digital/#service",
+        "name": "Consultoría en transformación digital",
+        "serviceType": "Consultoría en transformación digital",
+        "description": "Diagnóstico, hoja de ruta y gobernanza de proyectos de transformación digital para empresas: selección e implementación de ERP y CRM, adopción de inteligencia artificial, automatización de procesos y gobierno de TI.",
+        "url": "https://ricardotorales.com/consultoria-transformacion-digital/",
+        "provider": {
+          "@type": "Person",
+          "@id": "https://ricardotorales.com/#person",
+          "name": "Ricardo Torales"
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "Paraguay" },
+          { "@type": "City", "name": "Asunción" }
+        ],
+        "availableLanguage": ["es", "en", "pt"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de consultoría",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diagnóstico de madurez digital y hoja de ruta" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Selección e implementación de ERP y CRM" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Adopción de inteligencia artificial con gobernanza" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatización de procesos" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gobierno de TI y oficina de proyectos (PMO)" } }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ricardotorales.com/consultoria-transformacion-digital/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué incluye una consultoría en transformación digital?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un diagnóstico del estado actual (procesos, sistemas, datos y capacidades del equipo), una hoja de ruta priorizada por impacto y esfuerzo, y el acompañamiento en la ejecución con gobernanza: responsables definidos, indicadores, gestión de riesgos y reportes al directorio. El alcance se ajusta a cada organización; no hay un paquete único."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto dura un proyecto de transformación digital?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un diagnóstico con hoja de ruta suele tomar entre 3 y 6 semanas. La ejecución depende del alcance: una automatización acotada puede resolverse en semanas, mientras que una implementación de ERP o CRM se mide en meses. Prefiero entregas parciales que produzcan valor temprano antes que un proyecto único de un año."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Trabajás con empresas fuera de Asunción o del Paraguay?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Trabajo presencialmente en Asunción y el área metropolitana, y de forma remota con empresas del interior del país y de la región. Los proyectos de implementación suelen requerir instancias presenciales en las etapas de relevamiento y salida en vivo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Hace falta cambiar de sistema para transformarse digitalmente?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No necesariamente. En buena parte de los casos el problema no es el software sino los procesos, la calidad de los datos o la falta de gobernanza. Cambiar de sistema sin corregir eso reproduce el mismo desorden en una plataforma más cara. El diagnóstico existe justamente para determinar si el cambio se justifica."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo se cobra la consultoría?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El diagnóstico se cotiza como un trabajo cerrado con entregable definido. El acompañamiento posterior puede ser por proyecto o por una dedicación mensual acordada. En la primera conversación se define el alcance y recién sobre eso se presenta una propuesta."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ricardotorales.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Consultoría en transformación digital", "item": "https://ricardotorales.com/consultoria-transformacion-digital/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="Inicio">
+        <span class="nav-monogram" aria-hidden="true">RT</span>
+        <span class="nav-name">Ricardo Torales</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#perfil">Perfil</a></li>
+        <li><a href="/#proyectos">Proyectos</a></li>
+        <li><a href="/#experiencia">Experiencia</a></li>
+        <li><a href="/consultoria-transformacion-digital/" class="active">Servicios</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#contacto" class="nav-cta">Contactar</a></li>
+      </ul>
+      <a href="/#contacto" class="nav-cta-mobile">Contactar</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="/">Inicio</a><span>/</span>Consultoría en transformación digital
+    </nav>
+  </div>
+
+  <main>
+    <header class="container svc-hero">
+      <span class="eyebrow">Consultoría</span>
+      <h1>Consultoría en transformación digital para empresas de Paraguay</h1>
+      <p class="svc-lead">Acompaño a directorios y gerencias a ordenar sus procesos, elegir bien sus sistemas y adoptar inteligencia artificial con criterio de negocio. Más de 14 años dirigiendo áreas de TI y proyectos de ERP, CRM e IA en Paraguay y la región — con la misma vara que aplicaría si el presupuesto fuera mío.</p>
+      <div class="svc-actions">
+        <a href="/#contacto" class="btn btn-primary">Conversemos</a>
+        <a href="#metodo" class="btn btn-outline">Ver cómo trabajo</a>
+      </div>
+    </header>
+
+    <section class="container svc-section">
+      <h2>Por qué fracasan los proyectos de transformación digital</h2>
+      <p>La mayoría de los proyectos que salen mal no fracasan por la tecnología. Fracasan porque nadie definió qué problema de negocio se estaba resolviendo, porque se compró un sistema antes de entender el proceso, o porque el proyecto no tuvo un dueño con autoridad para decidir.</p>
+      <p>Los síntomas se repiten: información dispersa en planillas que nadie concilia, áreas que trabajan en silos, un ERP que se usa al 30% de su capacidad, decisiones que se toman por intuición porque los datos llegan tarde. Y un directorio que aprueba inversiones sin una forma clara de verificar si rindieron.</p>
+      <p>Mi trabajo es evitar eso. No traigo una plataforma para vender: traigo un método para decidir qué conviene hacer, en qué orden y con qué criterio para saber si funcionó.</p>
+    </section>
+
+    <section class="container svc-section" id="metodo">
+      <h2>Cómo trabajo</h2>
+      <p>Cuatro fases. Cada una termina en algo concreto que podés revisar antes de seguir a la siguiente.</p>
+      <ol class="svc-steps">
+        <li class="svc-step">
+          <div class="svc-step-n">FASE 01</div>
+          <h3>Diagnóstico</h3>
+          <p>Relevamiento de procesos, sistemas, datos y capacidades del equipo. Entrevistas con las áreas y revisión de lo que ya existe. El objetivo es entender dónde está realmente la organización, no dónde cree estar.</p>
+        </li>
+        <li class="svc-step">
+          <div class="svc-step-n">FASE 02</div>
+          <h3>Hoja de ruta</h3>
+          <p>Iniciativas priorizadas por impacto y esfuerzo, con estimación de inversión y responsables. Se separa lo que resuelve un dolor inmediato de lo que construye capacidad a largo plazo, y se define qué NO se va a hacer.</p>
+        </li>
+        <li class="svc-step">
+          <div class="svc-step-n">FASE 03</div>
+          <h3>Ejecución con gobernanza</h3>
+          <p>Acompañamiento en la implementación: gestión del proyecto, coordinación de proveedores, control de alcance y presupuesto, gestión de riesgos y reportes al directorio en lenguaje de negocio.</p>
+        </li>
+        <li class="svc-step">
+          <div class="svc-step-n">FASE 04</div>
+          <h3>Adopción y medición</h3>
+          <p>Un sistema que nadie usa es una inversión perdida. Capacitación, ajuste de procesos e indicadores que muestren si el cambio se sostiene después de que el consultor se va.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="container svc-section">
+      <h2>En qué puedo ayudarte</h2>
+      <ul class="svc-list">
+        <li><strong>Diagnóstico de madurez digital y hoja de ruta</strong> — dónde está tu organización y qué conviene hacer primero.</li>
+        <li><strong>Selección e implementación de ERP y CRM</strong> — Dynamics 365, SAP Business One, Salesforce: elegir con criterio y evitar el bloqueo de proveedor.</li>
+        <li><strong>Adopción de inteligencia artificial con gobernanza</strong> — dónde la IA agrega valor real, con qué controles y a qué costo. Incluye <a href="/blog/ai-act-transparencia-empresas-paraguay/">los requisitos de transparencia</a> que ya empiezan a exigirse.</li>
+        <li><strong>Automatización de procesos</strong> — Power Platform, integraciones y flujos que eliminan trabajo manual repetitivo.</li>
+        <li><strong>Gobierno de TI y oficina de proyectos (PMO)</strong> — portafolio, indicadores, gestión de riesgos y reporte ejecutivo.</li>
+        <li><strong>Evaluación de proveedores y contratos tecnológicos</strong> — una segunda opinión independiente antes de firmar.</li>
+      </ul>
+    </section>
+
+    <section class="container svc-section">
+      <h2>Para quién es — y para quién no</h2>
+      <p>Prefiero decirlo de entrada: no le sirvo a todo el mundo, y eso ahorra tiempo a los dos.</p>
+      <div class="svc-fit">
+        <div class="svc-fit-box svc-fit--yes">
+          <h3>Encaja bien si…</h3>
+          <ul>
+            <li>Sos parte del directorio o la gerencia y necesitás una lectura independiente antes de invertir.</li>
+            <li>Tenés un ERP o CRM que no rinde lo que prometía y no sabés si el problema es el sistema o el proceso.</li>
+            <li>Querés incorporar IA pero no sabés por dónde empezar ni cómo controlarla.</li>
+            <li>Tu empresa creció y los procesos que funcionaban con 30 personas ya no funcionan con 200.</li>
+            <li>Necesitás que alguien traduzca lo técnico a decisiones de negocio para el directorio.</li>
+          </ul>
+        </div>
+        <div class="svc-fit-box svc-fit--no">
+          <h3>No encaja si…</h3>
+          <ul>
+            <li>Buscás que valide una decisión ya tomada en lugar de evaluarla.</li>
+            <li>Necesitás desarrollo de software a medida como servicio principal.</li>
+            <li>Esperás resultados sin dedicación del equipo interno: sin un referente de tu lado, ningún proyecto se sostiene.</li>
+            <li>Buscás el proveedor más barato antes que el criterio más sólido.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container svc-section">
+      <h2>Por qué yo</h2>
+      <p>No vengo del lado de la venta de software: vengo de dirigir las áreas que después tienen que sostener esos sistemas. Esa diferencia se nota en las recomendaciones.</p>
+      <div class="svc-creds">
+        <div class="svc-cred">
+          <b>+14 años</b>
+          <span>Dirigiendo áreas de TI y proyectos de ERP, CRM e IA en Paraguay y la región.</span>
+        </div>
+        <div class="svc-cred">
+          <b>MITIC</b>
+          <span>Miembro Titular del Comité de Selección de Proyectos TIC, designado por Resolución N.° 381/2025 ante el BID.</span>
+        </div>
+        <div class="svc-cred">
+          <b>2 maestrías</b>
+          <span>Gestión de Proyectos y Sistemas Informáticos, con 34 certificaciones verificables.</span>
+        </div>
+      </div>
+      <p style="margin-top:22px;">Podés revisar mi <a href="/#experiencia">trayectoria completa</a>, los <a href="/#proyectos">proyectos</a> que construí y lo que escribo en el <a href="/blog/">blog</a> para ver cómo pienso antes de contactarme.</p>
+    </section>
+
+    <section class="container svc-section">
+      <h2>Preguntas frecuentes</h2>
+      <div class="svc-faq">
+        <details>
+          <summary>¿Qué incluye una consultoría en transformación digital?</summary>
+          <p>Un diagnóstico del estado actual (procesos, sistemas, datos y capacidades del equipo), una hoja de ruta priorizada por impacto y esfuerzo, y el acompañamiento en la ejecución con gobernanza: responsables definidos, indicadores, gestión de riesgos y reportes al directorio. El alcance se ajusta a cada organización; no hay un paquete único.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto dura un proyecto de transformación digital?</summary>
+          <p>Un diagnóstico con hoja de ruta suele tomar entre 3 y 6 semanas. La ejecución depende del alcance: una automatización acotada puede resolverse en semanas, mientras que una implementación de ERP o CRM se mide en meses. Prefiero entregas parciales que produzcan valor temprano antes que un proyecto único de un año.</p>
+        </details>
+        <details>
+          <summary>¿Trabajás con empresas fuera de Asunción o del Paraguay?</summary>
+          <p>Sí. Trabajo presencialmente en Asunción y el área metropolitana, y de forma remota con empresas del interior del país y de la región. Los proyectos de implementación suelen requerir instancias presenciales en las etapas de relevamiento y salida en vivo.</p>
+        </details>
+        <details>
+          <summary>¿Hace falta cambiar de sistema para transformarse digitalmente?</summary>
+          <p>No necesariamente. En buena parte de los casos el problema no es el software sino los procesos, la calidad de los datos o la falta de gobernanza. Cambiar de sistema sin corregir eso reproduce el mismo desorden en una plataforma más cara. El diagnóstico existe justamente para determinar si el cambio se justifica.</p>
+        </details>
+        <details>
+          <summary>¿Cómo se cobra la consultoría?</summary>
+          <p>El diagnóstico se cotiza como un trabajo cerrado con entregable definido. El acompañamiento posterior puede ser por proyecto o por una dedicación mensual acordada. En la primera conversación se define el alcance y recién sobre eso se presenta una propuesta.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <section class="article-cta">
+    <div class="article-cta-inner">
+      <h2>Conversemos sobre tu caso</h2>
+      <p>Una primera conversación sin costo para entender el problema y decirte con franqueza si puedo ayudarte — y si no, quién sí.</p>
+      <a href="/#contacto" class="btn btn-white">Contactar</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Ricardo Torales · Gerente de Tecnología &amp; Consultor en Automatización · Asunción, Paraguay · <a href="mailto:ricardotorales@outlook.com">ricardotorales@outlook.com</a></p>
+  </footer>
+
+  <script>
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); obs.unobserve(e.target); } });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.rt-reveal').forEach((el) => obs.observe(el));
+    }
+  </script>
+</body>
+</html>

@@ -222,7 +222,7 @@
             "name": "¿Ofrece consultoría independiente?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sí. Además de su rol como PMO en Grupo Chacomer, Ricardo Torales ofrece consultoría ejecutiva en transformación digital, gestión de proyectos e implementación de IA para empresas en Paraguay y la región. Se lo puede contactar por email o LinkedIn."
+              "text": "Sí. Además de su rol como PMO en Grupo Chacomer, Ricardo Torales ofrece consultoría en transformación digital para empresas en Paraguay y la región: diagnóstico de madurez digital, hoja de ruta, selección e implementación de ERP y CRM, adopción de IA con gobernanza y automatización de procesos. Se lo puede contactar por email o LinkedIn."
             }
           },
           {
@@ -1559,7 +1559,9 @@
       .cert-grid { grid-template-columns: repeat(2, 1fr); }
       section { padding: 72px 0; }
     }
-    @media (max-width: 720px) {
+    /* El nav completo son 10 enlaces: por debajo de ~980px no entran y desbordaban
+       la página, así que a partir de ahí se muestra solo el CTA. */
+    @media (max-width: 980px) {
       .nav-links { display: none; }
       .nav-cta-mobile {
         display: inline-flex !important;
@@ -1721,6 +1723,7 @@
         <li><a href="#formacion">Formación</a></li>
         <li><a href="#desarrollos">Desarrollos</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="/consultoria-transformacion-digital/">Servicios</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="#contacto" class="nav-cta">Contactar</a></li>
       </ul>
@@ -2670,7 +2673,7 @@
         </details>
         <details class="faq-item">
           <summary class="faq-q">¿Ofrece consultoría independiente?<span class="faq-icon" aria-hidden="true"></span></summary>
-          <p class="faq-a">Sí. Además de su rol como PMO en Grupo Chacomer, Ricardo Torales ofrece consultoría ejecutiva en transformación digital, gestión de proyectos e implementación de IA para empresas en Paraguay y la región. Se lo puede contactar por email o LinkedIn.</p>
+          <p class="faq-a">Sí. Además de su rol como PMO en Grupo Chacomer, Ricardo Torales ofrece <a href="/consultoria-transformacion-digital/">consultoría en transformación digital</a> para empresas en Paraguay y la región: diagnóstico de madurez digital, hoja de ruta, selección e implementación de ERP y CRM, adopción de IA con gobernanza y automatización de procesos. Se lo puede contactar por email o LinkedIn.</p>
         </details>
         <details class="faq-item">
           <summary class="faq-q">¿Dónde está ubicado y cómo trabaja?<span class="faq-icon" aria-hidden="true"></span></summary>

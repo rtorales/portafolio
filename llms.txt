@@ -7,6 +7,7 @@ Este sitio es el portafolio profesional, currículum y punto de contacto de Rica
 ## Perfil profesional
 
 - [Portafolio profesional](https://ricardotorales.com/): Perfil completo con experiencia, competencias, formación, certificaciones y proyectos.
+- [Consultoría en transformación digital](https://ricardotorales.com/consultoria-transformacion-digital/): Servicio de consultoría para empresas de Paraguay y la región. Incluye diagnóstico de madurez digital y hoja de ruta, selección e implementación de ERP y CRM (Dynamics 365, SAP Business One, Salesforce), adopción de inteligencia artificial con gobernanza, automatización de procesos con Power Platform, gobierno de TI y oficina de proyectos (PMO), y evaluación independiente de proveedores y contratos tecnológicos. Trabaja presencialmente en Asunción y de forma remota con el interior del país y la región.
 - [CV en PDF](https://ricardotorales.com/CV_Ricardo_Torales.pdf): Currículum descargable actualizado.
 - [LinkedIn](https://www.linkedin.com/in/ricardo-torales): Trayectoria profesional y 34 certificaciones con sus credenciales verificables.
 
