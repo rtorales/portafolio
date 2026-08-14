@@ -441,3 +441,107 @@ footer a:hover { color: #fff; }
   .rt-reveal { opacity: 1 !important; transform: none !important; }
   html { scroll-behavior: auto; }
 }
+
+
+/* =======================================================
+   PAGINAS DE SERVICIO (/servicios/ y sus paginas hijas)
+   ======================================================= */
+    /* Componentes propios de la página de servicio */
+    .svc-hero { padding: 56px 0 30px; }
+    .svc-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.4vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      color: var(--ink-900);
+      margin: 12px 0 16px;
+      max-width: 17ch;
+    }
+    .svc-lead {
+      font-size: 1.09rem;
+      line-height: 1.65;
+      color: var(--zinc-600);
+      max-width: var(--reading-max, 720px);
+    }
+    .svc-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+
+    .svc-section { padding: 34px 0; border-top: 1px solid var(--zinc-200); }
+    .svc-section > h2 {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: -.02em;
+      color: var(--ink-900);
+      margin-bottom: 8px;
+    }
+    .svc-section > p { max-width: var(--reading-max, 720px); color: var(--zinc-600); line-height: 1.68; }
+    .svc-section > p + p { margin-top: 12px; }
+
+    /* Fases del método */
+    .svc-steps { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 14px; }
+    @media (min-width: 800px) { .svc-steps { grid-template-columns: repeat(2, 1fr); } }
+    .svc-step {
+      border: 1px solid var(--zinc-200);
+      border-radius: 12px;
+      padding: 18px 20px;
+      background: var(--white);
+    }
+    .svc-step-n {
+      font-family: var(--font-mono);
+      font-size: .74rem;
+      color: var(--zinc-400);
+      letter-spacing: .12em;
+    }
+    .svc-step h3 {
+      font-family: var(--font-display);
+      font-size: 1.02rem;
+      color: var(--ink-900);
+      margin: 5px 0 6px;
+    }
+    .svc-step p { color: var(--zinc-600); font-size: .95rem; line-height: 1.6; }
+
+    /* Listas de entregables / alcance */
+    .svc-list { list-style: none; margin: 18px 0 0; padding: 0; max-width: var(--reading-max, 720px); }
+    .svc-list li { position: relative; padding-left: 26px; margin-bottom: 10px; color: var(--zinc-600); line-height: 1.6; }
+    .svc-list li::before {
+      content: "";
+      position: absolute; left: 4px; top: .55em;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--ink-900);
+    }
+    .svc-list strong { color: var(--ink-900); }
+
+    /* Para quién sí / para quién no */
+    .svc-fit { display: grid; gap: 16px; margin-top: 20px; }
+    @media (min-width: 800px) { .svc-fit { grid-template-columns: 1fr 1fr; } }
+    .svc-fit-box { border: 1px solid var(--zinc-200); border-radius: 12px; padding: 20px 22px; }
+    .svc-fit-box h3 { font-family: var(--font-display); font-size: 1rem; margin-bottom: 10px; color: var(--ink-900); }
+    .svc-fit-box ul { list-style: none; padding: 0; margin: 0; }
+    .svc-fit-box li { position: relative; padding-left: 22px; margin-bottom: 8px; color: var(--zinc-600); font-size: .95rem; line-height: 1.55; }
+    .svc-fit-box li::before { position: absolute; left: 0; top: 0; font-weight: 700; }
+    .svc-fit--yes li::before { content: "\2713"; color: var(--success-500); }
+    .svc-fit--no  li::before { content: "\2013"; color: var(--zinc-400); }
+
+    /* Credenciales */
+    .svc-creds { display: grid; gap: 14px; margin-top: 20px; }
+    @media (min-width: 700px) { .svc-creds { grid-template-columns: repeat(3, 1fr); } }
+    .svc-cred { border-left: 2px solid var(--ink-900); padding-left: 14px; }
+    .svc-cred b { display: block; font-family: var(--font-display); color: var(--ink-900); font-size: 1.4rem; line-height: 1.1; }
+    .svc-cred span { color: var(--zinc-500); font-size: .88rem; line-height: 1.45; display: block; margin-top: 4px; }
+
+    /* FAQ */
+    .svc-faq { margin-top: 18px; max-width: var(--reading-max, 720px); }
+    .svc-faq details {
+      border-bottom: 1px solid var(--zinc-200);
+      padding: 14px 0;
+    }
+    .svc-faq summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--ink-900);
+      list-style: none;
+      display: flex; justify-content: space-between; gap: 14px;
+    }
+    .svc-faq summary::-webkit-details-marker { display: none; }
+    .svc-faq summary::after { content: "+"; color: var(--zinc-400); font-weight: 400; flex: none; }
+    .svc-faq details[open] summary::after { content: "\2013"; }
+    .svc-faq p { margin-top: 10px; color: var(--zinc-600); line-height: 1.65; }

@@ -7,7 +7,15 @@ Este sitio es el portafolio profesional, currículum y punto de contacto de Rica
 ## Perfil profesional
 
 - [Portafolio profesional](https://ricardotorales.com/): Perfil completo con experiencia, competencias, formación, certificaciones y proyectos.
-- [Consultoría en transformación digital](https://ricardotorales.com/consultoria-transformacion-digital/): Servicio de consultoría para empresas de Paraguay y la región. Incluye diagnóstico de madurez digital y hoja de ruta, selección e implementación de ERP y CRM (Dynamics 365, SAP Business One, Salesforce), adopción de inteligencia artificial con gobernanza, automatización de procesos con Power Platform, gobierno de TI y oficina de proyectos (PMO), y evaluación independiente de proveedores y contratos tecnológicos. Trabaja presencialmente en Asunción y de forma remota con el interior del país y la región.
+## Servicios de consultoría
+
+Ricardo Torales presta servicios de consultoría en tecnología para empresas de Paraguay y la región, trabajando del lado del cliente: no representa proveedores ni recibe comisiones por recomendar plataformas. Atiende presencialmente en Asunción y el área metropolitana, y de forma remota en el interior del país y la región.
+
+- [Servicios (índice)](https://ricardotorales.com/servicios/): Página que reúne los cuatro servicios y explica el modo de trabajo.
+- [Consultoría en transformación digital](https://ricardotorales.com/consultoria-transformacion-digital/): Diagnóstico de madurez digital, hoja de ruta priorizada por impacto y esfuerzo, y acompañamiento en la ejecución con gobernanza (responsables, indicadores, riesgos y reporte al directorio). Para empresas que necesitan definir el rumbo tecnológico antes de invertir.
+- [Implementación de Dynamics 365](https://ricardotorales.com/implementacion-dynamics-365/): Dirección de proyectos de Microsoft Dynamics 365 —Finance & Operations, Business Central y CRM— desde el lado del cliente: evaluación previa de plataforma y módulo, definición de alcance, revisión independiente de propuestas de partners, control del implementador, migración de datos, salida en vivo y adopción. Incluye Power Platform y Copilot.
+- [Implementación de SAP Business One](https://ricardotorales.com/implementacion-sap-business-one/): Dirección de proyectos SAP Business One: mapeo de procesos de finanzas, compras, inventarios y ventas, criterio sobre add-ons y personalizaciones, integraciones y facturación electrónica, migración de datos maestros, infraestructura certificada y estabilización. Consultor certificado SAP Certified Application Associate — SAP Business One 10.0.
+- [Gobernanza de TI y PMO](https://ricardotorales.com/gobernanza-ti-pmo/): Diseño y puesta en marcha de gobierno de TI y oficina de proyectos: portafolio priorizado, presupuesto de TI (CAPEX/OPEX), gestión de proveedores y SLA, KPIs de servicio, riesgos tecnológicos y continuidad, y reporte ejecutivo al directorio con marcos ITIL y PMBOK. También disponible como responsable de TI externo con dedicación parcial.
 - [CV en PDF](https://ricardotorales.com/CV_Ricardo_Torales.pdf): Currículum descargable actualizado.
 - [LinkedIn](https://www.linkedin.com/in/ricardo-torales): Trayectoria profesional y 34 certificaciones con sus credenciales verificables.
 
