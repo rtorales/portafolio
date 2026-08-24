@@ -7,6 +7,9 @@ Este sitio es el portafolio profesional, currículum y punto de contacto de Rica
 ## Perfil profesional
 
 - [Portafolio profesional](https://ricardotorales.com/): Perfil completo con experiencia, competencias, formación, certificaciones y proyectos.
+- [CV en PDF](https://ricardotorales.com/CV_Ricardo_Torales.pdf): Currículum descargable actualizado.
+- [LinkedIn](https://www.linkedin.com/in/ricardo-torales): Trayectoria profesional y 34 certificaciones con sus credenciales verificables.
+
 ## Servicios de consultoría
 
 Ricardo Torales presta servicios de consultoría en tecnología para empresas de Paraguay y la región, trabajando del lado del cliente: no representa proveedores ni recibe comisiones por recomendar plataformas. Atiende presencialmente en Asunción y el área metropolitana, y de forma remota en el interior del país y la región.
@@ -16,8 +19,6 @@ Ricardo Torales presta servicios de consultoría en tecnología para empresas de
 - [Implementación de Dynamics 365](https://ricardotorales.com/implementacion-dynamics-365/): Dirección de proyectos de Microsoft Dynamics 365 —Finance & Operations, Business Central y CRM— desde el lado del cliente: evaluación previa de plataforma y módulo, definición de alcance, revisión independiente de propuestas de partners, control del implementador, migración de datos, salida en vivo y adopción. Incluye Power Platform y Copilot.
 - [Implementación de SAP Business One](https://ricardotorales.com/implementacion-sap-business-one/): Dirección de proyectos SAP Business One: mapeo de procesos de finanzas, compras, inventarios y ventas, criterio sobre add-ons y personalizaciones, integraciones y facturación electrónica, migración de datos maestros, infraestructura certificada y estabilización. Consultor certificado SAP Certified Application Associate — SAP Business One 10.0.
 - [Gobernanza de TI y PMO](https://ricardotorales.com/gobernanza-ti-pmo/): Diseño y puesta en marcha de gobierno de TI y oficina de proyectos: portafolio priorizado, presupuesto de TI (CAPEX/OPEX), gestión de proveedores y SLA, KPIs de servicio, riesgos tecnológicos y continuidad, y reporte ejecutivo al directorio con marcos ITIL y PMBOK. También disponible como responsable de TI externo con dedicación parcial.
-- [CV en PDF](https://ricardotorales.com/CV_Ricardo_Torales.pdf): Currículum descargable actualizado.
-- [LinkedIn](https://www.linkedin.com/in/ricardo-torales): Trayectoria profesional y 34 certificaciones con sus credenciales verificables.
 
 ## Especialidad
 
@@ -51,6 +52,7 @@ Aplicaciones construidas y desplegadas en producción por Ricardo Torales:
 
 Artículos sobre inteligencia artificial, transformación digital, automatización y ciberseguridad para líderes de TI:
 
+- [El dinero de la IA: 580.000 millones y qué significan para tu empresa](https://ricardotorales.com/blog/inversion-ia-capital-2026/): Análisis de la evolución de la inversión en inteligencia artificial con datos del AI Index 2026 de Stanford HAI: 581.700 millones de dólares de inversión corporativa global en 2025 (+129,9%), la curva no lineal con pico en 2021, enfriamiento hasta 2024 y explosión en 2025, los 725.000 millones de capex presupuestado por las cuatro grandes tecnológicas para 2026, la concentración extrema del capital de riesgo, el paralelo con la burbuja de las telecomunicaciones y cinco implicancias prácticas para empresas que usan IA en lugar de financiarla.
 - [El Reglamento Europeo de IA ya exige transparencia: qué cambia para una empresa paraguaya](https://ricardotorales.com/blog/ai-act-transparencia-empresas-paraguay/): Análisis de gestión sobre el artículo 50 del Reglamento (UE) 2024/1689 (AI Act), aplicable desde el 2 de agosto de 2026: las cuatro obligaciones de transparencia (chatbots que se identifican, marcado de contenido sintético, declaración de sistemas biométricos y etiquetado de deepfakes), el alcance extraterritorial que comprende a empresas de fuera de la UE cuando el resultado del sistema se usa en la Unión, las sanciones de hasta 15 millones de euros o el 3% de la facturación mundial, y cinco pasos prácticos empezando por inventariar los usos de IA.
 - [Orquestación de agentes de IA: cuándo uno no alcanza y cuánto cuesta que sean varios](https://ricardotorales.com/blog/orquestacion-agentes-ia-suscripciones/): Guía de decisión sobre sistemas multiagente: los tres límites de un solo agente (contexto, especialización, paralelismo), los cinco patrones de orquestación usados en producción (secuencial, paralelo, jerárquico, enrutamiento y bucle), cómo el esquema orquestador-trabajadores reduce el gasto entre 40% y 60%, y cuándo conviene suscripción frente a consumo por API según el punto de equilibrio.
 - [Ciberespionaje estatal en Paraguay: qué significa para tu empresa](https://ricardotorales.com/blog/ciberespionaje-paraguay-flax-typhoon/): Análisis de la atribución pública que hizo Paraguay en julio de 2026 sobre la infiltración de sistemas del Estado por actores vinculados al gobierno chino (grupo Flax Typhoon), con estadísticas del CERT-PY que muestran que el 47,98% de los incidentes gestionados en 2026 corresponden al sector privado, y cinco medidas concretas de gobernanza para empresas.
