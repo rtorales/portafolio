@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ransomware en diez horas: la semana en que los agentes de IA hicieron el trabajo completo | Ricardo Torales</title>
+  <meta name="description" content="Unit 42 documentó una intrusión donde agentes de IA comprometieron una empresa entera en menos de diez horas, un trabajo que a un equipo humano le habría llevado dos semanas. Qué cambia para la defensa de una empresa mediana." />
+  <link rel="canonical" href="https://ricardotorales.com/blog/ransomware-agentes-ia-diez-horas/" />
+  <meta name="author" content="Ricardo Torales" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Ricardo Torales" />
+  <meta property="og:title" content="Ransomware en diez horas: la semana en que los agentes de IA hicieron el trabajo completo" />
+  <meta property="og:description" content="Agentes de IA comprometieron una empresa entera en menos de diez horas y dejaron una auditoría de 80 páginas. Qué cambia cuando la ventana de respuesta se achica de días a horas." />
+  <meta property="og:url" content="https://ricardotorales.com/blog/ransomware-agentes-ia-diez-horas/" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://ricardotorales.com/img/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-04T09:00:00-03:00" />
+  <meta property="article:modified_time" content="2026-09-04T09:00:00-03:00" />
+  <meta property="article:author" content="Ricardo Torales" />
+  <meta property="article:section" content="Ciberseguridad" />
+  <meta property="article:tag" content="Ransomware" />
+  <meta property="article:tag" content="Agentes de IA" />
+  <meta property="article:tag" content="Ciberseguridad" />
+  <meta property="article:tag" content="Unit 42" />
+  <meta property="fb:app_id" content="4234406980437487" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ransomware en diez horas: los agentes de IA ya hacen el trabajo completo" />
+  <meta name="twitter:description" content="Lo que antes tomaba dos semanas ahora toma diez horas. El problema no es el ataque: es que tu plan de respuesta supone que tenés días." />
+  <meta name="twitter:image" content="https://ricardotorales.com/img/og-image.jpg" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/blog/assets/blog.css?v=3" />
+
+  <script>document.documentElement.className = 'js';</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://ricardotorales.com/blog/ransomware-agentes-ia-diez-horas/#article",
+        "headline": "Ransomware en diez horas: la semana en que los agentes de IA hicieron el trabajo completo",
+        "description": "Unit 42 documentó una intrusión donde agentes de IA comprometieron una empresa entera en menos de diez horas, un trabajo que a un equipo humano le habría llevado dos semanas. Qué cambia para la defensa de una empresa mediana.",
+        "image": "https://ricardotorales.com/img/og-image.jpg",
+        "datePublished": "2026-09-04T09:00:00-03:00",
+        "dateModified": "2026-09-04T09:00:00-03:00",
+        "inLanguage": "es",
+        "articleSection": "Ciberseguridad",
+        "keywords": "ransomware con IA, agentes de IA, ciberseguridad empresarial, Unit 42, respuesta a incidentes, prompt injection, identidades no humanas, CI/CD, gestión de secretos, Paraguay",
+        "wordCount": 1434,
+        "author": {
+          "@type": "Person",
+          "@id": "https://ricardotorales.com/#person",
+          "name": "Ricardo Torales",
+          "url": "https://ricardotorales.com/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://ricardotorales.com/#person",
+          "name": "Ricardo Torales"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://ricardotorales.com/blog/ransomware-agentes-ia-diez-horas/"
+        },
+        "citation": [
+          {
+            "@type": "CreativeWork",
+            "name": "An AI-Assisted Cyber Attack: Inside a Unit 42 Investigation — Palo Alto Networks Unit 42",
+            "url": "https://unit42.paloaltonetworks.com/ai-assisted-cyber-attack-inside-a-unit-42-investigation/"
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "IBM Study: One in Four Malicious Breaches are AI-Enabled, Costing Companies $6 Million on Average",
+            "url": "https://newsroom.ibm.com/2026-07-29-ibm-study-one-in-four-malicious-breaches-are-ai-enabled,-costing-companies-6-million-on-average"
+          }
+        ],
+        "isPartOf": { "@id": "https://ricardotorales.com/blog/#blog" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ricardotorales.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ricardotorales.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Ransomware en diez horas", "item": "https://ricardotorales.com/blog/ransomware-agentes-ia-diez-horas/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="Inicio">
+        <span class="nav-monogram" aria-hidden="true">RT</span>
+        <span class="nav-name">Ricardo Torales</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#perfil">Perfil</a></li>
+        <li><a href="/#proyectos">Proyectos</a></li>
+        <li><a href="/#experiencia">Experiencia</a></li>
+        <li><a href="/servicios/">Servicios</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/#contacto" class="nav-cta">Contactar</a></li>
+      </ul>
+      <a href="/#contacto" class="nav-cta-mobile">Contactar</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="/">Inicio</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Ransomware en diez horas
+    </nav>
+  </div>
+
+  <article>
+    <header class="article-header">
+      <span class="tag--cat">Ciberseguridad</span>
+      <h1 class="article-title">Ransomware en diez horas: la semana en que los agentes de IA hicieron el trabajo completo</h1>
+      <p class="article-lead">Durante dos años hablamos de la IA en ciberseguridad como una promesa incómoda: mejores correos de phishing, algo de código malicioso, mucha especulación. Esta semana se publicó el primer caso documentado en detalle de una intrusión donde los agentes no asistieron al atacante: hicieron el trabajo. Y el dato que debería preocupar a un directorio no es cómo entraron, sino cuánto tardaron.</p>
+      <div class="article-meta">
+        <div class="article-author">
+          <img class="article-author-avatar" src="/img/ricardo-torales.jpeg" alt="Ricardo Torales" width="42" height="42" loading="lazy" />
+          <div>
+            <div class="article-author-name">Ricardo Torales</div>
+            <div class="article-author-role">Gerente de Proyectos de Tecnología · PMO</div>
+          </div>
+        </div>
+        <div class="article-meta-stats">
+          <time datetime="2026-09-04">4 sep 2026</time>
+          <span class="dot"></span>
+          <span>10 min de lectura</span>
+        </div>
+      </div>
+    </header>
+
+    <figure class="article-hero rt-reveal">
+      <img src="/blog/assets/img/cover-ransomware-agentico.svg" alt="Ilustración: varios agentes de inteligencia artificial coordinados convergen sobre un candado central mientras la ventana de tiempo del ataque se comprime" width="1200" height="600" loading="lazy" />
+    </figure>
+
+    <div class="article-body">
+      <p>El 2 de septiembre, la unidad de inteligencia de amenazas de Palo Alto Networks publicó el <a href="https://unit42.paloaltonetworks.com/ai-assisted-cyber-attack-inside-a-unit-42-investigation/" target="_blank" rel="noopener">análisis forense de una intrusión</a> que sus investigadores atendieron directamente. El resumen cabe en una línea: <strong>agentes de IA comprometieron una empresa completa —nube, identidades, pipelines de desarrollo, SaaS y contenedores— en menos de diez horas</strong>, empleando más de 50 técnicas del catálogo MITRE ATT&amp;CK. El mismo trabajo, hecho por un equipo humano coordinado, habría tomado alrededor de dos semanas.</p>
+
+      <p>Durante la negociación, el propio atacante le dijo a Unit 42 cómo lo había hecho: modelos de frontera más marcos de agentes construidos específicamente para el ataque. No era una persona usando un chatbot como ayuda. Era una flota de agentes con roles repartidos.</p>
+
+      <h2>La diferencia no es la velocidad. Es la adaptación</h2>
+      <p>Los ataques automatizados existen desde hace décadas: un script escanea, encuentra y explota. Lo que describe este caso es otra cosa. Cada agente <strong>interpretaba el resultado de su propia acción y decidía el paso siguiente</strong>, algo que hasta ahora requería a una persona mirando la pantalla.</p>
+
+      <p>El reparto de tareas es reconocible para cualquiera que haya visto una arquitectura multiagente del lado legítimo: un agente de reconocimiento mapeando los microservicios internos; subagentes revisando repositorios de código en busca de tokens y contraseñas escritas a mano; otro entrando al gestor de secretos y cosechando credenciales administrativas maestras; y un agente de pipeline secuestrando los flujos de CI/CD y extrayendo claves de acceso a la nube. Es el patrón orquestador–trabajadores del que <a href="/blog/orquestacion-agentes-ia-suscripciones/">escribí hace un mes en clave de productividad</a>, aplicado en la dirección opuesta.</p>
+
+      <p>Vale registrar también lo que <em>no</em> funcionó: el intento de plantar puertas traseras en la configuración de infraestructura como código fue bloqueado por la protección de ramas del repositorio. Un control aburrido, barato y bien configurado detuvo al agente. Volveremos a eso.</p>
+
+      <figure class="data-figure" style="max-width:720px;margin:28px auto;padding:0 4px;">
+        <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+        <svg viewBox="0 0 720 262" role="img" aria-label="Gráfico comparativo: un equipo humano coordinado tarda alrededor de 336 horas, dos semanas, en completar la misma intrusión que los agentes de inteligencia artificial completaron en menos de 10 horas." style="width:100%;min-width:560px;height:auto;font-family:'JetBrains Mono',ui-monospace,monospace;">
+          <!-- gridlines -->
+          <g stroke="#e4e4e7" stroke-width="1">
+            <line x1="320" y1="34" x2="320" y2="176"/>
+            <line x1="464" y1="34" x2="464" y2="176"/>
+            <line x1="608" y1="34" x2="608" y2="176"/>
+          </g>
+          <!-- ejes -->
+          <line x1="176" y1="34" x2="176" y2="176" stroke="#a1a1aa" stroke-width="1.5"/>
+          <line x1="176" y1="176" x2="686" y2="176" stroke="#a1a1aa" stroke-width="1.5"/>
+          <!-- barras: escala 336 h = 504 px -->
+          <rect x="176" y="52" width="504" height="34" rx="4" fill="#a1a1aa"/>
+          <rect x="176" y="116" width="15" height="34" rx="4" fill="#1b1b20"/>
+          <!-- etiquetas de serie -->
+          <g font-size="13" fill="#0e0e11" text-anchor="end">
+            <text x="164" y="68">Equipo humano</text>
+            <text x="164" y="84">coordinado</text>
+            <text x="164" y="138">Agentes de IA</text>
+          </g>
+          <!-- valores -->
+          <g font-size="14" font-weight="600">
+            <text x="668" y="74" text-anchor="end" fill="#ffffff">~336 h · 2 semanas</text>
+            <text x="203" y="138" fill="#0e0e11">&lt; 10 h</text>
+          </g>
+          <!-- escala -->
+          <g font-size="12" fill="#a1a1aa" text-anchor="middle">
+            <text x="176" y="196">0</text>
+            <text x="320" y="196">96 h</text>
+            <text x="464" y="196">192 h</text>
+            <text x="608" y="196">288 h</text>
+          </g>
+          <text x="428" y="230" font-size="12" fill="#a1a1aa" text-anchor="middle">Tiempo hasta comprometer el entorno completo · misma intrusión</text>
+          <text x="428" y="250" font-size="12" fill="#71717a" text-anchor="middle">Compresión aproximada: 34 veces</text>
+        </svg>
+        </div>
+        <figcaption style="font-family:var(--font-mono);font-size:.74rem;color:var(--zinc-500);margin-top:10px;line-height:1.5;">
+          Elaboración propia con datos del informe <a href="https://unit42.paloaltonetworks.com/ai-assisted-cyber-attack-inside-a-unit-42-investigation/" target="_blank" rel="noopener">«An AI-Assisted Cyber Attack: Inside a Unit 42 Investigation»</a> (Palo Alto Networks, 2 de septiembre de 2026). Las dos semanas son la estimación de los investigadores para el mismo alcance ejecutado por un equipo humano coordinado.
+        </figcaption>
+      </figure>
+
+      <h2>La auditoría de 80 páginas</h2>
+      <p>Hay un detalle del caso que se leyó como anécdota y a mí me parece el hallazgo central. Al terminar, el atacante le entregó a la víctima <strong>un informe de unas 80 páginas documentando las decenas de debilidades que había explotado</strong>. No como servicio ni como cortesía: como argumento de negociación.</p>
+
+      <p>Ese documento no existía en el ransomware clásico porque redactarlo costaba horas de trabajo experto. Ahora es un subproducto gratuito: los agentes ya venían registrando todo de forma estructurada mientras avanzaban. Y cambia la conversación de la extorsión. Ya no es «te cifré los archivos». Es «tengo el mapa detallado de por qué fue fácil, y vos no lo tenías».</p>
+
+      <blockquote>Cuando el atacante termina la intrusión con mejor documentación de tu arquitectura que la que tenés vos, el problema dejó de ser el incidente.</blockquote>
+
+      <h2>El caso no es aislado, y los números ya lo mostraban</h2>
+      <p>Es tentador leer esto como una rareza espectacular. Los datos agregados dicen que no. Según el <a href="https://newsroom.ibm.com/2026-07-29-ibm-study-one-in-four-malicious-breaches-are-ai-enabled,-costing-companies-6-million-on-average" target="_blank" rel="noopener">informe <em>Cost of a Data Breach 2026</em> de IBM</a>, <strong>una de cada cuatro brechas maliciosas ya fue habilitada por IA, un 56% más que el año anterior</strong>, y esas brechas costaron en promedio 6 millones de dólares frente a los 4,99 millones del promedio global.</p>
+
+      <p>El mismo informe trae tres cifras que ordenan bien las prioridades:</p>
+      <ul>
+        <li><strong>92% de las organizaciones que sufrieron un incidente vinculado a IA no tenía controles de acceso adecuados sobre esos sistemas.</strong> No es un problema de modelos: es de permisos.</li>
+        <li><strong>Menos de la mitad protege activamente sus identidades no humanas</strong> —tokens de servicio, claves de API, cuentas de integración—, que es exactamente lo que fueron a buscar los agentes en el caso de Unit 42.</li>
+        <li><strong>Quienes usan IA y automatización en la defensa ahorraron unos 1,93 millones de dólares por brecha.</strong> La asimetría corta para los dos lados.</li>
+      </ul>
+
+      <p>A esto se suma la otra tendencia de la semana, menos ruidosa pero más estructural: la investigación sobre navegadores con IA presentada este año confirma que <strong>la inyección indirecta de instrucciones (<em>prompt injection</em>) no tiene una solución completa</strong>. Ni siquiera los modelos de frontera con sus mejores defensas la eliminan. Si tu empresa está por darle a un agente acceso al correo, al ERP o a la banca electrónica, ese es el supuesto con el que hay que diseñar: el agente puede ser convencido por el contenido que lee.</p>
+
+      <div class="callout">
+        <span class="callout-label">El número que sí cambia tu plan</span>
+        <p>Si tu procedimiento de respuesta ante incidentes supone que entre la intrusión inicial y el cifrado hay días para detectar, escalar, convocar al comité y decidir, ese supuesto <strong>ya no es válido</strong>. Diez horas es menos que un fin de semana largo, menos que una guardia sin cobertura, menos que el tiempo que tarda un proveedor externo en responder un ticket fuera de horario.</p>
+      </div>
+
+      <h2>Qué hacer, en orden de retorno</h2>
+      <p>La reacción intuitiva es comprar más herramientas. Creo que es la última prioridad. Lo que frenó al agente en este caso fue un control de higiene básica, y casi todo lo que lo habilitó también lo era. En orden de lo que más rinde:</p>
+      <ul>
+        <li><strong>Sacá los secretos del código.</strong> Los tokens y contraseñas escritos en repositorios fueron la bisagra de la intrusión. Un escaneo de secretos sobre el repositorio y la rotación de lo que aparezca es de las medidas más baratas y de mayor impacto que existen hoy.</li>
+        <li><strong>Tratá a las identidades no humanas como tratás a las personas.</strong> Inventario, dueño responsable, mínimo privilegio y caducidad. Un token de servicio con permisos amplios y sin vencimiento es la llave maestra que buscan los agentes, y no dispara ninguna alerta de «inicio de sesión sospechoso».</li>
+        <li><strong>Protegé el gestor de secretos y el pipeline como si fueran producción.</strong> Porque lo son. Revisión por más de una persona, protección de ramas inmutable en los repositorios de infraestructura como código y separación entre quien programa y quien despliega. Es lo único que bloqueó al atacante.</li>
+        <li><strong>Ensayá una contención sincronizada, no secuencial.</strong> Si al detectar el incidente revocás credenciales, después sesiones OAuth, después claves de nube y después el pipeline, el agente ya se movió. La recomendación explícita de Unit 42 es cortar todo eso a la vez, y eso hay que tenerlo escrito y practicado antes, no improvisado a las tres de la mañana.</li>
+        <li><strong>Definí verificación fuera de banda para acciones críticas.</strong> Transferencias, cambios de datos bancarios de proveedores, altas de accesos privilegiados. Con deepfakes de voz y video baratos, la confirmación por un segundo canal dejó de ser burocracia y pasó a ser control.</li>
+      </ul>
+
+      <p>Para una empresa mediana en Paraguay o la región, nada de esto exige un SOC propio ni un presupuesto de banco. Exige orden: saber qué identidades existen, quién las usa y quién puede desactivarlas rápido. Los datos del CERT-PY que <a href="/blog/ciberespionaje-paraguay-flax-typhoon/">revisé al analizar el ciberespionaje estatal</a> ya mostraban que casi la mitad de los incidentes gestionados en el país corresponden al sector privado. La compresión del tiempo de ataque no cambia quién es blanco: cambia cuánto margen tenés cuando te toca.</p>
+
+      <div class="key-takeaways">
+        <h2>Para llevar</h2>
+        <ul>
+          <li>Unit 42 documentó el 2 de septiembre una intrusión donde agentes de IA comprometieron nube, identidades, CI/CD y SaaS en menos de diez horas, con más de 50 técnicas ATT&amp;CK.</li>
+          <li>La novedad no es la automatización, sino que los agentes interpretaban resultados y adaptaban el paso siguiente sin intervención humana.</li>
+          <li>El atacante dejó una auditoría de 80 páginas: documentar el ataque pasó a ser un subproducto gratuito y una herramienta de extorsión.</li>
+          <li>Una de cada cuatro brechas maliciosas ya es habilitada por IA (+56% interanual) y cuesta 6 millones de dólares en promedio, según IBM.</li>
+          <li>El 92% de las organizaciones con incidentes ligados a IA no tenía controles de acceso adecuados: el problema es de permisos e identidades, no de modelos.</li>
+          <li>Lo que bloqueó al agente fue un control básico bien configurado. La prioridad es higiene —secretos, identidades no humanas, pipeline— antes que herramientas nuevas.</li>
+        </ul>
+      </div>
+
+      <p>La lectura ejecutiva de la semana no es que la IA volvió invencibles a los atacantes. Es más simple y más manejable: <strong>la IA eliminó el cuello de botella del tiempo humano del lado ofensivo, y todavía no lo eliminó del lado defensivo</strong>. Esa brecha se cierra de dos maneras, y conviene empezar por la barata. Automatizar la detección y la contención cuesta dinero. Ordenar quién tiene acceso a qué cuesta decisión.</p>
+
+      <p class="article-note" style="font-size:.86rem;color:var(--zinc-500);border-top:1px solid var(--zinc-200);padding-top:16px;">Nota: los detalles de la intrusión provienen del informe <a href="https://unit42.paloaltonetworks.com/ai-assisted-cyber-attack-inside-a-unit-42-investigation/" target="_blank" rel="noopener">«An AI-Assisted Cyber Attack: Inside a Unit 42 Investigation»</a> (Palo Alto Networks, 2 de septiembre de 2026); las estadísticas agregadas, del <a href="https://newsroom.ibm.com/2026-07-29-ibm-study-one-in-four-malicious-breaches-are-ai-enabled,-costing-companies-6-million-on-average" target="_blank" rel="noopener">informe <em>Cost of a Data Breach 2026</em> de IBM</a>, publicado el 29 de julio de 2026. La identidad de la empresa afectada no fue divulgada. Este artículo es un análisis de gestión y no sustituye una evaluación de seguridad sobre tu entorno.</p>
+    </div>
+
+    <aside class="author-box">
+      <div class="author-box-inner">
+        <img src="/img/ricardo-torales.jpeg" alt="Ricardo Torales" width="64" height="64" loading="lazy" />
+        <div>
+          <div class="author-box-name">Ricardo Torales</div>
+          <div class="author-box-role">Gerente de Proyectos de Tecnología · PMO &amp; Business Transformation</div>
+          <p>Más de 14 años liderando transformación digital, adopción de IA y gobernanza de TI en empresas de Paraguay y la región. Especialista en integrar tecnología emergente con criterio de negocio y seguridad.</p>
+          <div class="author-box-links">
+            <a href="/#contacto">Contactar →</a>
+            <a href="https://www.linkedin.com/in/ricardo-torales" target="_blank" rel="noopener">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </article>
+
+  <section class="related" aria-label="Artículos relacionados">
+    <h2>Seguir leyendo</h2>
+    <div class="related-grid">
+      <article class="related-card">
+        <span class="tag--cat">Ciberseguridad</span>
+        <h3><a href="/blog/ciberespionaje-paraguay-flax-typhoon/">Ciberespionaje estatal en Paraguay: qué significa para tu empresa</a></h3>
+      </article>
+      <article class="related-card">
+        <span class="tag--cat">Ciberseguridad</span>
+        <h3><a href="/blog/arquitectura-zero-trust-empresa/">Arquitectura Zero Trust: cómo implementarla en tu empresa</a></h3>
+      </article>
+      <article class="related-card">
+        <span class="tag--cat">Inteligencia Artificial</span>
+        <h3><a href="/blog/orquestacion-agentes-ia-suscripciones/">Orquestación de agentes de IA: cuándo uno no alcanza</a></h3>
+      </article>
+    </div>
+  </section>
+
+  <section class="article-cta">
+    <div class="article-cta-inner">
+      <h2>¿Sabés quién tiene acceso a qué en tu empresa?</h2>
+      <p>Ayudo a ordenar la gobernanza de accesos, identidades y proveedores antes de que un incidente la ordene por vos.</p>
+      <a href="/servicios/" class="btn btn-white">Ver servicios</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Ricardo Torales · Gerente de Tecnología &amp; Consultor en Automatización · Asunción, Paraguay · <a href="mailto:ricardotorales@outlook.com">ricardotorales@outlook.com</a></p>
+    <p class="footer-updated">Publicado el <time datetime="2026-09-04">4 de septiembre de 2026</time></p>
+  </footer>
+
+  <script>
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); obs.unobserve(e.target); } });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.rt-reveal').forEach((el) => obs.observe(el));
+    }
+  </script>
+</body>
+</html>

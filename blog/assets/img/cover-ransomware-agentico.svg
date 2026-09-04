@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="Ilustración: varios agentes de inteligencia artificial convergen sobre un candado central mientras la ventana de tiempo se comprime">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="6%" r="120%">
+      <stop offset="0%" stop-color="#26262f"/>
+      <stop offset="55%" stop-color="#0e0e11"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+    <marker id="tip" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#ffffff" fill-opacity="0.7"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+
+  <!-- Agentes: nodos en abanico a la izquierda -->
+  <g>
+    <g fill="#ffffff" fill-opacity="0.20" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2">
+      <circle cx="196" cy="150" r="26"/>
+      <circle cx="150" cy="252" r="26"/>
+      <circle cx="150" cy="360" r="26"/>
+      <circle cx="196" cy="462" r="26"/>
+      <circle cx="292" cy="306" r="26"/>
+    </g>
+    <!-- enlaces entre agentes: se coordinan entre si -->
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.20" stroke-width="1.5">
+      <path d="M196 150 L292 306"/>
+      <path d="M150 252 L292 306"/>
+      <path d="M150 360 L292 306"/>
+      <path d="M196 462 L292 306"/>
+      <path d="M196 150 L150 252"/>
+      <path d="M150 360 L196 462"/>
+    </g>
+  </g>
+
+  <!-- Vectores de ataque convergentes hacia el nucleo -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2.5" stroke-dasharray="10 9" marker-end="url(#tip)">
+    <path d="M330 300 L636 300"/>
+    <path d="M236 178 C 420 208, 540 236, 640 268"/>
+    <path d="M236 434 C 420 404, 540 376, 640 344"/>
+  </g>
+
+  <!-- Nucleo: candado cerrado -->
+  <g>
+    <rect x="690" y="268" width="150" height="118" rx="14" fill="#16161b" stroke="#ffffff" stroke-opacity="0.9" stroke-width="3"/>
+    <path d="M727 268 v-30 a38 38 0 0 1 76 0 v30" fill="none" stroke="#ffffff" stroke-opacity="0.9" stroke-width="3"/>
+    <circle cx="765" cy="316" r="12" fill="#ffffff" fill-opacity="0.9"/>
+    <rect x="759" y="322" width="12" height="30" rx="6" fill="#ffffff" fill-opacity="0.9"/>
+  </g>
+
+  <!-- Ventana de tiempo comprimida -->
+  <g>
+    <rect x="690" y="440" width="420" height="16" rx="8" fill="#ffffff" fill-opacity="0.14"/>
+    <rect x="690" y="440" width="30" height="16" rx="8" fill="#ffffff" fill-opacity="0.92"/>
+    <text x="690" y="486" font-family="ui-monospace, Menlo, monospace" font-size="19" fill="#ffffff" fill-opacity="0.85">10 h</text>
+    <text x="1110" y="486" font-family="ui-monospace, Menlo, monospace" font-size="19" fill="#ffffff" fill-opacity="0.35" text-anchor="end">2 semanas</text>
+  </g>
+
+  <text x="72" y="546" font-family="ui-monospace, Menlo, monospace" font-size="21" letter-spacing="6" fill="#ffffff" fill-opacity="0.32">AGENTES · RANSOMWARE · 2026</text>
+</svg>
