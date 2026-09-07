@@ -6,7 +6,70 @@
     <atom:link href="https://ricardotorales.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <description>Análisis y guías prácticas sobre inteligencia artificial, transformación digital, automatización de procesos y ciberseguridad para líderes de TI en Latinoamérica.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 14 Jul 2026 09:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 09:00:00 -0300</lastBuildDate>
+
+    <item>
+      <title>El 90% de tus tokens no necesita el modelo más caro</title>
+      <link>https://ricardotorales.com/blog/costo-tokens-ia-enrutamiento-modelos/</link>
+      <guid isPermaLink="true">https://ricardotorales.com/blog/costo-tokens-ia-enrutamiento-modelos/</guid>
+      <pubDate>Mon, 07 Sep 2026 09:00:00 -0300</pubDate>
+      <category>Inteligencia Artificial</category>
+      <description>Un ingeniero de Spotify recortó nueve de cada diez tokens de su asistente de programación enrutando el trabajo rutinario a un modelo barato. Gartner proyecta que en 2028 el gasto en IA para desarrollo superará el sueldo de un programador. Cómo se gobierna ese costo.</description>
+    </item>
+
+    <item>
+      <title>Ransomware en diez horas: la semana en que los agentes de IA hicieron el trabajo completo</title>
+      <link>https://ricardotorales.com/blog/ransomware-agentes-ia-diez-horas/</link>
+      <guid isPermaLink="true">https://ricardotorales.com/blog/ransomware-agentes-ia-diez-horas/</guid>
+      <pubDate>Fri, 04 Sep 2026 09:00:00 -0300</pubDate>
+      <category>Ciberseguridad</category>
+      <description>Unit 42 documentó una intrusión donde agentes de IA comprometieron una empresa entera en menos de diez horas, un trabajo que a un equipo humano le habría llevado dos semanas. Qué cambia para la defensa de una empresa mediana.</description>
+    </item>
+
+    <item>
+      <title>El dinero de la IA: 580.000 millones y qué significan para tu empresa</title>
+      <link>https://ricardotorales.com/blog/inversion-ia-capital-2026/</link>
+      <guid isPermaLink="true">https://ricardotorales.com/blog/inversion-ia-capital-2026/</guid>
+      <pubDate>Mon, 24 Aug 2026 09:00:00 -0300</pubDate>
+      <category>Inteligencia Artificial</category>
+      <description>La inversión corporativa global en IA llegó a 581.700 millones de dólares en 2025 y las cuatro grandes tecnológicas presupuestan 725.000 millones para 2026. Qué dice esa evolución y qué significa para una empresa que no es Google.</description>
+    </item>
+
+    <item>
+      <title>El Reglamento Europeo de IA ya exige transparencia: qué cambia para una empresa paraguaya</title>
+      <link>https://ricardotorales.com/blog/ai-act-transparencia-empresas-paraguay/</link>
+      <guid isPermaLink="true">https://ricardotorales.com/blog/ai-act-transparencia-empresas-paraguay/</guid>
+      <pubDate>Wed, 12 Aug 2026 09:00:00 -0300</pubDate>
+      <category>Inteligencia Artificial</category>
+      <description>Desde el 2 de agosto de 2026 rigen las obligaciones de transparencia del AI Act: avisar que es un chatbot, etiquetar contenido generado con IA y declarar sistemas biométricos. Por qué alcanza a empresas fuera de la UE y qué hacer al respecto.</description>
+    </item>
+
+    <item>
+      <title>Orquestación de agentes de IA: cuándo uno no alcanza y cuánto cuesta que sean varios</title>
+      <link>https://ricardotorales.com/blog/orquestacion-agentes-ia-suscripciones/</link>
+      <guid isPermaLink="true">https://ricardotorales.com/blog/orquestacion-agentes-ia-suscripciones/</guid>
+      <pubDate>Tue, 04 Aug 2026 09:00:00 -0300</pubDate>
+      <category>Inteligencia Artificial</category>
+      <description>Patrones de orquestación multiagente, por qué un solo agente choca contra un techo, y cómo decidir entre suscripción y consumo por API para trabajos complejos. Guía de decisión para líderes de TI.</description>
+    </item>
+
+    <item>
+      <title>Ciberespionaje estatal en Paraguay: qué significa para tu empresa</title>
+      <link>https://ricardotorales.com/blog/ciberespionaje-paraguay-flax-typhoon/</link>
+      <guid isPermaLink="true">https://ricardotorales.com/blog/ciberespionaje-paraguay-flax-typhoon/</guid>
+      <pubDate>Fri, 31 Jul 2026 09:00:00 -0300</pubDate>
+      <category>Ciberseguridad</category>
+      <description>Paraguay atribuyó a actores vinculados al Estado chino la infiltración de sistemas públicos y se abrió causa penal. El dato que pocos miran: casi la mitad de los incidentes del CERT-PY son del sector privado.</description>
+    </item>
+
+    <item>
+      <title>La carrera de la IA se acelera: Kimi K3, GPT-5.6 y Claude (jul 2026)</title>
+      <link>https://ricardotorales.com/blog/carrera-ia-2026-kimi-gpt-claude/</link>
+      <guid isPermaLink="true">https://ricardotorales.com/blog/carrera-ia-2026-kimi-gpt-claude/</guid>
+      <pubDate>Thu, 23 Jul 2026 09:00:00 -0300</pubDate>
+      <category>Inteligencia Artificial</category>
+      <description>Kimi K3 llega al podio, GPT-5.6 queda a un punto de Claude y seis laboratorios superan la marca de 50 en el Intelligence Index. Qué significa este ritmo vertiginoso de la IA para los líderes de tecnología.</description>
+    </item>
 
     <item>
       <title>Harness de IA y agentes autónomos: OpenClaw vs Hermes</title>
