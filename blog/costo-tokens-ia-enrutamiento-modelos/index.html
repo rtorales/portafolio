@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>El 90% de tus tokens no necesita el modelo más caro | Ricardo Torales</title>
+  <meta name="description" content="Un ingeniero de Spotify recortó nueve de cada diez tokens de su asistente de programación enrutando el trabajo rutinario a un modelo barato. Gartner proyecta que en 2028 el gasto en IA para desarrollo superará el sueldo de un programador. Cómo se gobierna ese costo." />
+  <link rel="canonical" href="https://ricardotorales.com/blog/costo-tokens-ia-enrutamiento-modelos/" />
+  <meta name="author" content="Ricardo Torales" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Ricardo Torales" />
+  <meta property="og:title" content="El 90% de tus tokens no necesita el modelo más caro" />
+  <meta property="og:description" content="Spotify publicó cómo recortó nueve de cada diez tokens de su asistente de IA sin escribir menos código. La lección no es técnica: es de gobernanza del costo." />
+  <meta property="og:url" content="https://ricardotorales.com/blog/costo-tokens-ia-enrutamiento-modelos/" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://ricardotorales.com/img/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="article:published_time" content="2026-09-07T09:00:00-03:00" />
+  <meta property="article:modified_time" content="2026-09-07T09:00:00-03:00" />
+  <meta property="article:author" content="Ricardo Torales" />
+  <meta property="article:section" content="Inteligencia Artificial" />
+  <meta property="article:tag" content="Costos de IA" />
+  <meta property="article:tag" content="Enrutamiento de modelos" />
+  <meta property="article:tag" content="Gobernanza de TI" />
+  <meta property="article:tag" content="FinOps" />
+  <meta property="fb:app_id" content="4234406980437487" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="El 90% de tus tokens no necesita el modelo más caro" />
+  <meta name="twitter:description" content="Spotify recortó nueve de cada diez tokens enrutando el trabajo rutinario a un modelo barato. Gartner: en 2028 la IA para desarrollo costará más que el programador." />
+  <meta name="twitter:image" content="https://ricardotorales.com/img/og-image.jpg" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/blog/assets/blog.css?v=3" />
+
+  <script>document.documentElement.className = 'js';</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://ricardotorales.com/blog/costo-tokens-ia-enrutamiento-modelos/#article",
+        "headline": "El 90% de tus tokens no necesita el modelo más caro",
+        "description": "Un ingeniero de Spotify recortó nueve de cada diez tokens de su asistente de programación enrutando el trabajo rutinario a un modelo barato. Gartner proyecta que en 2028 el gasto en IA para desarrollo superará el sueldo de un programador. Cómo se gobierna ese costo.",
+        "image": "https://ricardotorales.com/img/og-image.jpg",
+        "datePublished": "2026-09-07T09:00:00-03:00",
+        "dateModified": "2026-09-07T09:00:00-03:00",
+        "inLanguage": "es",
+        "articleSection": "Inteligencia Artificial",
+        "keywords": "costo de tokens, enrutamiento de modelos, model routing, FinOps de IA, gobernanza de IA, Claude Code, Portal by Spotify, Gartner, licenciamiento por consumo, costo por tarea, Paraguay",
+        "wordCount": 2001,
+        "author": {
+          "@type": "Person",
+          "@id": "https://ricardotorales.com/#person",
+          "name": "Ricardo Torales",
+          "url": "https://ricardotorales.com/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://ricardotorales.com/#person",
+          "name": "Ricardo Torales"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://ricardotorales.com/blog/costo-tokens-ia-enrutamiento-modelos/"
+        },
+        "citation": [
+          {
+            "@type": "CreativeWork",
+            "name": "Portal by Spotify cut my Claude Code token usage by 90% — Spotify Engineering",
+            "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90"
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Gartner Predicts AI Coding Costs Will Surpass Average Developer's Salary by 2028 as Token Consumption Surges",
+            "url": "https://www.gartner.com/en/newsroom/press-releases/2026-06-24-gartner-predicts-ai-coding-costs-will-surpass-average-developer-salary-by-2028-as-token-consumption-surges"
+          }
+        ],
+        "isPartOf": { "@id": "https://ricardotorales.com/blog/#blog" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ricardotorales.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ricardotorales.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "El 90% de tus tokens no necesita el modelo más caro", "item": "https://ricardotorales.com/blog/costo-tokens-ia-enrutamiento-modelos/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="Inicio">
+        <span class="nav-monogram" aria-hidden="true">RT</span>
+        <span class="nav-name">Ricardo Torales</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#perfil">Perfil</a></li>
+        <li><a href="/#proyectos">Proyectos</a></li>
+        <li><a href="/#experiencia">Experiencia</a></li>
+        <li><a href="/servicios/">Servicios</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/#contacto" class="nav-cta">Contactar</a></li>
+      </ul>
+      <a href="/#contacto" class="nav-cta-mobile">Contactar</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="/">Inicio</a><span>/</span><a href="/blog/">Blog</a><span>/</span>El 90% de tus tokens no necesita el modelo más caro
+    </nav>
+  </div>
+
+  <article>
+    <header class="article-header">
+      <span class="tag--cat">Inteligencia Artificial</span>
+      <h1 class="article-title">El 90% de tus tokens no necesita el modelo más caro</h1>
+      <p class="article-lead">Un ingeniero de Spotify publicó esta semana cómo recortó nueve de cada diez tokens que consumía su asistente de programación. No cambió de herramienta, no escribió menos código y no bajó la calidad: cambió qué modelo hace cada tarea. El caso es técnico, pero el problema que resuelve ya está sentado en el presupuesto de cualquier empresa que pasó de probar la IA a usarla todos los días.</p>
+      <div class="article-meta">
+        <div class="article-author">
+          <img class="article-author-avatar" src="/img/ricardo-torales.jpeg" alt="Ricardo Torales" width="42" height="42" loading="lazy" />
+          <div>
+            <div class="article-author-name">Ricardo Torales</div>
+            <div class="article-author-role">Gerente de Proyectos de Tecnología · PMO</div>
+          </div>
+        </div>
+        <div class="article-meta-stats">
+          <time datetime="2026-09-07">7 sep 2026</time>
+          <span class="dot"></span>
+          <span>12 min de lectura</span>
+        </div>
+      </div>
+    </header>
+
+    <figure class="article-hero rt-reveal">
+      <img src="/blog/assets/img/cover-costo-tokens-ia.svg" alt="Ilustración: un enrutador reparte las tareas de un asistente de inteligencia artificial, nueve de cada diez hacia un modelo trabajador barato y una hacia el modelo de frontera" width="1200" height="600" loading="lazy" />
+    </figure>
+
+    <div class="article-body">
+      <p>El 3 de septiembre, Dimitri Mazmanov —Principal Product Manager en Spotify— publicó en el blog de ingeniería de la compañía un artículo con un título deliberadamente concreto: <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90" target="_blank" rel="noopener">«Portal by Spotify cut my Claude Code token usage by 90%»</a>. La idea que hay detrás es tan simple que da un poco de vergüenza no haberla aplicado antes: <strong>no todas las tareas que le pedís a una IA merecen el mismo modelo</strong>.</p>
+
+      <p>Buena parte de lo que consume un asistente de programación no es razonamiento. Es acarreo. Abrir cuarenta archivos para responder «¿dónde se configura esto?», resumir un módulo largo, generar un archivo de pruebas que copia un patrón que ya existe. Nada de eso exige el modelo más caro del mercado, pero por defecto todo eso pasa por el modelo más caro del mercado, y cada línea leída se paga.</p>
+
+      <h2>Primero, por qué esto es un problema de presupuesto y no de ingeniería</h2>
+
+      <p>Tres meses antes de ese artículo, Gartner publicó una proyección que conviene leer despacio: <a href="https://www.gartner.com/en/newsroom/press-releases/2026-06-24-gartner-predicts-ai-coding-costs-will-surpass-average-developer-salary-by-2028-as-token-consumption-surges" target="_blank" rel="noopener"><strong>para 2028, el gasto en agentes de IA para desarrollo superará el salario promedio de un programador</strong></a>. No el costo de la herramienta: el salario de la persona.</p>
+
+      <p>El dato de hoy sostiene la proyección. Según la misma investigación, cerca de <strong>una cuarta parte de los líderes de tecnología ya gasta entre 200 y 500 dólares por desarrollador por mes</strong> solo en tokens. Nitish Tyagi, analista principal de Gartner, lo resume en una idea que debería estar pegada en la pared de todo comité de TI: sin un modelo operativo con gobernanza, <em>los costos escalan más rápido que las ganancias de productividad que estas herramientas prometen entregar</em>.</p>
+
+      <p>El cambio de fondo es de modelo comercial. Durante veinte años el software empresarial se presupuestó por asiento: sabías cuántas licencias tenías y cuánto costaba el año. La IA agéntica se factura por consumo, y el consumo lo determina el comportamiento diario de cada usuario. Es la diferencia entre alquilar una oficina y pagar la nafta: lo primero se firma una vez, lo segundo depende de cómo maneja cada uno.</p>
+
+      <h2>Qué hizo Spotify, en castellano</h2>
+
+      <p>Mazmanov montó un sistema de <strong>enrutamiento de modelos</strong> (<em>model routing</em>) sobre Portal, la plataforma interna de desarrollo de Spotify. El mecanismo tiene tres capas, y vale entenderlo porque lo interesante es la estructura, no la herramienta:</p>
+
+      <ul>
+        <li><strong>Ganchos (<em>hooks</em>).</strong> Antes de que el asistente ejecute una acción, un control la intercepta. Si intenta leer un archivo de más de 350 líneas —umbral configurable—, la lectura se <em>bloquea</em> y se redirige.</li>
+        <li><strong>Guiones (<em>scripts</em>).</strong> Envuelven la tarea y la mandan al modelo barato con instrucciones estrictas de formato: viñetas estructuradas, sin saludos, sin prosa, sin preámbulos. Cada palabra de cortesía es un token facturado.</li>
+        <li><strong>Instrucciones (<em>skills</em>).</strong> Documentos que le explican al asistente cuándo conviene delegar.</li>
+      </ul>
+
+      <p>Sobre esa base definió dos «modos» de trabajador: uno que <strong>lee y resume en volumen</strong> y otro que <strong>escribe código repetitivo</strong> siguiendo patrones que ya existen en el repositorio. Ambos corren sobre un modelo económico —Gemini 2.5 Flash— mientras el modelo de frontera queda reservado para lo que de verdad requiere criterio. El ahorro promedio medido en las lecturas masivas fue cercano al 90%.</p>
+
+      <figure class="data-figure" style="max-width:720px;margin:28px auto;padding:0 4px;">
+        <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
+        <svg viewBox="0 0 720 262" role="img" aria-label="Gráfico comparativo: la lectura masiva de archivos hecha directamente por el modelo de frontera consume el 100% de los tokens de referencia, mientras que delegada a un modelo trabajador consume alrededor del 10%." style="width:100%;min-width:560px;height:auto;font-family:'JetBrains Mono',ui-monospace,monospace;">
+          <!-- gridlines -->
+          <g stroke="#e4e4e7" stroke-width="1">
+            <line x1="320" y1="34" x2="320" y2="176"/>
+            <line x1="464" y1="34" x2="464" y2="176"/>
+            <line x1="608" y1="34" x2="608" y2="176"/>
+          </g>
+          <!-- ejes -->
+          <line x1="176" y1="34" x2="176" y2="176" stroke="#a1a1aa" stroke-width="1.5"/>
+          <line x1="176" y1="176" x2="686" y2="176" stroke="#a1a1aa" stroke-width="1.5"/>
+          <!-- barras: escala 100% = 504 px -->
+          <rect x="176" y="52" width="504" height="34" rx="4" fill="#a1a1aa"/>
+          <rect x="176" y="116" width="50" height="34" rx="4" fill="#1b1b20"/>
+          <!-- etiquetas de serie -->
+          <g font-size="13" fill="#0e0e11" text-anchor="end">
+            <text x="164" y="62">Lectura directa</text>
+            <text x="164" y="80">(modelo de frontera)</text>
+            <text x="164" y="126">Lectura delegada</text>
+            <text x="164" y="144">(modelo trabajador)</text>
+          </g>
+          <!-- valores -->
+          <g font-size="14" font-weight="600">
+            <text x="668" y="74" text-anchor="end" fill="#ffffff">100% · referencia</text>
+            <text x="238" y="138" fill="#0e0e11">~10%</text>
+          </g>
+          <!-- escala -->
+          <g font-size="12" fill="#a1a1aa" text-anchor="middle">
+            <text x="176" y="196">0</text>
+            <text x="320" y="196">25%</text>
+            <text x="464" y="196">50%</text>
+            <text x="608" y="196">75%</text>
+          </g>
+          <text x="428" y="230" font-size="12" fill="#a1a1aa" text-anchor="middle">Tokens consumidos en lectura masiva de archivos · misma tarea</text>
+          <text x="428" y="250" font-size="12" fill="#71717a" text-anchor="middle">Ahorro medio reportado: ~90%</text>
+        </svg>
+        </div>
+        <figcaption style="font-family:var(--font-mono);font-size:.74rem;color:var(--zinc-500);margin-top:10px;line-height:1.5;">
+          Elaboración propia con datos de <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90" target="_blank" rel="noopener">«Portal by Spotify cut my Claude Code token usage by 90%»</a> (Spotify Engineering, 3 de septiembre de 2026). El ahorro corresponde al promedio medido sobre operaciones de lectura masiva, no sobre el total de la factura.
+        </figcaption>
+      </figure>
+
+      <h2>La letra chica del 90%</h2>
+
+      <p>Conviene ser preciso, porque el titular es más generoso que el cuerpo del artículo. El 90% es el ahorro promedio <strong>en una clase de operación</strong> —las lecturas masivas de archivos—, no el recorte de la factura total. Cuánto baja el gasto real depende de qué proporción de tu consumo sea acarreo y qué proporción sea razonamiento.</p>
+
+      <p>Ese matiz no debilita el caso: lo vuelve utilizable. La pregunta correcta para un gerente no es «¿cuánto ahorró Spotify?» sino <strong>«¿qué porcentaje de mi consumo es trabajo que no requiere el modelo caro?»</strong>. En la mayoría de los equipos que vi, esa fracción es alta y nadie la midió nunca.</p>
+
+      <h2>Lo que más me interesa: la regla se hace cumplir, no se sugiere</h2>
+
+      <p>Hay un detalle de diseño que se lee al pasar y que a mí me parece el verdadero aporte. Las tres capas no son redundantes: son una escalera de <em>obligatoriedad</em>.</p>
+
+      <p>La capa de instrucciones le <em>sugiere</em> al asistente que delegue. La capa de ganchos <em>le impide</em> no hacerlo. El propio autor cuenta que el complemento que terminó usando reemplaza el enrutamiento voluntario —donde el modelo decide si le conviene— por bloqueos duros sobre las operaciones caras.</p>
+
+      <blockquote>Una política que depende de que alguien se acuerde de cumplirla no es un control. Es una expectativa con nombre elegante.</blockquote>
+
+      <p>Es exactamente lo mismo que discutimos en gobernanza de gastos, de accesos o de compras. Una política de viáticos que vive en un PDF genera un promedio; una que está codificada en el flujo de aprobación genera un límite. Con los costos de IA pasa igual: la distancia entre «recomendamos usar el modelo económico para tareas rutinarias» y «el sistema no te deja gastar de más en tareas rutinarias» es toda la diferencia.</p>
+
+      <h2>Dónde no conviene delegar</h2>
+
+      <p>El artículo es honesto con sus límites, y esa honestidad es lo que lo vuelve creíble. El enrutamiento se excluye deliberadamente en tres frentes:</p>
+
+      <ul>
+        <li><strong>Edición de código.</strong> Los resúmenes del modelo barato no traen números de línea confiables; para modificar, el modelo principal tiene que leer directamente.</li>
+        <li><strong>Trabajo que depende de razonamiento.</strong> Los modelos trabajadores pasan por alto errores sutiles. Depuración, decisiones de arquitectura y revisión de código crítico para la seguridad quedan explícitamente fuera del enrutamiento.</li>
+        <li><strong>Tareas chicas.</strong> Cada delegación es un viaje de red de 10 a 30 segundos, con un tope de 30. Debajo del umbral de líneas, la demora cuesta más de lo que ahorra el token.</li>
+      </ul>
+
+      <p>Ahí está el intercambio real: <strong>se cambia dinero por latencia y se acota el alcance a lo que no exige criterio</strong>. Es una decisión de ingeniería con forma de decisión de negocio, y por eso se toma con números y no con entusiasmo. Es el mismo razonamiento que planteé al comparar <a href="/blog/orquestacion-agentes-ia-suscripciones/">orquestación de agentes contra un solo agente</a>: el esquema orquestador–trabajadores no es más elegante, es más barato, y solo mientras sepas qué tareas caen de cada lado.</p>
+
+      <div class="callout">
+        <span class="callout-label">El número que deberías poder responder</span>
+        <p>No «¿cuánto gastamos en IA el mes pasado?», que casi todos pueden contestar mirando la tarjeta. Sino <strong>«¿cuánto nos cuesta, en promedio, resolver una tarea de este tipo?»</strong>. Sin costo por tarea no hay comparación posible entre proveedores, ni caso de negocio, ni forma de saber si el gasto que subió 40% es un problema o el resultado de que se hizo 60% más de trabajo.</p>
+      </div>
+
+      <h2>Cómo se traduce esto a una empresa que no es Spotify</h2>
+
+      <p>Nadie en Paraguay necesita construir una plataforma interna de agentes para aprovechar la idea. Lo que se transfiere es el criterio, y aplica igual si tu consumo de IA está en atención al cliente, en análisis de documentos o en el área de sistemas. En orden de retorno:</p>
+
+      <ul>
+        <li><strong>Medí antes de optimizar.</strong> Pedí a tu proveedor o a tu equipo el consumo desagregado por caso de uso y por usuario, no la factura consolidada. Si no podés ver dónde se va el gasto, cualquier ahorro que declares después va a ser una anécdota.</li>
+        <li><strong>Clasificá el trabajo en dos niveles.</strong> Rutinario y predecible de un lado —resumir, extraer, clasificar, transcribir, generar formatos repetidos—; criterio, ambigüedad y riesgo del otro. La primera lista casi siempre es más larga de lo que el equipo supone.</li>
+        <li><strong>Poné el corte en el sistema, no en el instructivo.</strong> Límites de gasto por proyecto, alertas por umbral, modelo económico por defecto y el caro por excepción justificada. Que la opción barata sea la que ocurre sola.</li>
+        <li><strong>Escribí qué queda excluido.</strong> Decisiones con impacto legal, financiero o de seguridad no se enrutan al modelo barato ni se automatizan sin revisión humana. Definilo antes y por escrito, no cuando ya pasó algo.</li>
+        <li><strong>Exigí transparencia de consumo al contratar.</strong> Gartner señala que muchos proveedores no explican con claridad cómo se calcula y se factura el consumo, y eso impide pronosticar. Es una cláusula de contrato, no un detalle técnico: si no podés auditar el medidor, no podés controlar la cuenta.</li>
+      </ul>
+
+      <p>Vale una advertencia de la que casi no se habla: el modelo más caro no siempre es el mejor para tu tarea, y el ranking cambia cada pocas semanas. Ya lo planteé al mirar <a href="/blog/carrera-ia-2026-kimi-gpt-claude/">cómo se mueve la carrera entre modelos</a> — si tu arquitectura está atada a un proveedor, cada movimiento del mercado es un proyecto de migración en lugar de una línea de configuración. La conclusión con la que cierra el artículo de Spotify apunta justamente ahí: lo valioso es que enrutar deja de ser un problema de ingeniería de sistemas y pasa a ser un problema de configuración.</p>
+
+      <div class="key-takeaways">
+        <h2>Para llevar</h2>
+        <ul>
+          <li>Spotify publicó el 3 de septiembre de 2026 un caso de enrutamiento de modelos con un ahorro medio cercano al 90% en lecturas masivas de archivos, sin cambiar de herramienta ni bajar la calidad del resultado.</li>
+          <li>Ese 90% aplica a una clase de operación, no a la factura total. La pregunta útil es qué proporción de tu consumo es acarreo y no razonamiento.</li>
+          <li>Gartner proyecta que en 2028 el gasto en IA para desarrollo superará el salario promedio de un programador; una cuarta parte de los líderes de tecnología ya gasta entre 200 y 500 dólares por desarrollador al mes.</li>
+          <li>El cambio de fondo es de licenciamiento por asiento a facturación por consumo: el costo pasó a depender del comportamiento diario de cada usuario.</li>
+          <li>La clave del diseño no es la herramienta sino la obligatoriedad: el enrutamiento se hace cumplir con bloqueos automáticos, no con recomendaciones en un documento.</li>
+          <li>Se excluye explícitamente lo que exige criterio —edición, depuración, arquitectura, seguridad— y lo que es demasiado chico como para justificar la latencia.</li>
+          <li>Para una empresa mediana: medir costo por tarea, clasificar el trabajo en dos niveles, poner el corte en el sistema, escribir las exclusiones y exigir transparencia de consumo por contrato.</li>
+        </ul>
+      </div>
+
+      <p>La conclusión ejecutiva no es que haya que gastar menos en IA. En muchos casos habrá que gastar más, porque el trabajo que habilita lo justifica. Es que <strong>el gasto en IA dejó de comportarse como una licencia y empezó a comportarse como consumo de energía</strong>: variable, sensible al hábito y silencioso hasta que llega la factura. Las empresas que lo traten como una partida a gobernar —con medición, umbrales y excepciones documentadas— van a poder sostener la inversión. Las que lo traten como una suscripción más se van a enterar del problema tres trimestres tarde.</p>
+
+      <h2>Referencias</h2>
+      <ul>
+        <li>Mazmanov, D. (3 de septiembre de 2026). <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90" target="_blank" rel="noopener">«Portal by Spotify cut my Claude Code token usage by 90%»</a>. Spotify Engineering. — Fuente primaria del caso: la arquitectura de tres capas, los dos modos de trabajador, el umbral de 350 líneas, la latencia de 10 a 30 segundos y el ahorro medio del 90% en lecturas masivas.</li>
+        <li>Gartner (24 de junio de 2026). <a href="https://www.gartner.com/en/newsroom/press-releases/2026-06-24-gartner-predicts-ai-coding-costs-will-surpass-average-developer-salary-by-2028-as-token-consumption-surges" target="_blank" rel="noopener">«Gartner Predicts AI Coding Costs Will Surpass Average Developer's Salary by 2028 as Token Consumption Surges»</a>. Comunicado de prensa. — Proyección a 2028, gasto actual de 200 a 500 dólares por desarrollador al mes en cerca de una cuarta parte de las organizaciones, y las declaraciones de Nitish Tyagi sobre gobernanza y transparencia de facturación.</li>
+        <li>Torales, R. (4 de agosto de 2026). <a href="/blog/orquestacion-agentes-ia-suscripciones/">«Orquestación de agentes de IA: cuándo uno no alcanza y cuánto cuesta que sean varios»</a>. — Los cinco patrones de orquestación en producción y el punto de equilibrio entre suscripción y consumo por API.</li>
+        <li>Torales, R. (23 de julio de 2026). <a href="/blog/carrera-ia-2026-kimi-gpt-claude/">«La carrera de la IA se acelera: Kimi K3, GPT-5.6 y Claude»</a>. — Por qué conviene diseñar arquitecturas independientes del modelo y decidir por costo por tarea.</li>
+      </ul>
+
+      <p class="article-note" style="font-size:.86rem;color:var(--zinc-500);border-top:1px solid var(--zinc-200);padding-top:16px;">Nota: las cifras de ahorro corresponden a la medición interna reportada por Spotify sobre su propio entorno y no constituyen un resultado garantizable en otros contextos. Este artículo es un análisis de gestión sobre gobernanza del costo de IA y no una recomendación de producto ni de proveedor.</p>
+    </div>
+
+    <aside class="author-box">
+      <div class="author-box-inner">
+        <img src="/img/ricardo-torales.jpeg" alt="Ricardo Torales" width="64" height="64" loading="lazy" />
+        <div>
+          <div class="author-box-name">Ricardo Torales</div>
+          <div class="author-box-role">Gerente de Proyectos de Tecnología · PMO &amp; Business Transformation</div>
+          <p>Más de 14 años liderando transformación digital, adopción de IA y gobernanza de TI en empresas de Paraguay y la región. Especialista en integrar tecnología emergente con criterio de negocio y seguridad.</p>
+          <div class="author-box-links">
+            <a href="/#contacto">Contactar →</a>
+            <a href="https://www.linkedin.com/in/ricardo-torales" target="_blank" rel="noopener">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </article>
+
+  <section class="related" aria-label="Artículos relacionados">
+    <h2>Seguir leyendo</h2>
+    <div class="related-grid">
+      <article class="related-card">
+        <span class="tag--cat">Inteligencia Artificial</span>
+        <h3><a href="/blog/orquestacion-agentes-ia-suscripciones/">Orquestación de agentes de IA: cuándo uno no alcanza</a></h3>
+      </article>
+      <article class="related-card">
+        <span class="tag--cat">Inteligencia Artificial</span>
+        <h3><a href="/blog/inversion-ia-capital-2026/">El dinero de la IA: 580.000 millones y qué significan para tu empresa</a></h3>
+      </article>
+      <article class="related-card">
+        <span class="tag--cat">Inteligencia Artificial</span>
+        <h3><a href="/blog/carrera-ia-2026-kimi-gpt-claude/">La carrera de la IA se acelera: Kimi K3, GPT-5.6 y Claude</a></h3>
+      </article>
+    </div>
+  </section>
+
+  <section class="article-cta">
+    <div class="article-cta-inner">
+      <h2>¿Sabés cuánto te cuesta cada tarea que resolvés con IA?</h2>
+      <p>Ayudo a poner medición, umbrales y gobernanza sobre el gasto en tecnología antes de que la factura tome la decisión por vos.</p>
+      <a href="/servicios/" class="btn btn-white">Ver servicios</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Ricardo Torales · Gerente de Tecnología &amp; Consultor en Automatización · Asunción, Paraguay · <a href="mailto:ricardotorales@outlook.com">ricardotorales@outlook.com</a></p>
+    <p class="footer-updated">Publicado el <time datetime="2026-09-07">7 de septiembre de 2026</time></p>
+  </footer>
+
+  <script>
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); obs.unobserve(e.target); } });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.rt-reveal').forEach((el) => obs.observe(el));
+    }
+  </script>
+</body>
+</html>

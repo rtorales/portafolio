@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="Ilustración: un enrutador reparte las tareas de un asistente de inteligencia artificial, nueve de cada diez hacia un modelo trabajador barato y una hacia el modelo de frontera">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="6%" r="120%">
+      <stop offset="0%" stop-color="#26262f"/>
+      <stop offset="55%" stop-color="#0e0e11"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#ffffff" fill-opacity="0.55"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <rect width="1200" height="600" fill="url(#dots)"/>
+
+  <!-- Cola de tareas entrantes -->
+  <g fill="#16161b" stroke="#ffffff" stroke-opacity="0.30" stroke-width="2">
+    <rect x="108" y="168" width="88" height="22" rx="5"/>
+    <rect x="108" y="200" width="88" height="22" rx="5"/>
+    <rect x="108" y="232" width="88" height="22" rx="5"/>
+    <rect x="108" y="264" width="88" height="22" rx="5"/>
+    <rect x="108" y="296" width="88" height="22" rx="5"/>
+    <rect x="108" y="328" width="88" height="22" rx="5"/>
+    <rect x="108" y="360" width="88" height="22" rx="5"/>
+    <rect x="108" y="392" width="88" height="22" rx="5"/>
+  </g>
+
+  <!-- Convergencia hacia el enrutador -->
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="2">
+    <path d="M204 179 C 300 179, 330 268, 386 290"/>
+    <path d="M204 243 C 300 243, 336 280, 386 296"/>
+    <path d="M204 307 H 386"/>
+    <path d="M204 371 C 300 371, 336 324, 386 310"/>
+    <path d="M204 403 C 300 403, 330 340, 386 316"/>
+  </g>
+
+  <!-- Enrutador -->
+  <path d="M448 245 L511 303 L448 361 L385 303 Z" fill="#16161b" stroke="#ffffff" stroke-opacity="0.85" stroke-width="3"/>
+  <path d="M448 225 L531 303 L448 381 L365 303 Z" fill="none" stroke="#ffffff" stroke-opacity="0.13" stroke-width="2" stroke-dasharray="6 10"/>
+  <g fill="#ffffff" fill-opacity="0.9">
+    <rect x="428" y="288" width="40" height="6" rx="3"/>
+    <rect x="428" y="300" width="40" height="6" rx="3"/>
+    <rect x="428" y="312" width="26" height="6" rx="3"/>
+  </g>
+
+  <!-- Carril alto volumen: barato -->
+  <path d="M513 288 C 606 288, 636 208, 700 200" fill="none" stroke="#ffffff" stroke-opacity="0.30" stroke-width="10" stroke-linecap="round" marker-end="url(#ar)"/>
+  <!-- Carril bajo volumen: frontera -->
+  <path d="M513 320 C 606 320, 636 424, 700 436" fill="none" stroke="#ffffff" stroke-opacity="0.75" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- Modelo trabajador: nueve unidades -->
+  <g fill="#16161b" stroke="#ffffff" stroke-opacity="0.42" stroke-width="2">
+    <rect x="742" y="130" width="52" height="34" rx="6"/><rect x="812" y="130" width="52" height="34" rx="6"/><rect x="882" y="130" width="52" height="34" rx="6"/>
+    <rect x="742" y="182" width="52" height="34" rx="6"/><rect x="812" y="182" width="52" height="34" rx="6"/><rect x="882" y="182" width="52" height="34" rx="6"/>
+    <rect x="742" y="234" width="52" height="34" rx="6"/><rect x="812" y="234" width="52" height="34" rx="6"/><rect x="882" y="234" width="52" height="34" rx="6"/>
+  </g>
+  <g fill="#ffffff" fill-opacity="0.34">
+    <circle cx="768" cy="147" r="4"/><circle cx="838" cy="147" r="4"/><circle cx="908" cy="147" r="4"/>
+    <circle cx="768" cy="199" r="4"/><circle cx="838" cy="199" r="4"/><circle cx="908" cy="199" r="4"/>
+    <circle cx="768" cy="251" r="4"/><circle cx="838" cy="251" r="4"/><circle cx="908" cy="251" r="4"/>
+  </g>
+
+  <!-- Modelo de frontera: una unidad -->
+  <circle cx="838" cy="436" r="56" fill="#16161b" stroke="#ffffff" stroke-opacity="0.92" stroke-width="3.5"/>
+  <circle cx="838" cy="436" r="76" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2" stroke-dasharray="6 10"/>
+  <g fill="#ffffff" fill-opacity="0.9">
+    <circle cx="838" cy="436" r="9"/>
+    <circle cx="838" cy="436" r="24" fill="none" stroke="#ffffff" stroke-opacity="0.45" stroke-width="2"/>
+  </g>
+
+  <!-- Proporciones -->
+  <g font-family="ui-monospace, Menlo, monospace" font-size="26" font-weight="600" fill="#ffffff">
+    <text x="1000" y="208" fill-opacity="0.40">90%</text>
+    <text x="1000" y="446" fill-opacity="0.72">10%</text>
+  </g>
+
+  <text x="72" y="530" font-family="ui-monospace, Menlo, monospace" font-size="22" letter-spacing="6" fill="#ffffff" fill-opacity="0.32">ENRUTAMIENTO · COSTO POR TAREA</text>
+</svg>
