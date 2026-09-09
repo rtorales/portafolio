@@ -1052,6 +1052,67 @@
       color: var(--ink-900);
     }
 
+    /* Actividad institucional y consultoría — roles complementarios */
+    .roles-extra {
+      max-width: 860px;
+      padding-left: 32px;
+      margin-top: 52px;
+    }
+    .roles-extra-head {
+      padding-top: 32px;
+      border-top: 1px solid var(--zinc-200);
+      margin-bottom: 22px;
+    }
+    .roles-extra-head h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      color: var(--ink-900);
+      margin: 0 0 6px;
+    }
+    .roles-extra-head p {
+      font-size: .88rem;
+      line-height: 1.6;
+      color: var(--zinc-500);
+      max-width: 66ch;
+    }
+    .roles-extra-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .role-extra {
+      background: var(--white);
+      border: 1px solid var(--zinc-200);
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+    .role-extra-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 3px;
+    }
+    .role-extra-org {
+      font-family: var(--font-display);
+      font-size: .98rem;
+      font-weight: 600;
+      letter-spacing: -.01em;
+      color: var(--ink-900);
+    }
+    .role-extra-period {
+      font-family: var(--font-mono);
+      font-size: .68rem;
+      color: var(--zinc-500);
+      white-space: nowrap;
+    }
+    .role-extra-role { font-size: .88rem; font-weight: 500; color: var(--zinc-600); }
+    .role-extra-desc {
+      font-size: .86rem;
+      line-height: 1.6;
+      color: var(--zinc-500);
+      margin-top: 10px;
+    }
+
     /* ============================================================
        FORMACIÓN & CERTIFICACIONES
     ============================================================ */
@@ -1590,6 +1651,8 @@
       .perfil-meta { grid-template-columns: 1fr; }
       .timeline { padding-left: 26px; }
       .timeline-dot { left: -23px; }
+      .roles-extra { padding-left: 26px; }
+      .roles-extra-grid { grid-template-columns: 1fr; }
     }
     .nav-cta-mobile { display: none; }
 
@@ -1914,7 +1977,7 @@
         </p>
         <div class="highlight-box">
           <p>
-            Actualmente me desempeño como <strong>PMO & Business Transformation Specialist en Grupo Chacomer</strong>, uno de los grupos empresariales líderes del Paraguay. Paralelamente, soy <strong>Consultor Externo en Okara</strong> y <strong>Miembro Titular del Comité de Selección de Proyectos del MITIC</strong>, designado por Resolución N.° 381/2025 como representante del sector privado para evaluación de proyectos con fondos BID.
+            Desde mayo de 2025 me desempeño como <strong>PMO & Business Transformation Specialist en Grupo Chacomer</strong>, uno de los grupos empresariales líderes del Paraguay. De forma complementaria integro <em>ad honorem</em> el <strong>Comité de Selección de Proyectos del MITIC</strong> —designado por Resolución N.° 381/2025 como representante del sector privado para evaluar proyectos con fondos BID— y asesoro como <strong>consultor externo a demanda en Okara</strong>.
           </p>
         </div>
         <p>
@@ -2131,7 +2194,7 @@
                 <div class="timeline-company">Grupo Chacomer <span class="current-tag">Activo</span></div>
                 <div class="timeline-role">PMO & Business Transformation Specialist</div>
               </div>
-              <span class="timeline-period">Abr. 2026 – Actualidad</span>
+              <span class="timeline-period">May. 2025 – Actualidad</span>
             </div>
             <div class="timeline-context">Grupo empresarial líder en Paraguay · Distribución, retail y servicios · +3.000 colaboradores · Jornada completa · Híbrido</div>
             <ul class="timeline-list">
@@ -2145,64 +2208,6 @@
           </div>
         </article>
 
-        <article class="timeline-item current rt-reveal">
-          <div class="timeline-dot" aria-hidden="true"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <div class="timeline-company">Okara <span class="current-tag">Activo</span></div>
-                <div class="timeline-role">Consultor Externo – Sistemas y Automatización de Procesos</div>
-              </div>
-              <span class="timeline-period">2025 – Actualidad</span>
-            </div>
-            <div class="timeline-context">Consultora organizacional líder en Paraguay · Acompañamiento a empresas y familias empresarias</div>
-            <ul class="timeline-list">
-              <li>Asesoramiento estratégico en sistematización de procesos e implementación de soluciones tecnológicas para transformación digital.</li>
-              <li>Diseño y optimización de flujos de automatización orientados a la eficiencia operativa en organizaciones multisectoriales.</li>
-              <li>Evaluación de plataformas para mejorar la gestión de información y toma de decisiones basada en datos.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item current rt-reveal">
-          <div class="timeline-dot" aria-hidden="true"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <div class="timeline-company">MITIC – Ministerio de TIC <span class="current-tag">Activo</span></div>
-                <div class="timeline-role">Miembro Titular CSP – Representante Sector Privado</div>
-              </div>
-              <span class="timeline-period">Jul. 2025 – Actualidad</span>
-            </div>
-            <div class="timeline-context">Comité de Selección de Proyectos · Programa de Apoyo a la Agenda Digital (Contrato BID N.° 4650/OC-PR)</div>
-            <ul class="timeline-list">
-              <li>Evaluación y selección de proyectos TIC con fondos concursables para jóvenes, emprendedores y empresas del ecosistema digital.</li>
-              <li>Análisis de viabilidad técnica, impacto y alineación estratégica con la Agenda Digital Nacional.</li>
-              <li>Designado mediante Resolución MITIC N.° 381/2025 en reconocimiento a la trayectoria en el sector tecnológico.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="timeline-item rt-reveal">
-          <div class="timeline-dot" aria-hidden="true"></div>
-          <div class="timeline-card">
-            <div class="timeline-header">
-              <div>
-                <div class="timeline-company">Axxon Consulting</div>
-                <div class="timeline-role">Gerente de Proyectos de Implementación</div>
-              </div>
-              <span class="timeline-period">May. 2025 – 2026</span>
-            </div>
-            <div class="timeline-context">Consultora multinacional Microsoft Inner Circle Partner · Soluciones Dynamics 365, CRM, Data & AI</div>
-            <ul class="timeline-list">
-              <li>Liderazgo de equipos multidisciplinarios en proyectos de implementación Dynamics 365 + CRM con componentes de IA (Copilot, Power Platform).</li>
-              <li>Gestión integral del ciclo de vida: alcance, cronograma, presupuesto, calidad y satisfacción del cliente.</li>
-              <li>Coordinación de flujos de trabajo y transformación digital con integración de múltiples plataformas empresariales.</li>
-              <li>Contribución a la expansión de Axxon en Paraguay, captando nuevos clientes en retail, manufactura y servicios financieros.</li>
-            </ul>
-          </div>
-        </article>
-
         <article class="timeline-item rt-reveal">
           <div class="timeline-dot" aria-hidden="true"></div>
           <div class="timeline-card">
@@ -2211,7 +2216,7 @@
                 <div class="timeline-company">Grupo Perfecta</div>
                 <div class="timeline-role">Gerente de Proyectos Tecnológicos</div>
               </div>
-              <span class="timeline-period">Mar. 2022 – Abr. 2025</span>
+              <span class="timeline-period">Mar. 2022 – May. 2025</span>
             </div>
             <ul class="timeline-list">
               <li>Dirección de proyectos de implementación de ERP, DMS, Salesforce y sistemas financieros, logrando reducción de tiempos operativos y optimización de costos.</li>
@@ -2258,6 +2263,34 @@
           </div>
         </article>
 
+      </div>
+
+      <div class="roles-extra rt-reveal">
+        <div class="roles-extra-head">
+          <h3>Actividad institucional y consultoría independiente</h3>
+          <p>Roles complementarios al ejercicio ejecutivo a tiempo completo: una designación <em>ad honorem</em> y asesoría externa a demanda, sin relación de dependencia.</p>
+        </div>
+        <div class="roles-extra-grid">
+
+          <article class="role-extra">
+            <div class="role-extra-top">
+              <span class="role-extra-org">MITIC – Ministerio de TIC</span>
+              <span class="role-extra-period">Jul. 2025 – Actualidad</span>
+            </div>
+            <div class="role-extra-role">Miembro Titular · Comité de Selección de Proyectos (CSP)</div>
+            <p class="role-extra-desc">Designación <em>ad honorem</em> por Resolución MITIC N.° 381/2025 como representante del sector privado. Evaluación de proyectos TIC con fondos concursables del Programa de Apoyo a la Agenda Digital (Contrato BID N.° 4650/OC-PR): viabilidad técnica, impacto y alineación con la Agenda Digital Nacional.</p>
+          </article>
+
+          <article class="role-extra">
+            <div class="role-extra-top">
+              <span class="role-extra-org">Okara</span>
+              <span class="role-extra-period">Ene. 2025 – Actualidad</span>
+            </div>
+            <div class="role-extra-role">Consultor externo · Transformación digital y automatización</div>
+            <p class="role-extra-desc">Asesoría a demanda, bajo contrato temporal, a directorios y gerencias en sistematización de procesos, automatización de flujos y adopción de soluciones tecnológicas. Consultora organizacional líder en Paraguay.</p>
+          </article>
+
+        </div>
       </div>
     </div>
   </section>

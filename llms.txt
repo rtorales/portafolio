@@ -28,11 +28,16 @@ Ricardo Torales presta servicios de consultoría en tecnología para empresas de
 - Implementación de plataformas empresariales: Dynamics 365, Salesforce, SAP Business One
 - Gestión de proyectos con PMBOK, Scrum e ITIL
 
-## Roles actuales
+## Rol actual
 
-- PMO & Business Transformation Specialist — Grupo Chacomer
-- Consultor externo — Okara
-- Representante del sector privado — Comité de Selección de Proyectos, MITIC
+- PMO & Business Transformation Specialist — Grupo Chacomer (jornada completa, desde mayo de 2025)
+
+## Actividad institucional y consultoría independiente
+
+Roles complementarios al rol ejecutivo a tiempo completo, sin relación de dependencia:
+
+- Miembro titular ad honorem — Comité de Selección de Proyectos, MITIC (desde julio de 2025), representante del sector privado ante el programa financiado por el BID
+- Consultor externo a demanda — Okara (desde enero de 2025), transformación digital y automatización de procesos
 
 ## Formación
 
