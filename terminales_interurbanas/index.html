@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es-PY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terminales Interurbanas de Asunción</title>
+<meta name="description" content="Propuesta de cinco terminales Park and Ride en los accesos de Asunción para reducir un 20 % el flujo vehicular de ingreso. Proyecto de titulación, Maestría en Gestión de Proyectos, Universidad Americana.">
+<meta name="author" content="Ricardo Torales Ozorio y Fernando González Vargas">
+<meta name="theme-color" content="#1D4E89">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Terminales Interurbanas de Asunción">
+<meta property="og:description" content="Cinco terminales Park and Ride en los accesos de Asunción: USD 27,2 M, 24 meses, −20 % de vehículos de ingreso. Formulación completa del proyecto.">
+<meta property="og:locale" content="es_PY">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Ir al contenido</a>
+
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="brandmark" href="#top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="10.5" stroke="currentColor" stroke-width="1.3" opacity=".35"/>
+        <path d="M12 12 4 5M12 12l8-6M12 12l7 7M12 12l-6 8" stroke="currentColor" stroke-width="1.3"/>
+        <circle cx="12" cy="12" r="3.2" fill="#C67C0D"/>
+      </svg>
+      <span>Terminales Interurbanas</span>
+    </a>
+    <nav class="navlinks" aria-label="Secciones">
+      <a href="#problema">Problema</a>
+      <a href="#propuesta">Propuesta</a>
+      <a href="#corredores">Corredores</a>
+      <a href="#alternativas">Alternativas</a>
+      <a href="#metas">Metas</a>
+      <a href="#inversion">Inversión</a>
+      <a href="#plan">Plan</a>
+      <a href="#control">Control</a>
+      <a href="#riesgos">Riesgos</a>
+      <a href="#matrices">Matrices</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#trabajo">El trabajo</a>
+    </nav>
+    <button class="themetoggle" id="theme" type="button" aria-label="Cambiar entre tema claro y oscuro">
+      <svg class="sun" width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M12 2v2.6M12 19.4V22M22 12h-2.6M4.6 12H2M19.07 4.93l-1.84 1.84M6.77 17.23l-1.84 1.84M19.07 19.07l-1.84-1.84M6.77 6.77 4.93 4.93" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <svg class="moon" width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M21 13.2A9 9 0 1 1 10.8 3a7 7 0 0 0 10.2 10.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top" style="padding:0">
+  <div class="wrap hero__in">
+    <div>
+      <span class="eyebrow">Proyecto de titulación · <b>MGP</b> · Universidad Americana</span>
+      <h1>Cinco terminales en el borde para <em>devolverle la ciudad</em> a quien entra en ella</h1>
+      <p class="hero__lead">
+        Cada día ingresan a Asunción cerca de 600.000 vehículos con una ocupación media de 1,2 personas.
+        Este proyecto formula una red de cinco terminales <i>Park and Ride</i> en los accesos: se estaciona
+        en el borde, se continúa en bus lanzadera de alta frecuencia con una tarifa única.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--p" href="#propuesta">Cómo funciona
+          <svg width="15" height="12" viewBox="0 0 22 12" fill="none" aria-hidden="true"><path d="M0 6h20M15 1l5 5-5 5" stroke="currentColor" stroke-width="1.6"/></svg>
+        </a>
+        <a class="btn btn--g" href="#inversion">Inversión y plan</a>
+      </div>
+
+      <div class="statrow">
+        <div class="stat"><div class="stat__v">USD 27,2 M</div><div class="stat__k">Inversión total</div></div>
+        <div class="stat"><div class="stat__v">5 + 30</div><div class="stat__k">Terminales y buses</div></div>
+        <div class="stat"><div class="stat__v">24 meses</div><div class="stat__k">jul 2027 – jun 2029</div></div>
+        <div class="stat"><div class="stat__v">−20 %</div><div class="stat__k">Vehículos de ingreso</div></div>
+      </div>
+    </div>
+
+    <div>
+      <!-- Diagrama del embudo metropolitano -->
+      <svg class="funnel" viewBox="0 0 580 400" role="img"
+           aria-label="Esquema: cinco corredores del Área Metropolitana convergen sobre Asunción; las terminales interceptan parte del flujo y lo transfieren a buses lanzadera.">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+            <path d="M0 0 10 5 0 10z" fill="var(--s-base)"/>
+          </marker>
+          <marker id="arB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+            <path d="M0 0 10 5 0 10z" fill="var(--signal-2)"/>
+          </marker>
+        </defs>
+
+        <text class="lbl" x="4" y="20" fill="var(--muted)">ÁREA METROPOLITANA</text>
+        <text class="lbl" x="4" y="38" fill="var(--ink-2)" style="font-size:13px;font-weight:600">~600.000 veh./día</text>
+
+        <!-- lanes de entrada -->
+        <g stroke="var(--s-base)" stroke-width="7" fill="none" opacity=".45" class="lane" stroke-linecap="round">
+          <path d="M8,72 C104,72 146,124 208,148"/>
+          <path d="M8,140 C104,140 152,166 208,178"/>
+          <path d="M8,208 L208,208"/>
+          <path d="M8,276 C104,276 152,250 208,238"/>
+          <path d="M8,344 C104,344 146,292 208,268"/>
+        </g>
+
+        <!-- nodos de intercepción -->
+        <g>
+          <rect x="214" y="128" width="46" height="160" rx="23" fill="none" stroke="var(--signal-2)" stroke-width="2" stroke-dasharray="4 4" opacity=".55"/>
+          <circle cx="237" cy="148" r="13" fill="var(--surface)" stroke="var(--signal-2)" stroke-width="3"/>
+          <circle cx="237" cy="178" r="13" fill="var(--surface)" stroke="var(--signal-2)" stroke-width="3"/>
+          <circle cx="237" cy="208" r="13" fill="var(--surface)" stroke="var(--signal-2)" stroke-width="3"/>
+          <circle cx="237" cy="238" r="13" fill="var(--surface)" stroke="var(--signal-2)" stroke-width="3"/>
+          <circle cx="237" cy="268" r="13" fill="var(--surface)" stroke="var(--signal-2)" stroke-width="3"/>
+        </g>
+        <text class="lbl" x="186" y="312" fill="var(--signal)" style="font-weight:600">5 TERMINALES P&amp;R</text>
+        <text class="lbl" x="186" y="330" fill="var(--muted)">1.000 plazas · 4 bahías c/u</text>
+
+        <!-- flujo residual de autos -->
+        <g stroke="var(--s-base)" stroke-width="2.5" fill="none" opacity=".5" marker-end="url(#ar)">
+          <path d="M262,158 C330,158 348,162 398,166"/>
+          <path d="M262,258 C330,258 348,254 398,250"/>
+        </g>
+        <!-- buses lanzadera -->
+        <g stroke="var(--signal-2)" stroke-width="8" fill="none" stroke-linecap="round" marker-end="url(#arB)">
+          <path d="M262,208 L398,208"/>
+        </g>
+        <text class="lbl" x="268" y="194" fill="var(--signal)" style="font-weight:600">30 BUSES LANZADERA</text>
+
+        <!-- ciudad -->
+        <rect x="416" y="112" width="156" height="192" rx="10" fill="var(--brand-soft)" stroke="var(--brand)" stroke-width="1.6"/>
+        <text x="434" y="152" fill="var(--ink)" style="font-family:var(--font-display);font-size:17px;font-weight:800">ASUNCIÓN</text>
+        <text class="lbl" x="434" y="174" fill="var(--muted)" style="font-size:10px">~500.000 residentes</text>
+        <line x1="434" y1="192" x2="554" y2="192" stroke="var(--line-strong)" stroke-width="1"/>
+        <text x="434" y="232" fill="var(--signal)" style="font-family:var(--font-display);font-size:28px;font-weight:800">−20 %</text>
+        <text class="lbl" x="434" y="254" fill="var(--ink-2)" style="font-size:10px">ingresos vehiculares</text>
+        <text class="lbl" x="434" y="272" fill="var(--muted)" style="font-size:10px">≈120.000 autos menos</text>
+        <text class="lbl" x="434" y="288" fill="var(--muted)" style="font-size:10px">por día hábil</text>
+
+        <text class="lbl" x="4" y="384" fill="var(--muted)">ESQUEMA CONCEPTUAL · NO ESTÁ A ESCALA</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-bottom:26px">
+    <div class="notice">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M8 4.4v4.4M8 11.2v.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <div><strong>Propuesta académica, no un programa en ejecución.</strong>
+      Este sitio publica la formulación de un proyecto presentada como trabajo final de maestría. No existe
+      obra adjudicada, financiación comprometida ni decisión administrativa tomada: las entidades mencionadas
+      (MOPC, SETAMA, BID, municipios) son los actores que el proyecto identifica y el esquema de financiación
+      50-30-20 es el que propone, no un acuerdo suscrito.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROBLEMA ===================== -->
+<section id="problema">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">01 — Diagnóstico</div>
+      <h2>Una capital de 500.000 habitantes que recibe a 1,4 millones de personas cada mañana</h2>
+      <p class="sec-lead">
+        Asunción concentra el empleo, la administración y los servicios de un área metropolitana que creció
+        sin una planificación de movilidad que la acompañara. El resultado es un embudo diario sobre unos pocos
+        corredores radiales, y una de las pocas capitales latinoamericanas todavía sin transporte masivo estructurado.
+      </p>
+    </div>
+
+    <div class="grid g-3" id="diag-grid"></div>
+
+    <hr class="rule">
+
+    <div class="g-side grid">
+      <div class="tree" id="tree"></div>
+      <div class="stack">
+        <div class="card">
+          <div class="kicker">La cifra que conviene leer dos veces</div>
+          <h3>90 minutos y 41 minutos no se contradicen</h3>
+          <p>
+            Los <b>90 minutos</b> son el peor escenario del corredor: un usuario de bus convencional, en hora pico,
+            desde San Lorenzo o Luque hacia el centro. Los <b>41 minutos</b> son el tiempo medio de viaje al trabajo
+            considerando todos los modos y todos los horarios (Encuesta de Movilidad del AMA 2021). La línea de base
+            del proyecto es la primera, porque es exactamente la población que el sistema busca captar.
+          </p>
+        </div>
+        <div class="card">
+          <div class="kicker">El dato más incómodo</div>
+          <h3>Dos millones de asientos vacíos por día</h3>
+          <p>
+            Con una ocupación media de 1,2 personas sobre 5 plazas, el Gran Asunción mueve cada día alrededor de
+            dos millones de asientos vacíos. La congestión no es solo un problema de cuántos vehículos hay:
+            es un problema de cuán poco transporta cada uno.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROPUESTA ===================== -->
+<section id="propuesta" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">02 — La propuesta</div>
+      <h2>Estacionar en el borde y entrar en bus</h2>
+      <p class="sec-lead">
+        El <i>Park and Ride</i> —o estacionamiento disuasorio— no restringe el automóvil ni amplía la vía:
+        le ofrece al conductor un punto de transferencia donde dejar el auto y continuar en un servicio expreso.
+        Es la intervención con mejor relación costo-efectividad para atacar la causa directa del problema.
+      </p>
+    </div>
+
+    <div class="grid g-side">
+      <div class="steps">
+        <div class="step"><div class="step__n"></div><div>
+          <h3>Se conduce solo hasta el borde de la ciudad</h3>
+          <p>El usuario sale de Luque, San Lorenzo, Ñemby o Capiatá en su vehículo, pero en lugar de meterse en el embudo, maneja hasta la terminal de su corredor.</p>
+        </div></div>
+        <div class="step"><div class="step__n"></div><div>
+          <h3>Estaciona en una instalación segura</h3>
+          <p>Estacionamiento techado con vigilancia 24 horas, CCTV e iluminación eficiente. La seguridad es, junto con la rapidez, la necesidad mejor puntuada por los usuarios relevados.</p>
+        </div></div>
+        <div class="step"><div class="step__n"></div><div>
+          <h3>Aborda un bus lanzadera de alta frecuencia</h3>
+          <p>Una ruta expresa por corredor, con prioridad de circulación coordinada con las autoridades de tránsito y unidades Euro V o eléctricas.</p>
+        </div></div>
+        <div class="step"><div class="step__n"></div><div>
+          <h3>Paga una sola vez</h3>
+          <p>Tarifa única integrada —estacionamiento más bus— con pago electrónico desde el lanzamiento. Sin tarifa integrada, el sistema pierde su principal argumento frente al auto.</p>
+        </div></div>
+      </div>
+
+      <div class="figure">
+        <div class="figure__head"><div class="figure__title">Qué incluye cada terminal</div></div>
+        <div class="figure__sub">Programa arquitectónico y funcional definido en la EDT 3.1</div>
+        <dl class="deflist" id="terminal-spec"></dl>
+        <div class="figure__note">
+          Las obras se ejecutan en dos lotes para viabilizar la logística: Lote 1 con 3 terminales
+          (ene – sep 2028) y Lote 2 con 2 terminales (may – dic 2028).
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CORREDORES ===================== -->
+<section id="corredores">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">03 — Dónde</div>
+      <h2>Los cinco corredores de acceso</h2>
+      <p class="sec-lead">
+        Asunción tiene una configuración radial: unos pocos ejes conectan los núcleos periféricos con el centro.
+        El proyecto interviene sobre los cinco corredores de mayor flujo pendular. Explore cada uno en el esquema.
+      </p>
+    </div>
+
+    <div class="chiprow" id="corridor-chips" style="margin-bottom:18px"></div>
+
+    <div class="mapwrap">
+      <div class="mapbox">
+        <svg id="corridor-map"></svg>
+      </div>
+      <div class="stack">
+        <div class="figure">
+          <div class="mapdetail" id="corridor-detail"></div>
+        </div>
+        <div class="notice" style="margin-top:0">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.4"/><path d="M8 4.4v4.4M8 11.2v.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <div><strong>Sin direcciones, deliberadamente.</strong> El esquema no está a escala y no fija emplazamientos.
+          La localización exacta de cada terminal es un entregable de la fase de estudios (EDT 2.3) y depende de
+          flujo real medido, disponibilidad de suelo, conectividad y factibilidad ambiental. Fijar direcciones en la
+          formulación habría sido una precisión falsa.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ALTERNATIVAS ===================== -->
+<section id="alternativas" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">04 — La decisión</div>
+      <h2>Por qué esta alternativa y no otra</h2>
+      <p class="sec-lead">
+        Se evaluaron cinco alternativas contra cuatro criterios: eficacia, costo, plazo y sostenibilidad.
+        La conclusión no es que el Park and Ride sea la única solución posible, sino que es la de mejor
+        relación costo-efectividad y menor plazo — y que, a diferencia de las demás, es complementaria de todas ellas.
+      </p>
+    </div>
+    <div class="grid g-3" id="alt-list"></div>
+  </div>
+</section>
+
+<!-- ===================== METAS ===================== -->
+<section id="metas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">05 — Qué se compromete</div>
+      <h2>Cuatro resultados con línea de base, meta y forma de verificarlos</h2>
+      <p class="sec-lead">
+        La Matriz de Resultados descompone el objetivo de desarrollo en cuatro resultados medibles.
+        Cada uno tiene indicador, línea de base documentada, meta cuantificada, medio de verificación
+        y el supuesto del que depende. Lo que el proyecto garantiza no es la magnitud del efecto:
+        es que cada meta sea comprobable.
+      </p>
+    </div>
+
+    <div class="grid g-2" id="mdr-cards"></div>
+
+    <div class="grid g-3" style="margin-top:20px">
+      <div class="card">
+        <div class="kicker">Indicador de propósito</div>
+        <h3>Reparto modal</h3>
+        <p>Del 7 % actual del transporte público en el AMA a <b>≥ 15 %</b> en dos años de operación.</p>
+      </div>
+      <div class="card">
+        <div class="kicker">Indicador de propósito</div>
+        <h3>Satisfacción de usuarios</h3>
+        <p><b>≥ 80 %</b> de satisfacción del nuevo sistema, medida por encuesta.</p>
+      </div>
+      <div class="card">
+        <div class="kicker">Indicador de fin</div>
+        <h3>Índice de congestión</h3>
+        <p>Reducción <b>≥ 10 %</b> del índice de congestión de Asunción para 2029, con mejora del índice de calidad del aire en zonas críticas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INVERSIÓN ===================== -->
+<section id="inversion" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">06 — Inversión</div>
+      <h2>USD 27,2 millones, de los cuales el 89 % son adquisiciones</h2>
+      <p class="sec-lead">
+        El presupuesto se estimó por dos vías convergentes —análoga, sobre proyectos comparables de la región,
+        y ascendente, por cantidades y precios unitarios— más una reserva de contingencia de alrededor del 10 %
+        para los riesgos identificados.
+      </p>
+    </div>
+
+    <div class="grid g-2">
+      <div class="figure">
+        <div class="figure__head"><div class="figure__title">Composición del presupuesto</div>
+          <div class="u-mono u-small u-muted">BAC · USD 27,2 M</div></div>
+        <div class="figure__sub">Costo total presupuestado del proyecto, por categoría</div>
+        <div class="compbar" id="budget-bar"></div>
+        <div class="complist" id="budget-list"></div>
+        <div class="figure__note">Costos unitarios de referencia: terminal ≈ USD 3,5 M · bus ≈ USD 140.000.
+        Total de adquisiciones USD 24,1 M en cuatro grupos de licitación; el resto es gestión con equipo propio
+        (USD 0,6 M) y la reserva de contingencia.</div>
+      </div>
+
+      <div class="figure">
+        <div class="figure__head"><div class="figure__title">Esquema de financiación propuesto</div>
+          <div class="u-mono u-small u-muted">50 · 30 · 20</div></div>
+        <div class="figure__sub">Estructura de aportes que el proyecto plantea — no constituye un acuerdo suscrito</div>
+        <div class="compbar" id="fin-bar"></div>
+        <div class="complist" id="fin-list"></div>
+        <div class="figure__note">El aporte municipal puede materializarse en efectivo o en especie, con terrenos
+        valuados. Sin predios ni permisos municipales no hay terminales: por eso los municipios son socios
+        territoriales del proyecto y no solo receptores.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PLAN ===================== -->
+<section id="plan">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">07 — Plan de ejecución</div>
+      <h2>Veinticuatro meses, cinco fases, dos oleadas de obra</h2>
+      <p class="sec-lead">
+        La ruta crítica es una sola: predios y permisos → obra civil → habilitación. Por eso la gestión predial
+        arranca antes que cualquier otra cosa, las adquisiciones se solapan con los diseños (<i>fast-tracking</i>)
+        y las obras se dividen en dos lotes que avanzan escalonados.
+      </p>
+    </div>
+
+    <div class="figure" style="margin-bottom:20px">
+      <div class="figure__head"><div class="figure__title">Cronograma general</div>
+        <div class="u-mono u-small u-muted">jul 2027 → jun 2029</div></div>
+      <div class="figure__sub">Las fases 1 y 2 se superponen deliberadamente para ganar plazo</div>
+      <div class="gantt" id="gantt"></div>
+      <div class="figure__note">Se aplicó una reserva de tiempo en los entregables críticos: la construcción se
+      estimó en 10 meses y se asignaron 12.</div>
+    </div>
+
+    <div class="grid g-side">
+      <div class="grid g-2" style="align-content:start" id="fase-list"></div>
+      <div class="figure">
+        <div class="figure__head"><div class="figure__title">Hitos del proyecto</div></div>
+        <div class="figure__sub">Ocho puntos de control con entregable verificable</div>
+        <div class="milestones" id="hito-list"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTROL ===================== -->
+<section id="control" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">08 — Control</div>
+      <h2>Cómo se sabría, mes a mes, si el proyecto se está desviando</h2>
+      <p class="sec-lead">
+        El control se ejerce por valor ganado sobre la línea base de costos: comparar lo planificado (PV),
+        lo efectivamente avanzado (EV) y lo realmente gastado (AC). Un informe mensual con semáforos llega
+        al Comité Directivo y a los financiadores.
+      </p>
+    </div>
+
+    <div class="figure" style="margin-bottom:20px">
+      <div class="figure__head"><div class="figure__title">Curva S — línea base de costos</div></div>
+      <div class="figure__sub">Valor planificado acumulado por trimestre. El costo real se muestra hasta la fecha de corte de la simulación.</div>
+      <div class="legend">
+        <span><i style="background:var(--s1)"></i> PV acumulado — línea base</span>
+        <span><i class="dash" style="color:var(--s2)"></i> AC acumulado — simulación</span>
+      </div>
+      <svg id="chart-curvas"></svg>
+      <div class="figure__note">La curva tiene forma de S porque el gasto arranca lento durante estudios y diseños,
+      se acelera con las obras civiles y se estabiliza en la puesta en marcha.</div>
+    </div>
+
+    <div class="figure">
+      <div class="figure__head"><div class="figure__title">Simulación de valor ganado — primeros 12 meses</div>
+        <div><span class="pill pill--warn">Datos hipotéticos</span></div></div>
+      <div class="figure__sub">
+        Ejercicio ilustrativo del tablero de control ante un desvío. No refleja una ejecución real:
+        el proyecto no ha comenzado.
+      </div>
+      <div class="legend">
+        <span><i class="dash" style="color:var(--s-base)"></i> PV — planificado</span>
+        <span><i style="background:var(--s1)"></i> EV — valor ganado</span>
+        <span><i style="background:var(--s2)"></i> AC — costo real</span>
+      </div>
+      <svg id="chart-evm"></svg>
+      <div class="grid g-4" style="margin-top:20px" id="evm-kpi"></div>
+      <div class="figure__note">Leído así, el tablero activaría las acciones de recuperación previstas en el plan
+      —<i>fast-tracking</i> y control de cambios— y el desvío final proyectado de USD 0,82 M quedaría absorbido
+      por la reserva de contingencia de USD 2,5 M.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RIESGOS ===================== -->
+<section id="riesgos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">09 — Riesgos</div>
+      <h2>Nueve riesgos, cada uno con dueño y con un síntoma observable</h2>
+      <p class="sec-lead">
+        La evaluación es cualitativa —probabilidad por impacto en escala de 1 a 3— porque no hay series
+        históricas suficientes para un análisis cuantitativo. Lo que distingue a esta matriz de una lista de
+        temores es que cada riesgo define qué habría que ver para saber que se está materializando.
+      </p>
+    </div>
+
+    <div class="grid g-side" style="margin-bottom:22px">
+      <div class="figure">
+        <div class="figure__head"><div class="figure__title">Mapa de severidad</div></div>
+        <div class="figure__sub">Seleccione un riesgo para ubicarlo en la matriz completa</div>
+        <div class="heat" id="risk-heat"></div>
+        <div class="legend" style="margin:16px 0 0">
+          <span><i style="background:var(--crit);height:11px;width:11px;border-radius:3px"></i> Alto (≥ 6)</span>
+          <span><i style="background:var(--warn);height:11px;width:11px;border-radius:3px"></i> Medio (3 – 4)</span>
+          <span><i style="background:var(--ok);height:11px;width:11px;border-radius:3px"></i> Bajo (&lt; 3)</span>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="card card--flag" style="border-left-color:var(--crit)">
+          <div class="kicker">El riesgo principal</div>
+          <h3>R1 — Que la gente no cambie de hábito</h3>
+          <p>
+            Es el único riesgo con severidad 9 sobre 9. Ninguna terminal resuelve nada si el conductor no
+            acepta bajarse del auto. La respuesta es triple y está presupuestada: campaña de sensibilización
+            con meta de más del 70 % de conocimiento del sistema, tarifa única que haga el viaje competitivo
+            en costo, y seguridad garantizada en los estacionamientos.
+          </p>
+        </div>
+        <div class="card card--flag" style="border-left-color:var(--ok)">
+          <div class="kicker">Oportunidad registrada · O1</div>
+          <h3>Financiamiento adicional no reembolsable</h3>
+          <p>
+            La matriz registra también una oportunidad: la posibilidad de obtener subsidios que amplíen el
+            alcance o reduzcan los costos operativos. Estrategia: explotar, gestionando ante cooperantes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tablescroll" id="risk-table"></div>
+  </div>
+</section>
+
+<!-- ===================== MATRICES ===================== -->
+<section id="matrices" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">10 — Documentación</div>
+      <h2>Las matrices de gestión</h2>
+      <p class="sec-lead">
+        El proyecto se formuló combinando el estándar del PMI (PMBOK 7) con el enfoque orientado a resultados
+        del BID (PM4R). Estas son las matrices que sostienen cada decisión: lo que no está en ellas no es
+        parte del proyecto.
+      </p>
+    </div>
+
+    <div class="tabs" id="matrix-tabs" role="tablist" aria-label="Matrices del proyecto">
+      <button class="tab" role="tab" data-tab="mdr" aria-selected="true" type="button">Matriz de Resultados</button>
+      <button class="tab" role="tab" data-tab="edt" aria-selected="false" type="button">EDT</button>
+      <button class="tab" role="tab" data-tab="raci" aria-selected="false" type="button">RACI</button>
+      <button class="tab" role="tab" data-tab="stake" aria-selected="false" type="button">Interesados</button>
+      <button class="tab" role="tab" data-tab="proc" aria-selected="false" type="button">Adquisiciones</button>
+      <button class="tab" role="tab" data-tab="comm" aria-selected="false" type="button">Comunicaciones</button>
+      <button class="tab" role="tab" data-tab="qfd" aria-selected="false" type="button">Calidad · QFD</button>
+    </div>
+
+    <div data-panel="mdr"><div class="tablescroll" id="t-mdr"></div></div>
+    <div data-panel="edt" hidden><div class="tablescroll" id="t-edt"></div></div>
+    <div data-panel="raci" hidden>
+      <div class="tablescroll" id="t-raci"></div>
+      <p class="u-small u-muted" style="margin-top:12px">
+        <b>R</b> responsable de la ejecución · <b>A</b> aprueba y rinde cuentas · <b>C</b> consultado · <b>I</b> informado.
+        Roles: GP gerente del proyecto · ET especialista técnico e ingeniero de transporte · EA adquisiciones ·
+        EC comunicaciones · EF financiero y costos · CD comité directivo · CO contratistas.
+      </p>
+    </div>
+    <div data-panel="stake" hidden><div class="tablescroll" id="t-stake"></div></div>
+    <div data-panel="proc" hidden><div class="tablescroll" id="t-proc"></div></div>
+    <div data-panel="comm" hidden><div class="tablescroll" id="t-comm"></div></div>
+    <div data-panel="qfd" hidden>
+      <div class="figure" style="margin-bottom:20px">
+        <div class="figure__head"><div class="figure__title">Requisitos técnicos por importancia ponderada</div></div>
+        <div class="figure__sub">
+          Importancia = Σ (prioridad del requerimiento del usuario × fuerza de la relación, en escala 9 · 3 · 1)
+        </div>
+        <div class="qfd" id="qfd-bars"></div>
+        <div class="figure__note">
+          La rapidez es una necesidad que se reparte entre varios requisitos técnicos —frecuencia, ITS, diseño de
+          accesos— que suman por separado; la seguridad se concentra en uno solo. Por eso queda séptima aunque sea
+          una de las necesidades mejor puntuadas. Detectado el efecto, la vigilancia 24/7 se adoptó igualmente como
+          requisito no negociable: el QFD informó la decisión, no la sustituyó.
+        </div>
+      </div>
+      <div class="tablescroll" id="t-qfd"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PREGUNTAS ===================== -->
+<section id="preguntas">
+  <div class="wrap wrap--narrow">
+    <div class="sec-head">
+      <div class="sec-num">11 — Preguntas</div>
+      <h2>Las objeciones, respondidas</h2>
+      <p class="sec-lead">
+        Las preguntas que un evaluador atento haría primero — incluidas aquellas donde la respuesta honesta
+        es reconocer un límite del trabajo.
+      </p>
+    </div>
+    <div class="faq" id="faq"></div>
+  </div>
+</section>
+
+<!-- ===================== EL TRABAJO ===================== -->
+<section id="trabajo" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">12 — El trabajo académico</div>
+      <h2>Quién lo formuló y con qué método</h2>
+    </div>
+
+    <div class="grid g-side">
+      <div class="stack">
+        <div class="figure">
+          <div class="figure__head"><div class="figure__title">Ficha del proyecto</div></div>
+          <dl class="deflist">
+            <div><dt>Título</dt><dd>Implementación de Terminales Interurbanas en los Accesos de Asunción para Reducir la Congestión Vehicular</dd></div>
+            <div><dt>Institución</dt><dd>Universidad Americana · Escuela de Postgrado · Asunción, Paraguay</dd></div>
+            <div><dt>Programa</dt><dd>Maestría en Gestión de Proyectos · Línea de investigación: Project Management</dd></div>
+            <div><dt>Año</dt><dd>2026</dd></div>
+            <div><dt>Marcos aplicados</dt><dd>PMBOK 7.ª edición (PMI, 2021) y PM4R — gestión de proyectos para resultados (BID, 2019)</dd></div>
+          </dl>
+          <div class="authors" style="margin-top:6px">
+            <div class="author"><div class="author__i">RT</div><div>
+              <div class="author__n">Ricardo Torales Ozorio</div><div class="author__r">Autor</div></div></div>
+            <div class="author"><div class="author__i">FG</div><div>
+              <div class="author__n">Fernando González Vargas</div><div class="author__r">Autor</div></div></div>
+            <div class="author"><div class="author__i">NA</div><div>
+              <div class="author__n">Dra. Nathalie Elizabeth Alderete Troche</div><div class="author__r">Tutora</div></div></div>
+          </div>
+        </div>
+
+        <div class="figure">
+          <div class="figure__head"><div class="figure__title">Método</div></div>
+          <div class="figure__sub">Diseño no experimental, transversal, descriptivo-propositivo</div>
+          <p class="u-small" style="color:var(--ink-2)">
+            El enfoque es mixto con predominio cualitativo: se analizan estadísticas de tráfico y transporte ya
+            producidas por organismos oficiales, pero no se generan datos primarios. La técnica dominante es la
+            revisión documental, complementada con <i>benchmarking</i> internacional y triangulación de fuentes.
+            La unidad de análisis es el flujo vehicular interurbano en los accesos principales, con énfasis en
+            su comportamiento en hora pico.
+          </p>
+          <div class="figure__note">
+            <b>Evaluación ex ante.</b> El trabajo no constituye una implementación ejecutada, sino la formulación
+            completa y verificable del proyecto que la haría posible. Su validación es sobre la consistencia y la
+            calidad del diseño, no sobre resultados de operación.
+          </div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="figure">
+          <div class="figure__head"><div class="figure__title">Referentes internacionales</div></div>
+          <div class="figure__sub">Casos de aparcamiento disuasorio revisados</div>
+          <p class="u-small" style="color:var(--ink-2)">
+            Madrid, Bogotá y Seattle implementaron esquemas <i>Park and Ride</i> como parte de sus planes de
+            movilidad urbana sostenible, interceptando una porción significativa del tráfico de ingreso a sus
+            centros urbanos. La evidencia revisada indica reducciones de entre el 10 % y el 20 % del tráfico de
+            ingreso cuando estas intervenciones están bien diseñadas e integradas tarifariamente
+            (ITF, 2018; Alcaldía de Madrid, 2020).
+          </p>
+        </div>
+
+        <div class="figure">
+          <div class="figure__head"><div class="figure__title">Los 14 anexos</div></div>
+          <div class="figure__sub">Documentación de respaldo del proyecto</div>
+          <p class="u-small" style="color:var(--ink-2)">
+            I Matriz de Resultados · II Registro de problemas · III Matriz RACI · IV Árbol de problemas ·
+            V Cronograma detallado · VI Curva S · VII Plan de ejecución financiera (simulación EVM) ·
+            VIII Matriz de comunicaciones · IX Matriz de adquisiciones · X Matriz de interesados ·
+            XI Estructura de desglose del trabajo · XII Matriz de riesgos, supuestos y restricciones ·
+            XIII Gantt de redacción · XIV Matriz QFD.
+          </p>
+        </div>
+
+        <div class="figure">
+          <div class="figure__head"><div class="figure__title">Referencias</div></div>
+          <ul class="refs" id="refs" style="margin-top:14px"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <p style="font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--ink);margin-bottom:10px">
+        Terminales Interurbanas en los Accesos de Asunción
+      </p>
+      <p>
+        <strong>Proyecto de titulación de la Maestría en Gestión de Proyectos, Universidad Americana (Paraguay).</strong>
+        Este sitio divulga una propuesta académica. No es un sitio oficial de ninguna entidad pública ni privada,
+        no representa a las instituciones mencionadas y no anuncia obras, licitaciones ni decisiones administrativas.
+        Las cifras de inversión, financiación y cronograma corresponden a la formulación del proyecto y son estimaciones
+        elaboradas por sus autores sobre fuentes públicas citadas.
+      </p>
+      <p style="margin-top:12px">
+        © <span id="year">2026</span> Ricardo Torales Ozorio y Fernando González Vargas. Contenido con fines académicos y de divulgación.
+      </p>
+    </div>
+    <nav class="foot__links" aria-label="Enlaces del pie">
+      <a href="#problema">El problema</a>
+      <a href="#propuesta">Cómo funciona</a>
+      <a href="#corredores">Los cinco corredores</a>
+      <a href="#inversion">Inversión y financiación</a>
+      <a href="#matrices">Matrices de gestión</a>
+      <a href="#trabajo">Ficha académica</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
