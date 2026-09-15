@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Terminales Interurbanas">
+  <style>
+    .ring { fill: none; stroke: #1D4E89; opacity: .45 }
+    .spoke { stroke: #1D4E89 }
+    .hub { fill: #C67C0D }
+    @media (prefers-color-scheme: dark) {
+      .ring { stroke: #6FA3E0 }
+      .spoke { stroke: #6FA3E0 }
+      .hub { fill: #E0A33A }
+    }
+  </style>
+  <circle class="ring" cx="16" cy="16" r="14" stroke-width="2"/>
+  <g class="spoke" stroke-width="2.2" stroke-linecap="round">
+    <path d="M16 16 6.2 7.4"/>
+    <path d="M16 16 25.8 8.6"/>
+    <path d="M16 16 25.4 24.6"/>
+    <path d="M16 16 7 25.2"/>
+  </g>
+  <circle class="hub" cx="16" cy="16" r="4.6"/>
+</svg>
