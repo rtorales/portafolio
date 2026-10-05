@@ -6,7 +6,16 @@
     <atom:link href="https://ricardotorales.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <description>Análisis y guías prácticas sobre inteligencia artificial, transformación digital, automatización de procesos y ciberseguridad para líderes de TI en Latinoamérica.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 07 Sep 2026 09:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 05 Oct 2026 09:00:00 -0300</lastBuildDate>
+
+    <item>
+      <title>Tendencias de IA para directivos 2026: de la experimentación a la industrialización</title>
+      <link>https://ricardotorales.com/blog/tendencias-ia-directivos-2026/</link>
+      <guid isPermaLink="true">https://ricardotorales.com/blog/tendencias-ia-directivos-2026/</guid>
+      <pubDate>Sun, 05 Oct 2026 09:00:00 -0300</pubDate>
+      <category>Inteligencia Artificial</category>
+      <description>Seis tendencias definen la IA corporativa en 2026: economía de la inferencia (Spotify recortó el 90% de sus tokens; Sword, el 94%), agentes autónomos y la guerra de los arneses (OpenClaw vs Hermes), ciberseguridad a velocidad de máquina (Unit 42: compromiso total en menos de diez horas), el retorno real de Copilot (26% de captura de valor con gobernanza vs 3% sin ella), cumplimiento extraterritorial (AI Act e ISO 42001) y la realidad de la adopción en América Latina (79% de bloqueos y Shadow AI al 65%). Guía para directivos.</description>
+    </item>
 
     <item>
       <title>El 90% de tus tokens no necesita el modelo más caro</title>
