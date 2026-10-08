@@ -6,7 +6,16 @@
     <atom:link href="https://ricardotorales.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <description>Análisis y guías prácticas sobre inteligencia artificial, transformación digital, automatización de procesos y ciberseguridad para líderes de TI en Latinoamérica.</description>
     <language>es</language>
-    <lastBuildDate>Sun, 05 Oct 2026 09:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 09:00:00 -0300</lastBuildDate>
+
+    <item>
+      <title>El 98% no paga por la IA: la brecha real es de profundidad, no de acceso</title>
+      <link>https://ricardotorales.com/blog/brecha-adopcion-ia-uso-profundo/</link>
+      <guid isPermaLink="true">https://ricardotorales.com/blog/brecha-adopcion-ia-uso-profundo/</guid>
+      <pubDate>Thu, 08 Oct 2026 09:00:00 -0300</pubDate>
+      <category>Inteligencia Artificial</category>
+      <description>El 49% de los adultos en EE. UU. usa chatbots (Pew, 2026), pero solo el 2,2% de los hogares paga por IA (a16z con datos de PNC). La brecha no es de acceso sino de profundidad de uso, y se repite en las empresas con las licencias corporativas. Una escalera de cinco peldaños y un plan de siete pasos para pasar de la licencia al hábito.</description>
+    </item>
 
     <item>
       <title>Tendencias de IA para directivos 2026: de la experimentación a la industrialización</title>
