@@ -288,5 +288,15 @@
       <p class="site-footer-copy">© 2026 Ricardo Torales. Todos los derechos reservados.</p>
     </div>
   </footer>
+  <script>
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); obs.unobserve(e.target); } });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.rt-reveal').forEach((el) => obs.observe(el));
+    } else {
+      document.querySelectorAll('.rt-reveal').forEach((el) => el.classList.add('is-in'));
+    }
+  </script>
 </body>
 </html>
