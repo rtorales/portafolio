@@ -23,8 +23,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # --- Identidad (mantener sincronizado con index.html y cv.html) -------------
 NOMBRE = "Ricardo Torales"
-CARGO = "Gerente de Proyectos de Tecnología"
-SUB = "PMO & Business Transformation  \u00b7  Asunci\u00f3n, Paraguay"
+CARGO = "Liderazgo de TI y Transformación Digital"
+SUB = "Gobierno de TI  ·  PMO  ·  Asunción, Paraguay"
 DOMINIO = "RICARDOTORALES.COM"
 RETRATO = os.path.join(ROOT, "img", "ricardo-torales.jpeg")
 
@@ -173,7 +173,7 @@ def crear_og():
     # regla + claim
     d.rectangle([x0, 442, x0 + 620, 443], fill=(255, 255, 255, 40))
     f_claim = font(F_REG, 24)
-    d.text((x0 - 1, 466), "Transformaci\u00f3n digital  \u00b7  IA  \u00b7  Gobernanza de TI",
+    d.text((x0 - 1, 466), "+14 a\u00f1os  \u00b7  \u00c1rea de TI con reporte al directorio  \u00b7  ERP e IA",
            font=f_claim, fill=(126, 126, 136))
 
     return img
