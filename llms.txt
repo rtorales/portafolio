@@ -53,9 +53,10 @@ Roles complementarios al rol ejecutivo a tiempo completo, sin relación de depen
 
 Aplicaciones que Ricardo Torales construye por hobby, fuera de su actividad profesional, para experimentar con IA. No forman parte de su oferta de servicios:
 
+- Cotejo (en desarrollo, sin demo pública): Plataforma web que convierte hojas de cálculo, CSV y tablas de PDF en un cuadro de mando con informe gerencial verificable: cada número, gráfico y afirmación es trazable hasta la celda exacta del archivo original. El modelo de lenguaje nunca calcula; pandas produce todas las cifras de forma determinista y el backend valida cada cifra del texto contra el catálogo de métricas. Python, FastAPI, pandas, React, OpenRouter, Docker.
+- [FamilyFinance Pro](https://familyfinance-omega.vercel.app/): Aplicación de finanzas familiares. Next.js, React, TypeScript.
 - [NutriSnap](https://nutrisnap.ricardotorales.com): Seguimiento nutricional y físico mediante visión por computadora. Se registra una comida o un entrenamiento sacando una foto: un modelo multimodal identifica el contenido, estima la porción y devuelve calorías y macronutrientes estructurados, con la meta de completar un registro en menos de 10 segundos. Incluye panel diario con anillos y macros, historial por semana/mes/año y curva de peso. Next.js, React, TypeScript, Capacitor (web, iOS y Android desde un mismo monorepo), PostgreSQL con aislamiento por usuario (RLS).
 - [Ekklesia](https://ekklesia-app-kappa.vercel.app/): Plataforma de gestión integral para iglesias: agenda de servicios, biblioteca de canciones y control de accesos multi-rol. Next.js, React, TypeScript.
-- [FamilyFinance Pro](https://familyfinance-omega.vercel.app/): Aplicación de finanzas familiares. Next.js, React, TypeScript.
 
 ## Blog
 

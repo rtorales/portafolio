@@ -1285,6 +1285,7 @@
     .dev-card-accent--green  { background: linear-gradient(90deg, #10b981, #34d399); }
     .dev-card-accent--violet { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
     .dev-card-accent--amber  { background: linear-gradient(90deg, #d97706, #fbbf24); }
+    .dev-card-accent--blue   { background: linear-gradient(90deg, #2563eb, #60a5fa); }
 
     .dev-card-header {
       padding: 28px 28px 0;
@@ -1306,6 +1307,7 @@
     .dev-icon-wrap--green  { background: #ecfdf3; }
     .dev-icon-wrap--violet { background: #f5f3ff; }
     .dev-icon-wrap--amber  { background: #fffbeb; }
+    .dev-icon-wrap--blue   { background: #eff6ff; }
 
     .dev-card-meta { flex: 1; }
 
@@ -1325,6 +1327,7 @@
     .dev-app-badge--green  { color: #065f46; background: #ecfdf3; border: 1px solid #bbf7d0; }
     .dev-app-badge--violet { color: #5b21b6; background: #f5f3ff; border: 1px solid #ddd6fe; }
     .dev-app-badge--amber  { color: #92400e; background: #fffbeb; border: 1px solid #fde68a; }
+    .dev-app-badge--blue   { color: #1e40af; background: #eff6ff; border: 1px solid #bfdbfe; }
     .dev-app-badge::before {
       content: '';
       width: 5px; height: 5px;
@@ -1333,6 +1336,7 @@
     .dev-app-badge--green::before  { background: #10b981; }
     .dev-app-badge--violet::before { background: #7c3aed; }
     .dev-app-badge--amber::before  { background: #d97706; }
+    .dev-app-badge--blue::before   { background: #2563eb; }
 
     .dev-card-title {
       font-family: var(--font-display);
@@ -1402,6 +1406,8 @@
     .dev-feat-icon--green  { background: #ecfdf3; color: #10b981; }
     .dev-feat-icon--violet { background: #f5f3ff; color: #7c3aed; }
     .dev-feat-icon--amber  { background: #fffbeb; color: #d97706; }
+    .dev-feat-icon--blue   { background: #eff6ff; color: #2563eb; }
+    .dev-card-note { font-size: .84rem; color: var(--zinc-500); }
 
     .dev-tech-row {
       display: flex;
@@ -2448,81 +2454,76 @@
 
       <details class="dev-toggle">
         <summary class="dev-toggle-btn">
-          <span><span class="dev-toggle-open">Ver los proyectos</span><span class="dev-toggle-close">Ocultar los proyectos</span> <span class="dev-toggle-hint">· NutriSnap, FamilyFinance Pro, Ekklesia</span></span>
+          <span><span class="dev-toggle-open">Ver los proyectos</span><span class="dev-toggle-close">Ocultar los proyectos</span> <span class="dev-toggle-hint">· Cotejo, FamilyFinance Pro, NutriSnap, Ekklesia</span></span>
           <span class="faq-icon" aria-hidden="true"></span>
         </summary>
 
       <div class="dev-grid">
 
-        <!-- NUTRISNAP -->
-        <article class="dev-card rt-reveal" style="transition-delay:.06s;">
-          <div class="dev-card-accent dev-card-accent--amber"></div>
+        <!-- COTEJO -->
+        <article class="dev-card rt-reveal">
+          <div class="dev-card-accent dev-card-accent--blue"></div>
           <div class="dev-card-header">
-            <div class="dev-icon-wrap dev-icon-wrap--amber" aria-hidden="true">
-              <svg viewBox="0 0 72 72" width="28" height="28" fill="none" aria-hidden="true">
-                <rect x="6" y="20" width="60" height="42" rx="7" fill="hsl(32 95% 44%)" opacity=".16"/>
-                <path d="M24 20l4-7h16l4 7" stroke="hsl(32 95% 44%)" stroke-width="4" stroke-linejoin="round"/>
-                <rect x="6" y="20" width="60" height="42" rx="7" stroke="hsl(32 95% 44%)" stroke-width="4"/>
-                <circle cx="36" cy="41" r="13" stroke="hsl(32 95% 44%)" stroke-width="4"/>
-                <circle cx="36" cy="41" r="5.5" fill="hsl(43 96% 56%)"/>
-                <circle cx="57" cy="29" r="2.6" fill="hsl(32 95% 44%)"/>
+            <div class="dev-icon-wrap dev-icon-wrap--blue" aria-hidden="true">
+              <!-- Data icon -->
+              <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <rect x="2" y="2" width="60" height="60" rx="16" fill="#2563eb"/>
+                <path d="M18 46V34M30 46V22M42 46V28" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+                <path d="M40 16l4 4 8-8" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
             <div class="dev-card-meta">
-              <div class="dev-app-badge dev-app-badge--amber">En vivo · Web y móvil</div>
-              <h3 class="dev-card-title">NutriSnap</h3>
-              <p class="dev-card-tagline">Seguimiento nutricional y físico con una foto, usando visión por computadora.</p>
+              <div class="dev-app-badge dev-app-badge--blue">En desarrollo · App web</div>
+              <h3 class="dev-card-title">Cotejo</h3>
+              <p class="dev-card-tagline">De una planilla a un cuadro de mando con informe gerencial verificable.</p>
             </div>
           </div>
 
           <div class="dev-card-body">
             <div class="dev-problem">
               <div class="dev-problem-label">El problema que resuelve</div>
-              <p>La gente abandona las apps de nutrición por la fricción de cargar cada alimento a mano, no por falta de funciones. NutriSnap invierte el flujo: sacás una foto, un modelo de visión identifica lo que hay en el plato, estima la porción y devuelve calorías y macros ya estructurados. La meta de diseño es registrar una comida en menos de 10 segundos y menos de 3 toques.</p>
+              <p>Los informes que arma la IA a partir de datos suelen traer cifras que nadie puede comprobar. Cotejo convierte hojas de cálculo, CSV y tablas de PDF en un tablero con informe redactado, donde cada número es trazable hasta la celda exacta del archivo original.</p>
             </div>
 
             <ul class="dev-features">
               <li>
-                <span class="dev-feat-icon dev-feat-icon--amber" aria-hidden="true">
+                <span class="dev-feat-icon dev-feat-icon--blue" aria-hidden="true">
                   <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 </span>
-                <span><strong>Registro por foto</strong> — visión multimodal que estima porción, calorías y macronutrientes.</span>
+                <span><strong>El modelo nunca calcula</strong> — todas las cifras salen de un motor determinista; la IA solo elige qué mostrar y redacta.</span>
               </li>
               <li>
-                <span class="dev-feat-icon dev-feat-icon--amber" aria-hidden="true">
+                <span class="dev-feat-icon dev-feat-icon--blue" aria-hidden="true">
                   <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 </span>
-                <span><strong>Panel diario</strong> — anillos de progreso, macros y línea de tiempo de comidas y entrenamientos.</span>
+                <span><strong>Rastro de auditoría</strong> — cada número, gráfico y afirmación del informe se puede seguir hasta su celda de origen.</span>
               </li>
               <li>
-                <span class="dev-feat-icon dev-feat-icon--amber" aria-hidden="true">
+                <span class="dev-feat-icon dev-feat-icon--blue" aria-hidden="true">
                   <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 </span>
-                <span><strong>Historial y peso</strong> — balance por semana, mes y año, con seguimiento de la curva de peso.</span>
+                <span><strong>Validación de cada cifra</strong> — el sistema contrasta lo que dice el texto contra el catálogo de métricas antes de entregarlo.</span>
               </li>
               <li>
-                <span class="dev-feat-icon dev-feat-icon--amber" aria-hidden="true">
+                <span class="dev-feat-icon dev-feat-icon--blue" aria-hidden="true">
                   <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 </span>
-                <span><strong>Un código, tres plataformas</strong> — web, iOS y Android desde el mismo monorepo, con datos aislados por usuario (RLS).</span>
+                <span><strong>Informe que no falla</strong> — si un modelo no responde, cae en cascada a otros y, como último recurso, a un analista determinista.</span>
               </li>
             </ul>
 
             <div class="dev-tech-row">
-              <span class="dev-tech">Next.js</span>
+              <span class="dev-tech">Python</span>
+              <span class="dev-tech">FastAPI</span>
+              <span class="dev-tech">pandas</span>
               <span class="dev-tech">React</span>
-              <span class="dev-tech">TypeScript</span>
-              <span class="dev-tech">Capacitor</span>
-              <span class="dev-tech">IA multimodal</span>
-              <span class="dev-tech">PostgreSQL</span>
+              <span class="dev-tech">OpenRouter</span>
+              <span class="dev-tech">Docker</span>
             </div>
           </div>
 
           <div class="dev-card-footer">
-            <a href="https://nutrisnap.ricardotorales.com" target="_blank" rel="noopener noreferrer" class="dev-btn-primary dev-btn-primary--amber" id="btn-nutrisnap-demo">
-              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              Ver demo en vivo
-            </a>
+            <span class="dev-card-note">En desarrollo · todavía sin demo pública</span>
           </div>
         </article>
 
@@ -2590,6 +2591,78 @@
 
           <div class="dev-card-footer">
             <a href="https://familyfinance-omega.vercel.app/" target="_blank" rel="noopener noreferrer" class="dev-btn-primary dev-btn-primary--green" id="btn-familyfinance-demo">
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Ver demo en vivo
+            </a>
+          </div>
+        </article>
+
+        <!-- NUTRISNAP -->
+        <article class="dev-card rt-reveal">
+          <div class="dev-card-accent dev-card-accent--amber"></div>
+          <div class="dev-card-header">
+            <div class="dev-icon-wrap dev-icon-wrap--amber" aria-hidden="true">
+              <svg viewBox="0 0 72 72" width="28" height="28" fill="none" aria-hidden="true">
+                <rect x="6" y="20" width="60" height="42" rx="7" fill="hsl(32 95% 44%)" opacity=".16"/>
+                <path d="M24 20l4-7h16l4 7" stroke="hsl(32 95% 44%)" stroke-width="4" stroke-linejoin="round"/>
+                <rect x="6" y="20" width="60" height="42" rx="7" stroke="hsl(32 95% 44%)" stroke-width="4"/>
+                <circle cx="36" cy="41" r="13" stroke="hsl(32 95% 44%)" stroke-width="4"/>
+                <circle cx="36" cy="41" r="5.5" fill="hsl(43 96% 56%)"/>
+                <circle cx="57" cy="29" r="2.6" fill="hsl(32 95% 44%)"/>
+              </svg>
+            </div>
+            <div class="dev-card-meta">
+              <div class="dev-app-badge dev-app-badge--amber">En vivo · Web y móvil</div>
+              <h3 class="dev-card-title">NutriSnap</h3>
+              <p class="dev-card-tagline">Seguimiento nutricional y físico con una foto, usando visión por computadora.</p>
+            </div>
+          </div>
+
+          <div class="dev-card-body">
+            <div class="dev-problem">
+              <div class="dev-problem-label">El problema que resuelve</div>
+              <p>La gente abandona las apps de nutrición por la fricción de cargar cada alimento a mano, no por falta de funciones. NutriSnap invierte el flujo: sacás una foto, un modelo de visión identifica lo que hay en el plato, estima la porción y devuelve calorías y macros ya estructurados. La meta de diseño es registrar una comida en menos de 10 segundos y menos de 3 toques.</p>
+            </div>
+
+            <ul class="dev-features">
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--amber" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Registro por foto</strong> — visión multimodal que estima porción, calorías y macronutrientes.</span>
+              </li>
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--amber" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Panel diario</strong> — anillos de progreso, macros y línea de tiempo de comidas y entrenamientos.</span>
+              </li>
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--amber" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Historial y peso</strong> — balance por semana, mes y año, con seguimiento de la curva de peso.</span>
+              </li>
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--amber" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Un código, tres plataformas</strong> — web, iOS y Android desde el mismo monorepo, con datos aislados por usuario (RLS).</span>
+              </li>
+            </ul>
+
+            <div class="dev-tech-row">
+              <span class="dev-tech">Next.js</span>
+              <span class="dev-tech">React</span>
+              <span class="dev-tech">TypeScript</span>
+              <span class="dev-tech">Capacitor</span>
+              <span class="dev-tech">IA multimodal</span>
+              <span class="dev-tech">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="dev-card-footer">
+            <a href="https://nutrisnap.ricardotorales.com" target="_blank" rel="noopener noreferrer" class="dev-btn-primary dev-btn-primary--amber" id="btn-nutrisnap-demo">
               <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               Ver demo en vivo
             </a>
