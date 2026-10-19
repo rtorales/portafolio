@@ -1286,6 +1286,7 @@
     .dev-card-accent--violet { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
     .dev-card-accent--amber  { background: linear-gradient(90deg, #d97706, #fbbf24); }
     .dev-card-accent--blue   { background: linear-gradient(90deg, #2563eb, #60a5fa); }
+    .dev-card-accent--indigo { background: linear-gradient(90deg, #4f46e5, #818cf8); }
 
     .dev-card-header {
       padding: 28px 28px 0;
@@ -1308,6 +1309,7 @@
     .dev-icon-wrap--violet { background: #f5f3ff; }
     .dev-icon-wrap--amber  { background: #fffbeb; }
     .dev-icon-wrap--blue   { background: #eff6ff; }
+    .dev-icon-wrap--indigo { background: #eef2ff; }
 
     .dev-card-meta { flex: 1; }
 
@@ -1328,6 +1330,7 @@
     .dev-app-badge--violet { color: #5b21b6; background: #f5f3ff; border: 1px solid #ddd6fe; }
     .dev-app-badge--amber  { color: #92400e; background: #fffbeb; border: 1px solid #fde68a; }
     .dev-app-badge--blue   { color: #1e40af; background: #eff6ff; border: 1px solid #bfdbfe; }
+    .dev-app-badge--indigo { color: #3730a3; background: #eef2ff; border: 1px solid #c7d2fe; }
     .dev-app-badge::before {
       content: '';
       width: 5px; height: 5px;
@@ -1337,6 +1340,7 @@
     .dev-app-badge--violet::before { background: #7c3aed; }
     .dev-app-badge--amber::before  { background: #d97706; }
     .dev-app-badge--blue::before   { background: #2563eb; }
+    .dev-app-badge--indigo::before { background: #4f46e5; }
 
     .dev-card-title {
       font-family: var(--font-display);
@@ -1407,6 +1411,7 @@
     .dev-feat-icon--violet { background: #f5f3ff; color: #7c3aed; }
     .dev-feat-icon--amber  { background: #fffbeb; color: #d97706; }
     .dev-feat-icon--blue   { background: #eff6ff; color: #2563eb; }
+    .dev-feat-icon--indigo { background: #eef2ff; color: #4f46e5; }
     .dev-card-note { font-size: .84rem; color: var(--zinc-500); }
 
     .dev-tech-row {
@@ -1450,6 +1455,7 @@
     .dev-btn-primary--green  { background: var(--ink-900); color: #fff; }
     .dev-btn-primary--violet { background: var(--ink-900); color: #fff; }
     .dev-btn-primary--amber  { background: var(--ink-900); color: #fff; }
+    .dev-btn-primary--indigo { background: var(--ink-900); color: #fff; }
 
     .dev-btn-outline {
       display: inline-flex;
@@ -2454,11 +2460,82 @@
 
       <details class="dev-toggle">
         <summary class="dev-toggle-btn">
-          <span><span class="dev-toggle-open">Ver los proyectos</span><span class="dev-toggle-close">Ocultar los proyectos</span> <span class="dev-toggle-hint">· Cotejo, FamilyFinance Pro, NutriSnap, Ekklesia</span></span>
+          <span><span class="dev-toggle-open">Ver los proyectos</span><span class="dev-toggle-close">Ocultar los proyectos</span> <span class="dev-toggle-hint">· AprendeIngles, Cotejo, FamilyFinance Pro, NutriSnap, Ekklesia</span></span>
           <span class="faq-icon" aria-hidden="true"></span>
         </summary>
 
       <div class="dev-grid">
+
+        <!-- APRENDEINGLES -->
+        <article class="dev-card rt-reveal">
+          <div class="dev-card-accent dev-card-accent--indigo"></div>
+          <div class="dev-card-header">
+            <div class="dev-icon-wrap dev-icon-wrap--indigo" aria-hidden="true">
+              <!-- Language icon -->
+              <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+                <rect x="2" y="2" width="60" height="60" rx="16" fill="#4f46e5"/>
+                <path d="M14 18h36a4 4 0 014 4v18a4 4 0 01-4 4H30l-10 8v-8h-6a4 4 0 01-4-4V22a4 4 0 014-4z" fill="#fff" opacity=".18"/>
+                <path d="M14 18h36a4 4 0 014 4v18a4 4 0 01-4 4H30l-10 8v-8h-6a4 4 0 01-4-4V22a4 4 0 014-4z" stroke="#fff" stroke-width="3.5" stroke-linejoin="round"/>
+                <path d="M24 37V25h7M24 31h6M24 37h7M36 37V25l7 12V25" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="dev-card-meta">
+              <div class="dev-app-badge dev-app-badge--indigo">En vivo · App web</div>
+              <h3 class="dev-card-title">AprendeIngles</h3>
+              <p class="dev-card-tagline">Inglés profesional para tu sector, con test de nivel CEFR y repaso espaciado.</p>
+            </div>
+          </div>
+
+          <div class="dev-card-body">
+            <div class="dev-problem">
+              <div class="dev-problem-label">El problema que resuelve</div>
+              <p>Las apps de idiomas enseñan frases de turista; un profesional necesita el inglés de su trabajo: code reviews, correos formales, presentaciones de datos. AprendeIngles mide el nivel real con un test adaptativo, arma un camino por sector y programa los repasos para retener el vocabulario con el menor esfuerzo posible.</p>
+            </div>
+
+            <ul class="dev-features">
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--indigo" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Test de nivel adaptativo</strong> — la dificultad se ajusta a cada respuesta y ubica al usuario en la escala CEFR (A1 a C2).</span>
+              </li>
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--indigo" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Camino por sector profesional</strong> — lecciones de software, negocios y datos, con checkpoints y un desafío final por nivel.</span>
+              </li>
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--indigo" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Repaso espaciado con FSRS</strong> — cada tarjeta se reprograma según cuánto costó recordarla, con menos repeticiones que los métodos clásicos.</span>
+              </li>
+              <li>
+                <span class="dev-feat-icon dev-feat-icon--indigo" aria-hidden="true">
+                  <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span><strong>Progreso que no se puede inflar</strong> — XP, rachas y avance se calculan en la base de datos, con datos aislados por usuario (RLS).</span>
+              </li>
+            </ul>
+
+            <div class="dev-tech-row">
+              <span class="dev-tech">Next.js</span>
+              <span class="dev-tech">React</span>
+              <span class="dev-tech">TypeScript</span>
+              <span class="dev-tech">InsForge</span>
+              <span class="dev-tech">PostgreSQL</span>
+              <span class="dev-tech">FSRS</span>
+            </div>
+          </div>
+
+          <div class="dev-card-footer">
+            <a href="https://aprendeingles.ricardotorales.com" target="_blank" rel="noopener noreferrer" class="dev-btn-primary dev-btn-primary--indigo" id="btn-aprendeingles-demo">
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Ver demo en vivo
+            </a>
+          </div>
+        </article>
 
         <!-- COTEJO -->
         <article class="dev-card rt-reveal">
